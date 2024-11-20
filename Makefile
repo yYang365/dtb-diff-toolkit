@@ -62,6 +62,9 @@ MOD_DTS_LIST := $(wildcard $(MOD_DIR)/*.dts)
 MOD_YAML_LIST := $(patsubst $(MOD_DIR)/%.dts,$(BUILD_DUMP_DIR)/%.yaml,$(MOD_DTS_LIST))
 MOD_PMAP_LIST := $(patsubst $(MOD_DIR)/%.dts,$(BUILD_DUMP_DIR)/%.pmap,$(MOD_DTS_LIST))
 MOD_P_YAML_LIST := $(patsubst $(MOD_DIR)/%.dts,$(BUILD_DUMP_DIR)/%.p.yaml,$(MOD_DTS_LIST))
+
+BUILD_MOD_DIR := $(BUILD_DIR)/mod
+
 MOD_RELEASE_LIST := $(patsubst $(MOD_DIR)/%.dts,$(BUILD_MOD_DIR)/%.dtb,$(MOD_DTS_LIST))
 
 # 生成所有的文件
@@ -113,6 +116,10 @@ $(BUILD_DUMP_DIR)/%.yaml: $(MOD_DIR)/%.dts $(BUILD_DUMP_DIR)
 %.pp.dtb: %.pp.dts
 	dtc -I dts -O dtb $< -o $@
 
+# 特别的，对于魔改的 dts 编译为 dtb 的规则
+$(BUILD_MOD_DIR)/%.dtb: $(MOD_DIR)/%.dts $(BUILD_MOD_DIR)
+	dtc -I dts -O dtb $< -o $@
+
 # dtb 反编译为 dts 的规则
 %.rb.dts: %.pp.dtb
 	dtc -I dtb -s -O dts $< -o $@
@@ -134,5 +141,5 @@ $(COMBINED_TYPE_YAML): $(TYPE_YAML_LIST)
 	python3 ./scripts/resolve_dts_phandle.py $@ $^
 
 # 创建目录规则
-$(BUILD_REF_DIR) $(BUILD_DUMP_DIR):
+$(BUILD_REF_DIR) $(BUILD_DUMP_DIR) $(BUILD_MOD_DIR):
 	mkdir -p $@
