@@ -1,6 +1,8 @@
 
 # https://github.com/rockchip-linux/kernel 源码目录
-KERNEL_DIR := ../kernel
+# KERNEL_DIR := ../kernel
+KERNEL_DIR := ../../rockchip-linux/kernel
+
 # kernel 源码中的 dts 文件目录
 REF_DTS_DIR := $(KERNEL_DIR)/arch/arm64/boot/dts/rockchip
 
