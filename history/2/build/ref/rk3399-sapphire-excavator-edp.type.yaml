@@ -1,0 +1,2568 @@
+? ''
+: interrupt-parent:
+  - P
+backlight:
+  enable-gpios:
+  - P
+  - I
+  - I
+  pwms:
+  - P
+  - I
+  - I
+  - I
+clock-controller:
+  assigned-clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+cpu:
+  clocks:
+  - P
+  - I
+  cpu-idle-states:
+  - P
+  - P
+  cpu-supply:
+  - P
+  operating-points-v2:
+  - P
+  sched-energy-costs:
+  - P
+  - P
+cpuinfo:
+  nvmem-cells:
+  - P
+cpus/cpu-map/cluster0/core0:
+  cpu:
+  - P
+cpus/cpu-map/cluster0/core1:
+  cpu:
+  - P
+cpus/cpu-map/cluster0/core2:
+  cpu:
+  - P
+cpus/cpu-map/cluster0/core3:
+  cpu:
+  - P
+cpus/cpu-map/cluster1/core0:
+  cpu:
+  - P
+cpus/cpu-map/cluster1/core1:
+  cpu:
+  - P
+dfi:
+  clocks:
+  - P
+  - I
+  rockchip,pmu:
+  - P
+display-subsystem:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  devfreq:
+  - P
+  logo-memory-region:
+  - P
+  ports:
+  - P
+  - P
+  secure-memory-region:
+  - P
+display-subsystem/route/route-dsi:
+  connect:
+  - P
+display-subsystem/route/route-dsi1:
+  connect:
+  - P
+display-subsystem/route/route-edp:
+  connect:
+  - P
+display-subsystem/route/route-hdmi:
+  connect:
+  - P
+dma-controller:
+  clocks:
+  - P
+  - I
+dmc:
+  center-supply:
+  - P
+  clocks:
+  - P
+  - I
+  ddr_timing:
+  - P
+  devfreq-events:
+  - P
+  operating-points-v2:
+  - P
+dp:
+  assigned-clocks:
+  - P
+  - I
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  extcon:
+  - P
+  phys:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  rockchip,grf:
+  - P
+dp-sound:
+  rockchip,codec:
+  - P
+  - I
+  rockchip,cpu:
+  - P
+dp/ports/port/endpoint:
+  remote-endpoint:
+  - P
+dsi:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  rockchip,grf:
+  - P
+dsi/ports/port/endpoint:
+  remote-endpoint:
+  - P
+dummy-codec:
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+dwc3:
+  phys:
+  - P
+  - P
+dwmmc:
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  mmc-pwrseq:
+  - P
+  pinctrl-0:
+  - P
+  - P
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  vmmc-supply:
+  - P
+  vqmmc-supply:
+  - P
+edp:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  rockchip,grf:
+  - P
+edp/ports/port/endpoint:
+  remote-endpoint:
+  - P
+efuse:
+  clocks:
+  - P
+  - I
+ethernet:
+  assigned-clock-parents:
+  - P
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  phy-supply:
+  - P
+  pinctrl-0:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  rockchip,grf:
+  - P
+  snps,reset-gpio:
+  - P
+  - I
+  - I
+fiq-debugger:
+  pinctrl-0:
+  - P
+fusb30x:
+  int-n-gpios:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+  vbus-5v-gpios:
+  - P
+  - I
+  - I
+gpio0:
+  clocks:
+  - P
+  - I
+gpio1:
+  clocks:
+  - P
+  - I
+gpio2:
+  clocks:
+  - P
+  - I
+gpio3:
+  clocks:
+  - P
+  - I
+gpio4:
+  clocks:
+  - P
+  - I
+gpu:
+  clocks:
+  - P
+  - I
+  mali-supply:
+  - P
+  operating-points-v2:
+  - P
+  power-domains:
+  - P
+  - I
+gsl3673:
+  irq_gpio_number:
+  - P
+  - I
+  - I
+  rst_gpio_number:
+  - P
+  - I
+  - I
+hdmi:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+  power-domains:
+  - P
+  - I
+  rockchip,grf:
+  - P
+hdmi-dp-sound:
+  rockchip,codec:
+  - P
+  - P
+  rockchip,cpu:
+  - P
+hdmi-hdcp2:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+hdmi-sound/simple-audio-card,codec:
+  sound-dai:
+  - P
+hdmi-sound/simple-audio-card,cpu:
+  sound-dai:
+  - P
+hdmi/ports/port/endpoint:
+  remote-endpoint:
+  - P
+hdmiin-sound:
+  rockchip,codec:
+  - P
+  - P
+  - P
+  rockchip,cpu:
+  - P
+i2c:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+i2s:
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  dmas:
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  rockchip,grf:
+  - P
+iep:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  iommus:
+  - P
+  power-domains:
+  - P
+  - I
+interrupt-controller/ppi-partitions/interrupt-partition-0:
+  affinity:
+  - P
+  - P
+  - P
+  - P
+interrupt-controller/ppi-partitions/interrupt-partition-1:
+  affinity:
+  - P
+  - P
+io-domains:
+  audio-supply:
+  - P
+  bt656-supply:
+  - P
+  gpio1830-supply:
+  - P
+  pmu1830-supply:
+  - P
+  sdmmc-supply:
+  - P
+iommu:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+isp:
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  iommus:
+  - P
+  pinctrl-0:
+  - P
+  pinctrl-1:
+  - P
+  - P
+  pinctrl-2:
+  - P
+  pinctrl-3:
+  - P
+  - P
+  pinctrl-4:
+  - P
+  pinctrl-5:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  rockchip,cru:
+  - P
+  rockchip,gpios:
+  - P
+  - I
+  - I
+  rockchip,grf:
+  - P
+mipi-dphy-rx0:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+mipi-dphy-rx0/ports/port/endpoint:
+  remote-endpoint:
+  - P
+mipi-dphy-tx1rx1:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+  rockchip,grf:
+  - P
+mipi-dphy-tx1rx1/ports/port/endpoint:
+  remote-endpoint:
+  - P
+mpu6500:
+  irq-gpio:
+  - P
+  - I
+  - I
+opp-table0:
+  clocks:
+  - P
+  - I
+  nvmem-cells:
+  - P
+  - P
+  - P
+opp-table1:
+  clocks:
+  - P
+  - I
+  nvmem-cells:
+  - P
+  - P
+  - P
+opp-table2:
+  nvmem-cells:
+  - P
+ov13850:
+  clocks:
+  - P
+  - I
+  lens-focus:
+  - P
+  pinctrl-0:
+  - P
+  pwdn-gpios:
+  - P
+  - I
+  - I
+  reset-gpios:
+  - P
+  - I
+  - I
+ov13850/port/endpoint:
+  remote-endpoint:
+  - P
+ov4689:
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+  pwdn-gpios:
+  - P
+  - I
+  - I
+ov4689/port/endpoint:
+  remote-endpoint:
+  - P
+panel:
+  backlight:
+  - P
+  enable-gpios:
+  - P
+  - I
+  - I
+  power-supply:
+  - P
+panel/display-timings:
+  native-mode:
+  - P
+panel/ports/endpoint:
+  remote-endpoint:
+  - P
+pcie:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  ep-gpios:
+  - P
+  - I
+  - I
+  interrupt-map:
+  - I
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - I
+  - I
+  - P
+  - I
+  msi-map:
+  - I
+  - P
+  - I
+  - I
+  phys:
+  - P
+  pinctrl-0:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+pcie-phy:
+  clocks:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  rockchip,grf:
+  - P
+phy:
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  extcon:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  rockchip,grf:
+  - P
+pinctrl:
+  rockchip,grf:
+  - P
+  rockchip,pmu:
+  - P
+pinctrl/edp/edp-hpd:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/emmc/emmc-pwr:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/fusb30x/fusb0-int:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/gmac/rgmii-pins:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/gmac/rmii-pins:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/hdmi/hdmi-cec:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/hdmi/hdmi-i2c-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/hdmiin/hdmiin_gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c0/i2c0-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c1/i2c1-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c2/i2c2-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c3/i2c3-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c3/i2c3_gpio:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c4/i2c4-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c5/i2c5-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c6/i2c6-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c7/i2c7-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2c8/i2c8-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2s0/i2s-8ch-mclk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2s0/i2s0-8ch-bus:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/i2s1/i2s1-2ch-bus:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/cif-clkout:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/isp-dvp-d0d7:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/isp-flash-trigger:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/isp-prelight:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/isp-shutter:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/isp/isp_flash_trigger_as_gpio:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/lcd-panel/lcd-panel-reset:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pcie/pci-clkreqn:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pcie/pci-clkreqn-cpm:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pcie/pci-clkreqnb:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pcie/pci-clkreqnb-cpm:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pmic/pmic-int-l:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pmic/vsel1-gpio:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pmic/vsel2-gpio:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/preisp_irq_gpios/preisp_irq_gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/preisp_reset_gpios/preisp_reset_gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/preisp_sleep_gpios/preisp_sleep_gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/preisp_wake_gpios/preisp_wake_gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm0/pwm0-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm0/pwm0-pin-pull-down:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm0/vop0-pwm-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm0/vop1-pwm-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm1/pwm1-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm1/pwm1-pin-pull-down:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm2/pwm2-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm2/pwm2-pin-pull-down:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm3a/pwm3a-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm3a/pwm3a-pin-pull-down:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm3b/pwm3b-pin:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/pwm3b/pwm3b-pin-pull-down:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio-pwrseq/wifi-enable-h:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-bkpwr:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-bus1:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-bus4:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-cd:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-cmd:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-int:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-pwr:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdio0/sdio0-wp:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmcc-cd:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmmc-bus1:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmmc-bus4:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmmc-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmmc-cmd:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/sdmmc/sdmmc-wp:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spdif/spdif-bus:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spdif/spdif-bus-1:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi0/spi0-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi0/spi0-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi0/spi0-cs1:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi0/spi0-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi0/spi0-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi1/spi1-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi1/spi1-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi1/spi1-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi1/spi1-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi2/spi2-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi2/spi2-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi2/spi2-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi2/spi2-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi3/spi3-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi3/spi3-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi3/spi3-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi3/spi3-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi4/spi4-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi4/spi4-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi4/spi4-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi4/spi4-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi5/spi5-clk:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi5/spi5-cs0:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi5/spi5-rx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/spi5/spi5-tx:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/tsadc/otp-gpio:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/tsadc/otp-out:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart0/uart0-cts:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart0/uart0-rts:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart0/uart0-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart1/uart1-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart2a/uart2a-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart2b/uart2b-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart2c/uart2c-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart3/uart3-cts:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart3/uart3-rts:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart3/uart3-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uart4/uart4-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/uarthdcp/uarthdcp-xfer:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+  - I
+  - I
+  - I
+  - P
+pinctrl/usb2/host-vbus-drv:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/vcc_sd/vcc-sd-h:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pinctrl/wireless-bluetooth/uart0-gpios:
+  rockchip,pins:
+  - I
+  - I
+  - I
+  - P
+pmic:
+  interrupt-parent:
+  - P
+  pinctrl-0:
+  - P
+  vcc1-supply:
+  - P
+  vcc10-supply:
+  - P
+  vcc11-supply:
+  - P
+  vcc12-supply:
+  - P
+  vcc2-supply:
+  - P
+  vcc3-supply:
+  - P
+  vcc4-supply:
+  - P
+  vcc6-supply:
+  - P
+  vcc7-supply:
+  - P
+  vcc8-supply:
+  - P
+  vcc9-supply:
+  - P
+  vddio-supply:
+  - P
+pmu-clock-controller:
+  assigned-clocks:
+  - P
+  - I
+  - P
+  - I
+pmu-pvtm:
+  clocks:
+  - P
+  - I
+  resets:
+  - P
+  - I
+pmu_a53:
+  interrupts:
+  - I
+  - I
+  - I
+  - P
+pmu_a72:
+  interrupts:
+  - I
+  - I
+  - I
+  - P
+power-controller/pd_edp:
+  clocks:
+  - P
+  - I
+power-controller/pd_emmc:
+  clocks:
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_gmac:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_gpu:
+  clocks:
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_iep:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_perihp:
+  clocks:
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+  - P
+  - P
+power-controller/pd_perihp/pd_sd:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_rga:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_sdioaudio:
+  clocks:
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_usb3:
+  clocks:
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_vcodec:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_vdu:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_vio/pd_hdcp:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+power-controller/pd_vio/pd_isp0:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_vio/pd_isp1:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_vio/pd_tcpc0:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+power-controller/pd_vio/pd_tcpc1:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+power-controller/pd_vio/pd_vo/pd_vopb:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+  - P
+power-controller/pd_vio/pd_vo/pd_vopl:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pm_qos:
+  - P
+pvtm:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+pwm:
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+ramoops:
+  memory-region:
+  - P
+rga:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+rkisp1:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  devfreq:
+  - P
+  iommus:
+  - P
+  power-domains:
+  - P
+  - I
+rkisp1/port/endpoint:
+  remote-endpoint:
+  - P
+rktimer:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+rkvdec:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  iommus:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  rockchip,grf:
+  - P
+rng:
+  assigned-clocks:
+  - P
+  - I
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+rockchip-i2s-sound/simple-audio-card,codec:
+  sound-dai:
+  - P
+rockchip-i2s-sound/simple-audio-card,cpu:
+  sound-dai:
+  - P
+rockchip-key:
+  io-channels:
+  - P
+  - I
+rockchip-key/power-key:
+  gpios:
+  - P
+  - I
+  - I
+rockchip-suspend:
+  rockchip,power-ctrl:
+  - P
+  - I
+  - I
+  - P
+  - I
+  - I
+rt5651:
+  clocks:
+  - P
+  - I
+  hp-det-gpio:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+  spk-con-gpio:
+  - P
+  - I
+  - I
+rt5651-sound/simple-audio-card,codec:
+  sound-dai:
+  - P
+rt5651-sound/simple-audio-card,cpu:
+  sound-dai:
+  - P
+saradc:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  resets:
+  - P
+  - I
+sdhci:
+  arasan,soc-ctl-syscon:
+  - P
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  phys:
+  - P
+  power-domains:
+  - P
+  - I
+sdio-pwrseq:
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+  reset-gpios:
+  - P
+  - I
+  - I
+serial:
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+  - P
+spdif:
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  dmas:
+  - P
+  - I
+  pinctrl-0:
+  - P
+  power-domains:
+  - P
+  - I
+spdif-sound/simple-audio-card,codec:
+  sound-dai:
+  - P
+spdif-sound/simple-audio-card,cpu:
+  sound-dai:
+  - P
+spi:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  dmas:
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+  - P
+  - P
+  - P
+  power-domains:
+  - P
+  - I
+spi_rk_preisp:
+  clocks:
+  - P
+  - I
+  irq-gpio:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+  - P
+  - P
+  - P
+  power-domains:
+  - P
+  - I
+  reset-gpio:
+  - P
+  - I
+  - I
+  sleepst-gpio:
+  - P
+  - I
+  - I
+  wakeup-gpio:
+  - P
+  - I
+  - I
+syr827:
+  pinctrl-0:
+  - P
+  vin-supply:
+  - P
+  vsel-gpios:
+  - P
+  - I
+  - I
+syr828:
+  pinctrl-0:
+  - P
+  vin-supply:
+  - P
+  vsel-gpios:
+  - P
+  - I
+  - I
+tc358749x:
+  csi-ctl-gpios:
+  - P
+  - I
+  - I
+  int-gpios:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+  power-gpios:
+  - P
+  - I
+  - I
+  power18-gpios:
+  - P
+  - I
+  - I
+  power33-gpios:
+  - P
+  - I
+  - I
+  reset-gpios:
+  - P
+  - I
+  - I
+  stanby-gpios:
+  - P
+  - I
+  - I
+thermal-zones/gpu-thermal:
+  thermal-sensors:
+  - P
+  - I
+thermal-zones/soc-thermal:
+  thermal-sensors:
+  - P
+  - I
+thermal-zones/soc-thermal/cooling-maps/map0:
+  cooling-device:
+  - P
+  - I
+  - I
+  trip:
+  - P
+thermal-zones/soc-thermal/cooling-maps/map1:
+  cooling-device:
+  - P
+  - I
+  - I
+  trip:
+  - P
+thermal-zones/soc-thermal/cooling-maps/map2:
+  cooling-device:
+  - P
+  - I
+  - I
+  trip:
+  - P
+tsadc:
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  pinctrl-0:
+  - P
+  pinctrl-1:
+  - P
+  resets:
+  - P
+  - I
+  rockchip,grf:
+  - P
+usb:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  phys:
+  - P
+  power-domains:
+  - P
+  - I
+usb0:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  extcon:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+usb1:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+usb2-phy:
+  clocks:
+  - P
+  - I
+  extcon:
+  - P
+  power-domains:
+  - P
+  - I
+usb2-phy/host-port:
+  phy-supply:
+  - P
+vcc-lcd:
+  gpio:
+  - P
+  - I
+  - I
+  vin-supply:
+  - P
+vcc-sd:
+  gpio:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+vcc5v0-host-regulator:
+  gpio:
+  - P
+  - I
+  - I
+  pinctrl-0:
+  - P
+vdd-log:
+  pwms:
+  - P
+  - I
+  - I
+  - I
+vop:
+  assigned-clock-parents:
+  - P
+  - I
+  assigned-clocks:
+  - P
+  - I
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+  iommus:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  - P
+  - I
+vop/port/endpoint:
+  remote-endpoint:
+  - P
+voppwm:
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+vpu_service:
+  clocks:
+  - P
+  - I
+  - P
+  - I
+  iommus:
+  - P
+  power-domains:
+  - P
+  - I
+  resets:
+  - P
+  - I
+  - P
+  - I
+  rockchip,grf:
+  - P
+watchdog:
+  clocks:
+  - P
+  - I
+wireless-bluetooth:
+  BT,reset_gpio:
+  - P
+  - I
+  - I
+  BT,wake_gpio:
+  - P
+  - I
+  - I
+  BT,wake_host_irq:
+  - P
+  - I
+  - I
+  clocks:
+  - P
+  - I
+  pinctrl-0:
+  - P
+  pinctrl-1:
+  - P
+  uart_rts_gpios:
+  - P
+  - I
+  - I
+wireless-wlan:
+  WIFI,host_wake_irq:
+  - P
+  - I
+  - I
+  rockchip,grf:
+  - P

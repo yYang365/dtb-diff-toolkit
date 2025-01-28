@@ -7,7 +7,7 @@ KERNEL_DIR := ../../rockchip-linux/kernel
 REF_DTS_DIR := $(KERNEL_DIR)/arch/arm64/boot/dts/rockchip
 
 # 从 kernel 源码中拿来作为参考的 dts 文件名列表
-REF_DTS_NAME_LIST := rk3399-sapphire-excavator-edp.dts rk3399-sapphire-excavator-linux.dts
+REF_DTS_NAME_LIST := rk3399-firefly-android.dts rk3399-firefly-linux.dts
 
 # 输入数据放到下面这两个目录中：
 

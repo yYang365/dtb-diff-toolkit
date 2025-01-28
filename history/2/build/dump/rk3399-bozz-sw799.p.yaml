@@ -1,0 +1,5358 @@
+- '#address-cells':
+  - [2]
+  '#size-cells':
+  - [2]
+  4g_module_power:
+    compatible:
+    - regulator-fixed
+    enable-active-high: true
+    gpio:
+    - [116, 1, 0]
+    pinctrl-names:
+    - default
+    regulator-always-on: true
+    regulator-name:
+    - 4g_module_power
+    status:
+    - okay
+  __symbols__:
+    CLUSTER_SLEEP:
+    - /cpus/idle-states/cluster-sleep
+    CPU_SLEEP:
+    - /cpus/idle-states/cpu-sleep
+    ap_pwroff:
+    - /pinctrl/suspend/ap-pwroff
+    cdn_dp:
+    - /dp@fec00000
+    center_leakage:
+    - /efuse@ff690000/center-leakage@19
+    cif_clkin:
+    - /pinctrl/cif/cif-clkin
+    cif_clkouta:
+    - /pinctrl/cif/cif-clkouta
+    clk_32k:
+    - /pinctrl/clock/clk-32k
+    clkin_gmac:
+    - /external-gmac-clock
+    cluster0_opp:
+    - /opp-table-0
+    cluster1_opp:
+    - /opp-table-1
+    cpu_alert0:
+    - /thermal-zones/cpu-thermal/trips/cpu_alert0
+    cpu_alert1:
+    - /thermal-zones/cpu-thermal/trips/cpu_alert1
+    cpu_b0:
+    - /cpus/cpu@100
+    cpu_b1:
+    - /cpus/cpu@101
+    cpu_crit:
+    - /thermal-zones/cpu-thermal/trips/cpu_crit
+    cpu_id:
+    - /efuse@ff690000/cpu-id@7
+    cpu_l0:
+    - /cpus/cpu@0
+    cpu_l1:
+    - /cpus/cpu@1
+    cpu_l2:
+    - /cpus/cpu@2
+    cpu_l3:
+    - /cpus/cpu@3
+    cpu_thermal:
+    - /thermal-zones/cpu-thermal
+    cpub_leakage:
+    - /efuse@ff690000/cpu-leakage@17
+    cpul_leakage:
+    - /efuse@ff690000/cpu-leakage@1a
+    cru:
+    - /clock-controller@ff760000
+    crypto0:
+    - /crypto@ff8b0000
+    crypto1:
+    - /crypto@ff8b8000
+    ddrio_pwroff:
+    - /pinctrl/suspend/ddrio-pwroff
+    dfi:
+    - /dfi@ff630000
+    dmac_bus:
+    - /dma-controller@ff6d0000
+    dmac_peri:
+    - /dma-controller@ff6e0000
+    dmc:
+    - /memory-controller
+    dp_in:
+    - /dp@fec00000/ports/port
+    dp_in_vopb:
+    - /dp@fec00000/ports/port/endpoint@0
+    dp_in_vopl:
+    - /dp@fec00000/ports/port/endpoint@1
+    edp:
+    - /edp@ff970000
+    edp_hpd:
+    - /pinctrl/edp/edp-hpd
+    edp_in:
+    - /edp@ff970000/ports/port@0
+    edp_in_vopb:
+    - /edp@ff970000/ports/port@0/endpoint@0
+    edp_in_vopl:
+    - /edp@ff970000/ports/port@0/endpoint@1
+    efuse0:
+    - /efuse@ff690000
+    emmc_phy:
+    - /syscon@ff770000/phy@f780
+    gic:
+    - /interrupt-controller@fee00000
+    gmac:
+    - /ethernet@fe300000
+    gpio0:
+    - /pinctrl/gpio@ff720000
+    gpio1:
+    - /pinctrl/gpio@ff730000
+    gpio2:
+    - /pinctrl/gpio@ff780000
+    gpio3:
+    - /pinctrl/gpio@ff788000
+    gpio4:
+    - /pinctrl/gpio@ff790000
+    gpu:
+    - /gpu@ff9a0000
+    gpu_alert0:
+    - /thermal-zones/gpu-thermal/trips/gpu_alert0
+    gpu_crit:
+    - /thermal-zones/gpu-thermal/trips/gpu_crit
+    gpu_leakage:
+    - /efuse@ff690000/gpu-leakage@18
+    gpu_opp_table:
+    - /opp-table-2
+    gpu_thermal:
+    - /thermal-zones/gpu-thermal
+    grf:
+    - /syscon@ff770000
+    hdmi:
+    - /hdmi@ff940000
+    hdmi_cec:
+    - /pinctrl/hdmi/hdmi-cec
+    hdmi_i2c_xfer:
+    - /pinctrl/hdmi/hdmi-i2c-xfer
+    hdmi_in:
+    - /hdmi@ff940000/ports/port
+    hdmi_in_vopb:
+    - /hdmi@ff940000/ports/port/endpoint@0
+    hdmi_in_vopl:
+    - /hdmi@ff940000/ports/port/endpoint@1
+    hdmi_sound:
+    - /hdmi-sound
+    i2c0:
+    - /i2c@ff3c0000
+    i2c0_xfer:
+    - /pinctrl/i2c0/i2c0-xfer
+    i2c1:
+    - /i2c@ff110000
+    i2c1_xfer:
+    - /pinctrl/i2c1/i2c1-xfer
+    i2c2:
+    - /i2c@ff120000
+    i2c2_xfer:
+    - /pinctrl/i2c2/i2c2-xfer
+    i2c3:
+    - /i2c@ff130000
+    i2c3_xfer:
+    - /pinctrl/i2c3/i2c3-xfer
+    i2c4:
+    - /i2c@ff3d0000
+    i2c4_xfer:
+    - /pinctrl/i2c4/i2c4-xfer
+    i2c5:
+    - /i2c@ff140000
+    i2c5_xfer:
+    - /pinctrl/i2c5/i2c5-xfer
+    i2c6:
+    - /i2c@ff150000
+    i2c6_xfer:
+    - /pinctrl/i2c6/i2c6-xfer
+    i2c7:
+    - /i2c@ff160000
+    i2c7_xfer:
+    - /pinctrl/i2c7/i2c7-xfer
+    i2c8:
+    - /i2c@ff3e0000
+    i2c8_xfer:
+    - /pinctrl/i2c8/i2c8-xfer
+    i2s0:
+    - /i2s@ff880000
+    i2s0_2ch_bus:
+    - /pinctrl/i2s0/i2s0-2ch-bus
+    i2s0_2ch_bus_bclk_off:
+    - /pinctrl/i2s0/i2s0-2ch-bus-bclk-off
+    i2s0_8ch_bus:
+    - /pinctrl/i2s0/i2s0-8ch-bus
+    i2s0_8ch_bus_bclk_off:
+    - /pinctrl/i2s0/i2s0-8ch-bus-bclk-off
+    i2s1:
+    - /i2s@ff890000
+    i2s1_2ch_bus:
+    - /pinctrl/i2s1/i2s1-2ch-bus
+    i2s1_2ch_bus_bclk_off:
+    - /pinctrl/i2s1/i2s1-2ch-bus-bclk-off
+    i2s2:
+    - /i2s@ff8a0000
+    iep_mmu:
+    - /iommu@ff670800
+    io_domains:
+    - /syscon@ff770000/io-domains
+    isp0:
+    - /isp0@ff910000
+    isp0_mmu:
+    - /iommu@ff914000
+    isp1:
+    - /isp1@ff920000
+    isp1_mmu:
+    - /iommu@ff924000
+    its:
+    - /interrupt-controller@fee00000/interrupt-controller@fee20000
+    logic_leakage:
+    - /efuse@ff690000/logic-leakage@1b
+    mipi1_in:
+    - /mipi@ff968000/ports/port@0
+    mipi1_in_vopb:
+    - /mipi@ff968000/ports/port@0/endpoint@0
+    mipi1_in_vopl:
+    - /mipi@ff968000/ports/port@0/endpoint@1
+    mipi_dphy_rx0:
+    - /syscon@ff770000/mipi-dphy-rx0
+    mipi_dsi:
+    - /mipi@ff960000
+    mipi_dsi1:
+    - /mipi@ff968000
+    mipi_in:
+    - /mipi@ff960000/ports/port@0
+    mipi_in_vopb:
+    - /mipi@ff960000/ports/port@0/endpoint@0
+    mipi_in_vopl:
+    - /mipi@ff960000/ports/port@0/endpoint@1
+    otp_out:
+    - /pinctrl/tsadc/otp-out
+    otp_pin:
+    - /pinctrl/tsadc/otp-pin
+    pcfg_input_enable:
+    - /pinctrl/pcfg-input-enable
+    pcfg_input_pull_down:
+    - /pinctrl/pcfg-input-pull-down
+    pcfg_input_pull_up:
+    - /pinctrl/pcfg-input-pull-up
+    pcfg_output_high:
+    - /pinctrl/pcfg-output-high
+    pcfg_output_low:
+    - /pinctrl/pcfg-output-low
+    pcfg_pull_down:
+    - /pinctrl/pcfg-pull-down
+    pcfg_pull_down_12ma:
+    - /pinctrl/pcfg-pull-down-12ma
+    pcfg_pull_down_18ma:
+    - /pinctrl/pcfg-pull-down-18ma
+    pcfg_pull_down_20ma:
+    - /pinctrl/pcfg-pull-down-20ma
+    pcfg_pull_down_4ma:
+    - /pinctrl/pcfg-pull-down-4ma
+    pcfg_pull_down_8ma:
+    - /pinctrl/pcfg-pull-down-8ma
+    pcfg_pull_none:
+    - /pinctrl/pcfg-pull-none
+    pcfg_pull_none_12ma:
+    - /pinctrl/pcfg-pull-none-12ma
+    pcfg_pull_none_13ma:
+    - /pinctrl/pcfg-pull-none-13ma
+    pcfg_pull_none_18ma:
+    - /pinctrl/pcfg-pull-none-18ma
+    pcfg_pull_none_20ma:
+    - /pinctrl/pcfg-pull-none-20ma
+    pcfg_pull_up:
+    - /pinctrl/pcfg-pull-up
+    pcfg_pull_up_18ma:
+    - /pinctrl/pcfg-pull-up-18ma
+    pcfg_pull_up_20ma:
+    - /pinctrl/pcfg-pull-up-20ma
+    pcfg_pull_up_2ma:
+    - /pinctrl/pcfg-pull-up-2ma
+    pcfg_pull_up_8ma:
+    - /pinctrl/pcfg-pull-up-8ma
+    pcie0:
+    - /pcie@f8000000
+    pcie0_intc:
+    - /pcie@f8000000/interrupt-controller
+    pcie_clkreqn_cpm:
+    - /pinctrl/pcie/pci-clkreqn-cpm
+    pcie_clkreqnb_cpm:
+    - /pinctrl/pcie/pci-clkreqnb-cpm
+    pcie_phy:
+    - /syscon@ff770000/pcie-phy
+    pinctrl:
+    - /pinctrl
+    pmu:
+    - /power-management@ff310000
+    pmu_io_domains:
+    - /syscon@ff320000/io-domains
+    pmucru:
+    - /clock-controller@ff750000
+    pmugrf:
+    - /syscon@ff320000
+    power:
+    - /power-management@ff310000/power-controller
+    ppi_cluster0:
+    - /interrupt-controller@fee00000/ppi-partitions/interrupt-partition-0
+    ppi_cluster1:
+    - /interrupt-controller@fee00000/ppi-partitions/interrupt-partition-1
+    pwm0:
+    - /pwm@ff420000
+    pwm0_pin:
+    - /pinctrl/pwm0/pwm0-pin
+    pwm0_pin_pull_down:
+    - /pinctrl/pwm0/pwm0-pin-pull-down
+    pwm1:
+    - /pwm@ff420010
+    pwm1_pin:
+    - /pinctrl/pwm1/pwm1-pin
+    pwm1_pin_pull_down:
+    - /pinctrl/pwm1/pwm1-pin-pull-down
+    pwm2:
+    - /pwm@ff420020
+    pwm2_pin:
+    - /pinctrl/pwm2/pwm2-pin
+    pwm2_pin_pull_down:
+    - /pinctrl/pwm2/pwm2-pin-pull-down
+    pwm3:
+    - /pwm@ff420030
+    pwm3a_pin:
+    - /pinctrl/pwm3a/pwm3a-pin
+    pwm3b_pin:
+    - /pinctrl/pwm3b/pwm3b-pin
+    qos_emmc:
+    - /qos@ffa58000
+    qos_gmac:
+    - /qos@ffa5c000
+    qos_gpu:
+    - /qos@ffae0000
+    qos_hdcp:
+    - /qos@ffa90000
+    qos_iep:
+    - /qos@ffa98000
+    qos_isp0_m0:
+    - /qos@ffaa0000
+    qos_isp0_m1:
+    - /qos@ffaa0080
+    qos_isp1_m0:
+    - /qos@ffaa8000
+    qos_isp1_m1:
+    - /qos@ffaa8080
+    qos_pcie:
+    - /qos@ffa60080
+    qos_perihp:
+    - /qos@ffad8080
+    qos_rga_r:
+    - /qos@ffab0000
+    qos_rga_w:
+    - /qos@ffab0080
+    qos_sd:
+    - /qos@ffa74000
+    qos_sdioaudio:
+    - /qos@ffa76000
+    qos_usb_host0:
+    - /qos@ffa60100
+    qos_usb_host1:
+    - /qos@ffa60180
+    qos_usb_otg0:
+    - /qos@ffa70000
+    qos_usb_otg1:
+    - /qos@ffa70080
+    qos_video_m0:
+    - /qos@ffab8000
+    qos_video_m1_r:
+    - /qos@ffac0000
+    qos_video_m1_w:
+    - /qos@ffac0080
+    qos_vop_big_r:
+    - /qos@ffac8000
+    qos_vop_big_w:
+    - /qos@ffac8080
+    qos_vop_little:
+    - /qos@ffad0000
+    rga:
+    - /rga@ff680000
+    rgmii_pins:
+    - /pinctrl/gmac/rgmii-pins
+    rk808:
+    - /i2c@ff3c0000/pmic@1b
+    rktimer:
+    - /rktimer@ff850000
+    rmii_pins:
+    - /pinctrl/gmac/rmii-pins
+    rng:
+    - /rng@ff8b8000
+    saradc:
+    - /saradc@ff100000
+    sdhci:
+    - /mmc@fe330000
+    sdio0:
+    - /mmc@fe310000
+    sdio0_bkpwr:
+    - /pinctrl/sdio0/sdio0-bkpwr
+    sdio0_bus1:
+    - /pinctrl/sdio0/sdio0-bus1
+    sdio0_bus4:
+    - /pinctrl/sdio0/sdio0-bus4
+    sdio0_cd:
+    - /pinctrl/sdio0/sdio0-cd
+    sdio0_clk:
+    - /pinctrl/sdio0/sdio0-clk
+    sdio0_cmd:
+    - /pinctrl/sdio0/sdio0-cmd
+    sdio0_int:
+    - /pinctrl/sdio0/sdio0-int
+    sdio0_pwr:
+    - /pinctrl/sdio0/sdio0-pwr
+    sdio0_wp:
+    - /pinctrl/sdio0/sdio0-wp
+    sdio_pwrseq:
+    - /sdio-pwrseq
+    sdmmc:
+    - /mmc@fe320000
+    sdmmc_bus1:
+    - /pinctrl/sdmmc/sdmmc-bus1
+    sdmmc_bus4:
+    - /pinctrl/sdmmc/sdmmc-bus4
+    sdmmc_cd:
+    - /pinctrl/sdmmc/sdmmc-cd
+    sdmmc_clk:
+    - /pinctrl/sdmmc/sdmmc-clk
+    sdmmc_cmd:
+    - /pinctrl/sdmmc/sdmmc-cmd
+    sdmmc_wp:
+    - /pinctrl/sdmmc/sdmmc-wp
+    spdif:
+    - /spdif@ff870000
+    spdif_bus:
+    - /pinctrl/spdif/spdif-bus
+    spdif_bus_1:
+    - /pinctrl/spdif/spdif-bus-1
+    spi0:
+    - /spi@ff1c0000
+    spi0_clk:
+    - /pinctrl/spi0/spi0-clk
+    spi0_cs0:
+    - /pinctrl/spi0/spi0-cs0
+    spi0_cs1:
+    - /pinctrl/spi0/spi0-cs1
+    spi0_rx:
+    - /pinctrl/spi0/spi0-rx
+    spi0_tx:
+    - /pinctrl/spi0/spi0-tx
+    spi1:
+    - /spi@ff1d0000
+    spi1_clk:
+    - /pinctrl/spi1/spi1-clk
+    spi1_cs0:
+    - /pinctrl/spi1/spi1-cs0
+    spi1_rx:
+    - /pinctrl/spi1/spi1-rx
+    spi1_tx:
+    - /pinctrl/spi1/spi1-tx
+    spi2:
+    - /spi@ff1e0000
+    spi2_clk:
+    - /pinctrl/spi2/spi2-clk
+    spi2_cs0:
+    - /pinctrl/spi2/spi2-cs0
+    spi2_rx:
+    - /pinctrl/spi2/spi2-rx
+    spi2_tx:
+    - /pinctrl/spi2/spi2-tx
+    spi3:
+    - /spi@ff350000
+    spi3_clk:
+    - /pinctrl/spi3/spi3-clk
+    spi3_cs0:
+    - /pinctrl/spi3/spi3-cs0
+    spi3_rx:
+    - /pinctrl/spi3/spi3-rx
+    spi3_tx:
+    - /pinctrl/spi3/spi3-tx
+    spi4:
+    - /spi@ff1f0000
+    spi4_clk:
+    - /pinctrl/spi4/spi4-clk
+    spi4_cs0:
+    - /pinctrl/spi4/spi4-cs0
+    spi4_rx:
+    - /pinctrl/spi4/spi4-rx
+    spi4_tx:
+    - /pinctrl/spi4/spi4-tx
+    spi5:
+    - /spi@ff200000
+    spi5_clk:
+    - /pinctrl/spi5/spi5-clk
+    spi5_cs0:
+    - /pinctrl/spi5/spi5-cs0
+    spi5_rx:
+    - /pinctrl/spi5/spi5-rx
+    spi5_tx:
+    - /pinctrl/spi5/spi5-tx
+    tcphy0:
+    - /phy@ff7c0000
+    tcphy0_dp:
+    - /phy@ff7c0000/dp-port
+    tcphy0_usb3:
+    - /phy@ff7c0000/usb3-port
+    tcphy1:
+    - /phy@ff800000
+    tcphy1_dp:
+    - /phy@ff800000/dp-port
+    tcphy1_usb3:
+    - /phy@ff800000/usb3-port
+    test_clkout0:
+    - /pinctrl/testclk/test-clkout0
+    test_clkout1:
+    - /pinctrl/testclk/test-clkout1
+    test_clkout2:
+    - /pinctrl/testclk/test-clkout2
+    thermal_zones:
+    - /thermal-zones
+    tsadc:
+    - /tsadc@ff260000
+    u2phy0:
+    - /syscon@ff770000/usb2phy@e450
+    u2phy0_host:
+    - /syscon@ff770000/usb2phy@e450/host-port
+    u2phy0_otg:
+    - /syscon@ff770000/usb2phy@e450/otg-port
+    u2phy1:
+    - /syscon@ff770000/usb2phy@e460
+    u2phy1_host:
+    - /syscon@ff770000/usb2phy@e460/host-port
+    u2phy1_otg:
+    - /syscon@ff770000/usb2phy@e460/otg-port
+    uart0:
+    - /serial@ff180000
+    uart0_cts:
+    - /pinctrl/uart0/uart0-cts
+    uart0_rts:
+    - /pinctrl/uart0/uart0-rts
+    uart0_xfer:
+    - /pinctrl/uart0/uart0-xfer
+    uart1:
+    - /serial@ff190000
+    uart1_xfer:
+    - /pinctrl/uart1/uart1-xfer
+    uart2:
+    - /serial@ff1a0000
+    uart2a_xfer:
+    - /pinctrl/uart2a/uart2a-xfer
+    uart2b_xfer:
+    - /pinctrl/uart2b/uart2b-xfer
+    uart2c_xfer:
+    - /pinctrl/uart2c/uart2c-xfer
+    uart3:
+    - /serial@ff1b0000
+    uart3_cts:
+    - /pinctrl/uart3/uart3-cts
+    uart3_rts:
+    - /pinctrl/uart3/uart3-rts
+    uart3_xfer:
+    - /pinctrl/uart3/uart3-xfer
+    uart4:
+    - /serial@ff370000
+    uart4_xfer:
+    - /pinctrl/uart4/uart4-xfer
+    uarthdcp_xfer:
+    - /pinctrl/uarthdcp/uarthdcp-xfer
+    usb_host0_ehci:
+    - /usb@fe380000
+    usb_host0_ohci:
+    - /usb@fe3a0000
+    usb_host1_ehci:
+    - /usb@fe3c0000
+    usb_host1_ohci:
+    - /usb@fe3e0000
+    usbdrd3_0:
+    - /usb@fe800000
+    usbdrd3_1:
+    - /usb@fe900000
+    usbdrd_dwc3_0:
+    - /usb@fe800000/usb@fe800000
+    usbdrd_dwc3_1:
+    - /usb@fe900000/usb@fe900000
+    vcc1v8_codec:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG7
+    vcc1v8_dvp:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG1
+    vcc1v8_pmu:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG3
+    vcc3v0_tp:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG2
+    vcc3v3_s0:
+    - /i2c@ff3c0000/pmic@1b/regulators/SWITCH_REG2
+    vcc3v3_s3:
+    - /i2c@ff3c0000/pmic@1b/regulators/SWITCH_REG1
+    vcc3v3_sys:
+    - /vcc3v3-sys
+    vcc5v0_sys:
+    - /vcc5v0-sys
+    vcc_1v5:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG6
+    vcc_1v8:
+    - /i2c@ff3c0000/pmic@1b/regulators/DCDC_REG4
+    vcc_3v0:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG8
+    vcc_ddr:
+    - /i2c@ff3c0000/pmic@1b/regulators/DCDC_REG3
+    vcc_phy:
+    - /vcc-phy
+    vcc_sdio:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG4
+    vcca3v0_codec:
+    - /i2c@ff3c0000/pmic@1b/regulators/LDO_REG5
+    vdd_center:
+    - /i2c@ff3c0000/pmic@1b/regulators/DCDC_REG1
+    vdd_cpu_b:
+    - /i2c@ff3c0000/syr827@40
+    vdd_cpu_l:
+    - /i2c@ff3c0000/pmic@1b/regulators/DCDC_REG2
+    vdd_gpu:
+    - /i2c@ff3c0000/syr828@41
+    vdd_log:
+    - /vdd-log
+    vdec:
+    - /video-codec@ff660000
+    vdec_mmu:
+    - /iommu@ff660480
+    vop0_pwm_pin:
+    - /pinctrl/pwm0/vop0-pwm-pin
+    vop1_pwm_pin:
+    - /pinctrl/pwm0/vop1-pwm-pin
+    vopb:
+    - /vop@ff900000
+    vopb_mmu:
+    - /iommu@ff903f00
+    vopb_out:
+    - /vop@ff900000/port
+    vopb_out_dp:
+    - /vop@ff900000/port/endpoint@4
+    vopb_out_edp:
+    - /vop@ff900000/port/endpoint@0
+    vopb_out_hdmi:
+    - /vop@ff900000/port/endpoint@2
+    vopb_out_mipi:
+    - /vop@ff900000/port/endpoint@1
+    vopb_out_mipi1:
+    - /vop@ff900000/port/endpoint@3
+    vopl:
+    - /vop@ff8f0000
+    vopl_mmu:
+    - /iommu@ff8f3f00
+    vopl_out:
+    - /vop@ff8f0000/port
+    vopl_out_dp:
+    - /vop@ff8f0000/port/endpoint@4
+    vopl_out_edp:
+    - /vop@ff8f0000/port/endpoint@1
+    vopl_out_hdmi:
+    - /vop@ff8f0000/port/endpoint@2
+    vopl_out_mipi:
+    - /vop@ff8f0000/port/endpoint@0
+    vopl_out_mipi1:
+    - /vop@ff8f0000/port/endpoint@3
+    vpu:
+    - /video-codec@ff650000
+    vpu_mmu:
+    - /iommu@ff650800
+    wafer_info:
+    - /efuse@ff690000/wafer-info@1c
+    xin24m:
+    - /xin24m
+  aliases:
+    ethernet0:
+    - /ethernet@fe300000
+    i2c0:
+    - /i2c@ff3c0000
+    i2c1:
+    - /i2c@ff110000
+    i2c2:
+    - /i2c@ff120000
+    i2c3:
+    - /i2c@ff130000
+    i2c4:
+    - /i2c@ff3d0000
+    i2c5:
+    - /i2c@ff140000
+    i2c6:
+    - /i2c@ff150000
+    i2c7:
+    - /i2c@ff160000
+    i2c8:
+    - /i2c@ff3e0000
+    mmc0:
+    - /mmc@fe330000
+    serial0:
+    - /serial@ff180000
+    serial1:
+    - /serial@ff190000
+    serial2:
+    - /serial@ff1a0000
+    serial3:
+    - /serial@ff1b0000
+    serial4:
+    - /serial@ff370000
+  clock-controller@ff750000:
+    '#clock-cells':
+    - [1]
+    '#reset-cells':
+    - [1]
+    assigned-clock-rates:
+    - [676000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff750000
+      - 1
+    clock-names:
+    - xin24m
+    clocks:
+    - [127]
+    compatible:
+    - rockchip,rk3399-pmucru
+    reg:
+    - [0, 4285857792, 0, 4096]
+    rockchip,grf:
+    - [17]
+  clock-controller@ff760000:
+    '#clock-cells':
+    - [1]
+    '#reset-cells':
+    - [1]
+    assigned-clock-rates:
+    - [594000000, 800000000, 1000000000, 150000000, 75000000, 37500000, 100000000,
+      100000000, 50000000, 600000000, 100000000, 50000000, 400000000, 400000000, 200000000,
+      200000000, 400000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 5
+      - p:/clock-controller@ff760000
+      - 4
+      - p:/clock-controller@ff760000
+      - 6
+      - p:/clock-controller@ff760000
+      - 192
+      - p:/clock-controller@ff760000
+      - 448
+      - p:/clock-controller@ff760000
+      - 320
+      - p:/clock-controller@ff760000
+      - 194
+      - p:/clock-controller@ff760000
+      - 449
+      - p:/clock-controller@ff760000
+      - 322
+      - p:/clock-controller@ff760000
+      - 201
+      - p:/clock-controller@ff760000
+      - 450
+      - p:/clock-controller@ff760000
+      - 323
+      - p:/clock-controller@ff760000
+      - 227
+      - p:/clock-controller@ff760000
+      - 222
+      - p:/clock-controller@ff760000
+      - 262
+      - p:/clock-controller@ff760000
+      - 376
+      - p:/clock-controller@ff760000
+      - 237
+    clock-names:
+    - xin24m
+    clocks:
+    - [127]
+    compatible:
+    - rockchip,rk3399-cru
+    reg:
+    - [0, 4285923328, 0, 4096]
+    rockchip,grf:
+    - [25]
+  compatible:
+  - "rockchip,rk3399-sw799\0rockchip,rk3399"
+  cpus:
+    '#address-cells':
+    - [2]
+    '#size-cells':
+    - [0]
+    cpu-map:
+      cluster0:
+        core0:
+          cpu:
+          - - p:/cpus/cpu@0
+        core1:
+          cpu:
+          - - p:/cpus/cpu@1
+        core2:
+          cpu:
+          - - p:/cpus/cpu@2
+        core3:
+          cpu:
+          - - p:/cpus/cpu@3
+      cluster1:
+        core0:
+          cpu:
+          - - p:/cpus/cpu@100
+        core1:
+          cpu:
+          - - p:/cpus/cpu@101
+    cpu@0:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [485]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 8
+      compatible:
+      - arm,cortex-a53
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/pmic@1b/regulators/DCDC_REG2
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [100]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-0
+      reg:
+      - [0, 0]
+    cpu@1:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [485]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 8
+      compatible:
+      - arm,cortex-a53
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/pmic@1b/regulators/DCDC_REG2
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [100]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-0
+      reg:
+      - [0, 1]
+    cpu@100:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [1024]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 9
+      compatible:
+      - arm,cortex-a72
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/syr827@40
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [436]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-1
+      reg:
+      - [0, 256]
+      thermal-idle:
+        '#cooling-cells':
+        - [2]
+        duration-us:
+        - [10000]
+        exit-latency-us:
+        - [500]
+    cpu@101:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [1024]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 9
+      compatible:
+      - arm,cortex-a72
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/syr827@40
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [436]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-1
+      reg:
+      - [0, 257]
+      thermal-idle:
+        '#cooling-cells':
+        - [2]
+        duration-us:
+        - [10000]
+        exit-latency-us:
+        - [500]
+    cpu@2:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [485]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 8
+      compatible:
+      - arm,cortex-a53
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/pmic@1b/regulators/DCDC_REG2
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [100]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-0
+      reg:
+      - [0, 2]
+    cpu@3:
+      '#cooling-cells':
+      - [2]
+      capacity-dmips-mhz:
+      - [485]
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 8
+      compatible:
+      - arm,cortex-a53
+      cpu-idle-states:
+      - - p:/cpus/idle-states/cpu-sleep
+        - p:/cpus/idle-states/cluster-sleep
+      cpu-supply:
+      - - p:/i2c@ff3c0000/pmic@1b/regulators/DCDC_REG2
+      device_type:
+      - cpu
+      dynamic-power-coefficient:
+      - [100]
+      enable-method:
+      - psci
+      operating-points-v2:
+      - - p:/opp-table-0
+      reg:
+      - [0, 3]
+    idle-states:
+      cluster-sleep:
+        arm,psci-suspend-param:
+        - [16842752]
+        compatible:
+        - arm,idle-state
+        entry-latency-us:
+        - [400]
+        exit-latency-us:
+        - [500]
+        local-timer-stop: true
+        min-residency-us:
+        - [2000]
+      cpu-sleep:
+        arm,psci-suspend-param:
+        - [65536]
+        compatible:
+        - arm,idle-state
+        entry-latency-us:
+        - [120]
+        exit-latency-us:
+        - [250]
+        local-timer-stop: true
+        min-residency-us:
+        - [900]
+      entry-method:
+      - psci
+  crypto@ff8b0000:
+    clock-names:
+    - "hclk_master\0hclk_slave\0sclk"
+    clocks:
+    - [8, 464, 8, 466, 8, 133]
+    compatible:
+    - rockchip,rk3399-crypto
+    interrupts:
+    - [0, 0, 4, 0]
+    reg:
+    - [0, 4287299584, 0, 16384]
+    reset-names:
+    - "master\0lave\0crypto"
+    resets:
+    - [8, 181, 8, 174, 8, 175]
+  crypto@ff8b8000:
+    clock-names:
+    - "hclk_master\0hclk_slave\0sclk"
+    clocks:
+    - [8, 465, 8, 467, 8, 134]
+    compatible:
+    - rockchip,rk3399-crypto
+    interrupts:
+    - [0, 135, 4, 0]
+    reg:
+    - [0, 4287332352, 0, 16384]
+    reset-names:
+    - "master\0slave\0crypto"
+    resets:
+    - [8, 186, 8, 184, 8, 185]
+  debug@fe430000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 333]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [2]
+    reg:
+    - [0, 4265803776, 0, 4096]
+  debug@fe432000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 333]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [3]
+    reg:
+    - [0, 4265811968, 0, 4096]
+  debug@fe434000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 333]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [4]
+    reg:
+    - [0, 4265820160, 0, 4096]
+  debug@fe436000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 333]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [5]
+    reg:
+    - [0, 4265828352, 0, 4096]
+  debug@fe610000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 332]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [6]
+    reg:
+    - [0, 4267769856, 0, 4096]
+  debug@fe710000:
+    clock-names:
+    - apb_pclk
+    clocks:
+    - [8, 332]
+    compatible:
+    - "arm,coresight-cpu-debug\0arm,primecell"
+    cpu:
+    - [7]
+    reg:
+    - [0, 4268818432, 0, 4096]
+  dfi@ff630000:
+    clock-names:
+    - pclk_ddr_mon
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 377
+    compatible:
+    - rockchip,rk3399-dfi
+    interrupts:
+    - [0, 131, 4, 0]
+    reg:
+    - [0, 4284678144, 0, 16384]
+    rockchip,pmu:
+    - - p:/syscon@ff320000
+    status:
+    - disabled
+  display-subsystem:
+    compatible:
+    - rockchip,display-subsystem
+    ports:
+    - - p:/vop@ff8f0000/port
+      - p:/vop@ff900000/port
+  dma-controller@ff6d0000:
+    '#dma-cells':
+    - [1]
+    arm,pl330-periph-burst: true
+    clock-names:
+    - apb_pclk
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 211
+    compatible:
+    - "arm,pl330\0arm,primecell"
+    interrupts:
+    - [0, 5, 4, 0, 0, 6, 4, 0]
+    reg:
+    - [0, 4285333504, 0, 16384]
+  dma-controller@ff6e0000:
+    '#dma-cells':
+    - [1]
+    arm,pl330-periph-burst: true
+    clock-names:
+    - apb_pclk
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 212
+    compatible:
+    - "arm,pl330\0arm,primecell"
+    interrupts:
+    - [0, 7, 4, 0, 0, 8, 4, 0]
+    reg:
+    - [0, 4285399040, 0, 16384]
+  dp@fec00000:
+    '#sound-dai-cells':
+    - [1]
+    assigned-clock-rates:
+    - [100000000, 200000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 114
+      - p:/clock-controller@ff760000
+      - 161
+    clock-names:
+    - "core-clk\0pclk\0spdif\0grf"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 114
+      - p:/clock-controller@ff760000
+      - 373
+      - p:/clock-controller@ff760000
+      - 161
+      - p:/clock-controller@ff760000
+      - 367
+    compatible:
+    - rockchip,rk3399-cdn-dp
+    interrupts:
+    - [0, 9, 4, 0]
+    phys:
+    - - p:/phy@ff7c0000/dp-port
+    ports:
+      port:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        endpoint@0:
+          reg:
+          - [0]
+          remote-endpoint:
+          - - p:/vop@ff900000/port/endpoint@4
+        endpoint@1:
+          reg:
+          - [1]
+          remote-endpoint:
+          - - p:/vop@ff8f0000/port/endpoint@4
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 21
+    reg:
+    - [0, 4273995776, 0, 1048576]
+    reset-names:
+    - "spdif\0dptx\0apb\0core"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 259
+      - p:/clock-controller@ff760000
+      - 328
+      - p:/clock-controller@ff760000
+      - 330
+      - p:/clock-controller@ff760000
+      - 253
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - disabled
+  edp@ff970000:
+    clock-names:
+    - "dp\0pclk\0grf"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 362
+      - p:/clock-controller@ff760000
+      - 364
+    compatible:
+    - rockchip,rk3399-edp
+    interrupts:
+    - [0, 10, 4, 0]
+    pinctrl-0:
+    - [157]
+    pinctrl-names:
+    - default
+    ports:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      port@0:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        endpoint@0:
+          reg:
+          - [0]
+          remote-endpoint:
+          - - p:/vop@ff900000/port/endpoint@0
+        endpoint@1:
+          reg:
+          - [1]
+          remote-endpoint:
+          - - p:/vop@ff8f0000/port/endpoint@1
+        reg:
+        - [0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 25
+    reg:
+    - [0, 4288086016, 0, 32768]
+    reset-names:
+    - dp
+    resets:
+    - - p:/clock-controller@ff760000
+      - 285
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - disabled
+  efuse@ff690000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [1]
+    center-leakage@19:
+      reg:
+      - [25, 1]
+    clock-names:
+    - pclk_efuse
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 381
+    compatible:
+    - rockchip,rk3399-efuse
+    cpu-id@7:
+      reg:
+      - [7, 16]
+    cpu-leakage@17:
+      reg:
+      - [23, 1]
+    cpu-leakage@1a:
+      reg:
+      - [26, 1]
+    gpu-leakage@18:
+      reg:
+      - [24, 1]
+    logic-leakage@1b:
+      reg:
+      - [27, 1]
+    reg:
+    - [0, 4285071360, 0, 128]
+    wafer-info@1c:
+      reg:
+      - [28, 1]
+  ethernet@fe300000:
+    assigned-clock-parents:
+    - - p:/external-gmac-clock
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 166
+    clock-names:
+    - "stmmaceth\0mac_clk_rx\0mac_clk_tx\0clk_mac_ref\0clk_mac_refout\0aclk_mac\0\
+      pclk_mac"
+    clock_in_out:
+    - input
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 105
+      - p:/clock-controller@ff760000
+      - 103
+      - p:/clock-controller@ff760000
+      - 104
+      - p:/clock-controller@ff760000
+      - 102
+      - p:/clock-controller@ff760000
+      - 106
+      - p:/clock-controller@ff760000
+      - 213
+      - p:/clock-controller@ff760000
+      - 358
+    compatible:
+    - rockchip,rk3399-gmac
+    interrupt-names:
+    - macirq
+    interrupts:
+    - [0, 12, 4, 0]
+    phy-mode:
+    - rgmii
+    phy-supply:
+    - - p:/vcc-phy
+    pinctrl-0:
+    - - p:/pinctrl/gmac/rgmii-pins
+    pinctrl-names:
+    - default
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 22
+    reg:
+    - [0, 4264558592, 0, 65536]
+    reset-names:
+    - stmmaceth
+    resets:
+    - - p:/clock-controller@ff760000
+      - 137
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    rx_delay:
+    - [17]
+    snps,reset-active-low: true
+    snps,reset-delays-us:
+    - [0, 10000, 50000]
+    snps,reset-gpio:
+    - - p:/pinctrl/gpio@ff788000
+      - 15
+      - 1
+    snps,txpbl:
+    - [4]
+    status:
+    - okay
+    tx_delay:
+    - [40]
+  external-gmac-clock:
+    '#clock-cells':
+    - [0]
+    clock-frequency:
+    - [125000000]
+    clock-output-names:
+    - clkin_gmac
+    compatible:
+    - fixed-clock
+  gpu@ff9a0000:
+    '#cooling-cells':
+    - [2]
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 208
+    compatible:
+    - "rockchip,rk3399-mali\0arm,mali-t860"
+    interrupt-names:
+    - "job\0mmu\0gpu"
+    interrupts:
+    - [0, 20, 4, 0, 0, 21, 4, 0, 0, 19, 4, 0]
+    mali-supply:
+    - - p:/i2c@ff3c0000/syr828@41
+    operating-points-v2:
+    - - p:/opp-table-2
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 35
+    reg:
+    - [0, 4288282624, 0, 65536]
+    status:
+    - okay
+  hdmi-sound:
+    compatible:
+    - simple-audio-card
+    simple-audio-card,codec:
+      sound-dai:
+      - - p:/hdmi@ff940000
+    simple-audio-card,cpu:
+      sound-dai:
+      - - p:/i2s@ff8a0000
+    simple-audio-card,format:
+    - i2s
+    simple-audio-card,mclk-fs:
+    - [256]
+    simple-audio-card,name:
+    - hdmi-sound
+    status:
+    - disabled
+  hdmi@ff940000:
+    '#sound-dai-cells':
+    - [0]
+    clock-names:
+    - "iahb\0isfr\0cec\0grf\0ref"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 372
+      - p:/clock-controller@ff760000
+      - 113
+      - p:/clock-controller@ff760000
+      - 112
+      - p:/clock-controller@ff760000
+      - 367
+      - p:/clock-controller@ff760000
+      - 7
+    compatible:
+    - rockchip,rk3399-dw-hdmi
+    interrupts:
+    - [0, 23, 4, 0]
+    ports:
+      port:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        endpoint@0:
+          reg:
+          - [0]
+          remote-endpoint:
+          - - p:/vop@ff900000/port/endpoint@2
+        endpoint@1:
+          reg:
+          - [1]
+          remote-endpoint:
+          - - p:/vop@ff8f0000/port/endpoint@2
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 21
+    reg:
+    - [0, 4287889408, 0, 131072]
+    reg-io-width:
+    - [4]
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - disabled
+  i2c@ff110000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 65]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 65
+      - p:/clock-controller@ff760000
+      - 341
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 59, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c1/i2c1-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279304192, 0, 4096]
+    status:
+    - disabled
+  i2c@ff120000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 66]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 66
+      - p:/clock-controller@ff760000
+      - 342
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 35, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c2/i2c2-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279369728, 0, 4096]
+    status:
+    - disabled
+  i2c@ff130000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 67]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 67
+      - p:/clock-controller@ff760000
+      - 343
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 34, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c3/i2c3-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279435264, 0, 4096]
+    status:
+    - disabled
+  i2c@ff140000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 68]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 68
+      - p:/clock-controller@ff760000
+      - 344
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 38, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c5/i2c5-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279500800, 0, 4096]
+    status:
+    - disabled
+  i2c@ff150000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 69]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 69
+      - p:/clock-controller@ff760000
+      - 345
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 37, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c6/i2c6-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279566336, 0, 4096]
+    status:
+    - disabled
+  i2c@ff160000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 70]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 70
+      - p:/clock-controller@ff760000
+      - 346
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 36, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c7/i2c7-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279631872, 0, 4096]
+    status:
+    - disabled
+  i2c@ff3c0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [108, 9]
+    clock-frequency:
+    - [400000]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 9
+      - p:/clock-controller@ff750000
+      - 27
+    compatible:
+    - rockchip,rk3399-i2c
+    i2c-scl-falling-time-ns:
+    - [4]
+    i2c-scl-rising-time-ns:
+    - [168]
+    interrupts:
+    - [0, 57, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c0/i2c0-xfer
+    pinctrl-names:
+    - default
+    pmic@1b:
+      '#clock-cells':
+      - [1]
+      clock-output-names:
+      - "xin32k\0rk808-clkout2"
+      compatible:
+      - rockchip,rk808
+      interrupt-parent:
+      - - p:/pinctrl/gpio@ff730000
+      interrupts:
+      - [10, 8]
+      pinctrl-names:
+      - default
+      reg:
+      - [27]
+      regulators:
+        DCDC_REG1:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1350000]
+          regulator-min-microvolt:
+          - [750000]
+          regulator-name:
+          - vdd_center
+          regulator-ramp-delay:
+          - [6001]
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        DCDC_REG2:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1350000]
+          regulator-min-microvolt:
+          - [750000]
+          regulator-name:
+          - vdd_cpu_l
+          regulator-ramp-delay:
+          - [6001]
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        DCDC_REG3:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name:
+          - vcc_ddr
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+        DCDC_REG4:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1800000]
+          regulator-min-microvolt:
+          - [1800000]
+          regulator-name:
+          - vcc_1v8
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt:
+            - [1800000]
+        LDO_REG1:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1800000]
+          regulator-min-microvolt:
+          - [1800000]
+          regulator-name:
+          - vcc1v8_dvp
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        LDO_REG2:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [3000000]
+          regulator-min-microvolt:
+          - [3000000]
+          regulator-name:
+          - vcc3v0_tp
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        LDO_REG3:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1800000]
+          regulator-min-microvolt:
+          - [1800000]
+          regulator-name:
+          - vcc1v8_pmu
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt:
+            - [1800000]
+        LDO_REG4:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [3300000]
+          regulator-min-microvolt:
+          - [1800000]
+          regulator-name:
+          - vcc_sdio
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt:
+            - [3300000]
+        LDO_REG5:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [3000000]
+          regulator-min-microvolt:
+          - [3000000]
+          regulator-name:
+          - vcca3v0_codec
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        LDO_REG6:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1500000]
+          regulator-min-microvolt:
+          - [1500000]
+          regulator-name:
+          - vcc_1v5
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt:
+            - [1500000]
+        LDO_REG7:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [1800000]
+          regulator-min-microvolt:
+          - [1800000]
+          regulator-name:
+          - vcc1v8_codec
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        LDO_REG8:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt:
+          - [3000000]
+          regulator-min-microvolt:
+          - [3000000]
+          regulator-name:
+          - vcc_3v0
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt:
+            - [3000000]
+        SWITCH_REG1:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name:
+          - vcc3v3_s3
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        SWITCH_REG2:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name:
+          - vcc3v3_s0
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+      rockchip,system-power-controller: true
+      vcc1-supply:
+      - - p:/vcc3v3-sys
+      vcc10-supply:
+      - - p:/vcc3v3-sys
+      vcc11-supply:
+      - - p:/vcc3v3-sys
+      vcc12-supply:
+      - - p:/vcc3v3-sys
+      vcc2-supply:
+      - - p:/vcc3v3-sys
+      vcc3-supply:
+      - - p:/vcc3v3-sys
+      vcc4-supply:
+      - - p:/vcc3v3-sys
+      vcc6-supply:
+      - - p:/vcc3v3-sys
+      vcc7-supply:
+      - - p:/vcc3v3-sys
+      vcc8-supply:
+      - - p:/vcc3v3-sys
+      vcc9-supply:
+      - - p:/vcc3v3-sys
+      vddio-supply:
+      - - p:/i2c@ff3c0000/pmic@1b/regulators/LDO_REG3
+      wakeup-source: true
+    reg:
+    - [0, 4282122240, 0, 4096]
+    status:
+    - okay
+    syr827@40:
+      compatible:
+      - silergy,syr827
+      fcs,suspend-voltage-selector:
+      - [1]
+      reg:
+      - [64]
+      regulator-always-on: true
+      regulator-boot-on: true
+      regulator-compatible:
+      - fan53555-reg
+      regulator-initial-state:
+      - [3]
+      regulator-max-microvolt:
+      - [1500000]
+      regulator-min-microvolt:
+      - [712500]
+      regulator-name:
+      - vdd_cpu_b
+      regulator-ramp-delay:
+      - [1000]
+      regulator-state-mem:
+        regulator-off-in-suspend: true
+      vin-supply:
+      - - p:/vcc5v0-sys
+      vsel-gpios:
+      - - p:/pinctrl/gpio@ff730000
+        - 17
+        - 0
+    syr828@41:
+      compatible:
+      - silergy,syr828
+      fcs,suspend-voltage-selector:
+      - [1]
+      pinctrl-names:
+      - default
+      reg:
+      - [65]
+      regulator-always-on: true
+      regulator-boot-on: true
+      regulator-compatible:
+      - fan53555-reg
+      regulator-initial-state:
+      - [3]
+      regulator-max-microvolt:
+      - [1500000]
+      regulator-min-microvolt:
+      - [712500]
+      regulator-name:
+      - vdd_gpu
+      regulator-ramp-delay:
+      - [1000]
+      regulator-state-mem:
+        regulator-off-in-suspend: true
+      vin-supply:
+      - - p:/vcc5v0-sys
+      vsel-gpios:
+      - - p:/pinctrl/gpio@ff730000
+        - 14
+        - 0
+  i2c@ff3d0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [108, 10]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 10
+      - p:/clock-controller@ff750000
+      - 28
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 56, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c4/i2c4-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282187776, 0, 4096]
+    status:
+    - disabled
+  i2c@ff3e0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [108, 11]
+    clock-names:
+    - "i2c\0pclk"
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 11
+      - p:/clock-controller@ff750000
+      - 29
+    compatible:
+    - rockchip,rk3399-i2c
+    interrupts:
+    - [0, 58, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2c8/i2c8-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282253312, 0, 4096]
+    status:
+    - disabled
+  i2s@ff880000:
+    '#sound-dai-cells':
+    - [0]
+    clock-names:
+    - "i2s_clk\0i2s_hclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 86
+      - p:/clock-controller@ff760000
+      - 468
+    compatible:
+    - "rockchip,rk3399-i2s\0rockchip,rk3066-i2s"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6d0000
+      - 0
+      - p:/dma-controller@ff6d0000
+      - 1
+    interrupts:
+    - [0, 39, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2s0/i2s0-8ch-bus
+    pinctrl-1:
+    - [131]
+    pinctrl-names:
+    - "bclk_on\0bclk_off"
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 28
+    reg:
+    - [0, 4287102976, 0, 4096]
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - disabled
+  i2s@ff890000:
+    '#sound-dai-cells':
+    - [0]
+    clock-names:
+    - "i2s_clk\0i2s_hclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 87
+      - p:/clock-controller@ff760000
+      - 469
+    compatible:
+    - "rockchip,rk3399-i2s\0rockchip,rk3066-i2s"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6d0000
+      - 2
+      - p:/dma-controller@ff6d0000
+      - 3
+    interrupts:
+    - [0, 40, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/i2s1/i2s1-2ch-bus
+    pinctrl-names:
+    - default
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 28
+    reg:
+    - [0, 4287168512, 0, 4096]
+    status:
+    - disabled
+  i2s@ff8a0000:
+    '#sound-dai-cells':
+    - [0]
+    clock-names:
+    - "i2s_clk\0i2s_hclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 88
+      - p:/clock-controller@ff760000
+      - 470
+    compatible:
+    - "rockchip,rk3399-i2s\0rockchip,rk3066-i2s"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6d0000
+      - 4
+      - p:/dma-controller@ff6d0000
+      - 5
+    interrupts:
+    - [0, 41, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 28
+    reg:
+    - [0, 4287234048, 0, 4096]
+    status:
+    - disabled
+  interrupt-controller@fee00000:
+    '#address-cells':
+    - [2]
+    '#interrupt-cells':
+    - [4]
+    '#size-cells':
+    - [2]
+    compatible:
+    - arm,gic-v3
+    interrupt-controller: true
+    interrupt-controller@fee20000:
+      '#msi-cells':
+      - [1]
+      compatible:
+      - arm,gic-v3-its
+      msi-controller: true
+      reg:
+      - [0, 4276224000, 0, 131072]
+    interrupts:
+    - [1, 9, 4, 0]
+    ppi-partitions:
+      interrupt-partition-0:
+        affinity:
+        - - p:/cpus/cpu@0
+          - p:/cpus/cpu@1
+          - p:/cpus/cpu@2
+          - p:/cpus/cpu@3
+      interrupt-partition-1:
+        affinity:
+        - - p:/cpus/cpu@100
+          - p:/cpus/cpu@101
+    ranges: true
+    reg:
+    - [0, 4276092928, 0, 65536, 0, 4277141504, 0, 786432, 0, 4293918720, 0, 65536,
+      0, 4293984256, 0, 65536, 0, 4294049792, 0, 65536]
+  interrupt-parent:
+  - - p:/interrupt-controller@fee00000
+  iommu@ff650800:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 235
+      - p:/clock-controller@ff760000
+      - 490
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 115, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 31
+    reg:
+    - [0, 4284811264, 0, 64]
+  iommu@ff660480:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 237
+      - p:/clock-controller@ff760000
+      - 492
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 117, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 32
+    reg:
+    - [0, 4284875904, 0, 64, 0, 4284875968, 0, 64]
+  iommu@ff670800:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 225
+      - p:/clock-controller@ff760000
+      - 477
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 42, 4, 0]
+    reg:
+    - [0, 4284942336, 0, 64]
+    status:
+    - disabled
+  iommu@ff8f3f00:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 219
+      - p:/clock-controller@ff760000
+      - 475
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 119, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 18
+    reg:
+    - [0, 4287577856, 0, 256]
+    status:
+    - disabled
+  iommu@ff903f00:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 217
+      - p:/clock-controller@ff760000
+      - 473
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 118, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 17
+    reg:
+    - [0, 4287643392, 0, 256]
+    status:
+    - disabled
+  iommu@ff914000:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 233
+      - p:/clock-controller@ff760000
+      - 483
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 43, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 19
+    reg:
+    - [0, 4287709184, 0, 256, 0, 4287713280, 0, 256]
+    rockchip,disable-mmu-reset: true
+  iommu@ff924000:
+    '#iommu-cells':
+    - [0]
+    clock-names:
+    - "aclk\0iface"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 234
+      - p:/clock-controller@ff760000
+      - 484
+    compatible:
+    - rockchip,iommu
+    interrupts:
+    - [0, 44, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 20
+    reg:
+    - [0, 4287774720, 0, 256, 0, 4287778816, 0, 256]
+    rockchip,disable-mmu-reset: true
+  isp0@ff910000:
+    clock-names:
+    - "isp\0aclk\0hclk"
+    clocks:
+    - [8, 110, 8, 233, 8, 483]
+    compatible:
+    - rockchip,rk3399-cif-isp
+    interrupts:
+    - [0, 43, 4, 0]
+    iommus:
+    - [145]
+    phy-names:
+    - dphy
+    phys:
+    - [146]
+    ports:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      port@0:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        reg:
+        - [0]
+    power-domains:
+    - [24, 19]
+    reg:
+    - [0, 4287692800, 0, 16384]
+    status:
+    - disabled
+  isp1@ff920000:
+    clock-names:
+    - "isp\0aclk\0hclk"
+    clocks:
+    - [8, 111, 8, 234, 8, 484]
+    compatible:
+    - rockchip,rk3399-cif-isp
+    interrupts:
+    - [0, 44, 4, 0]
+    iommus:
+    - [147]
+    phy-names:
+    - dphy
+    phys:
+    - [148]
+    ports:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      port@0:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        reg:
+        - [0]
+    power-domains:
+    - [24, 20]
+    reg:
+    - [0, 4287758336, 0, 16384]
+    status:
+    - disabled
+  memory-controller:
+    clock-names:
+    - dmc_clk
+    clocks:
+    - [8, 168]
+    compatible:
+    - rockchip,rk3399-dmc
+    devfreq-events:
+    - [18]
+    rockchip,pmu:
+    - [17]
+    status:
+    - disabled
+  mipi@ff960000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "ref\0pclk\0phy_cfg\0grf"
+    clocks:
+    - [8, 162, 8, 368, 8, 163, 8, 367]
+    compatible:
+    - "rockchip,rk3399-mipi-dsi\0snps,dw-mipi-dsi"
+    interrupts:
+    - [0, 45, 4, 0]
+    ports:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      port@0:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        endpoint@0:
+          reg:
+          - [0]
+          remote-endpoint:
+          - [153]
+        endpoint@1:
+          reg:
+          - [1]
+          remote-endpoint:
+          - [154]
+        reg:
+        - [0]
+    power-domains:
+    - [24, 15]
+    reg:
+    - [0, 4288020480, 0, 32768]
+    reset-names:
+    - apb
+    resets:
+    - [8, 251]
+    rockchip,grf:
+    - [25]
+    status:
+    - disabled
+  mipi@ff968000:
+    '#address-cells':
+    - [1]
+    '#phy-cells':
+    - [0]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "ref\0pclk\0phy_cfg\0grf"
+    clocks:
+    - [8, 162, 8, 369, 8, 164, 8, 367]
+    compatible:
+    - "rockchip,rk3399-mipi-dsi\0snps,dw-mipi-dsi"
+    interrupts:
+    - [0, 46, 4, 0]
+    ports:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      port@0:
+        '#address-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        endpoint@0:
+          reg:
+          - [0]
+          remote-endpoint:
+          - [155]
+        endpoint@1:
+          reg:
+          - [1]
+          remote-endpoint:
+          - [156]
+        reg:
+        - [0]
+    power-domains:
+    - [24, 15]
+    reg:
+    - [0, 4288053248, 0, 32768]
+    reset-names:
+    - apb
+    resets:
+    - [8, 252]
+    rockchip,grf:
+    - [25]
+    status:
+    - disabled
+  mmc@fe310000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    bus-width:
+    - [4]
+    cap-sd-highspeed: true
+    cap-sdio-irq: true
+    clock-names:
+    - "biu\0ciu\0ciu-drive\0ciu-sample"
+    clocks:
+    - [8, 494, 8, 77, 8, 156, 8, 157]
+    compatible:
+    - "rockchip,rk3399-dw-mshc\0rockchip,rk3288-dw-mshc"
+    fifo-depth:
+    - [256]
+    interrupts:
+    - [0, 64, 4, 0]
+    keep-power-in-suspend: true
+    max-frequency:
+    - [150000000]
+    mmc-pwrseq:
+    - [30]
+    non-removable: true
+    pinctrl-0:
+    - [31, 32, 33]
+    pinctrl-names:
+    - default
+    power-domains:
+    - [24, 28]
+    reg:
+    - [0, 4264624128, 0, 16384]
+    reset-names:
+    - reset
+    resets:
+    - [8, 121]
+    sd-uhs-sdr104: true
+    status:
+    - okay
+    wifi@1:
+      brcm,drive-strength:
+      - [5]
+      compatible:
+      - brcm,bcm4329-fmac
+      interrupt-names:
+      - host-wake
+      interrupt-parent:
+      - [34]
+      interrupts:
+      - [3, 0]
+      pinctrl-names:
+      - default
+      reg:
+      - [1]
+  mmc@fe320000:
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 461]
+    clock-names:
+    - "biu\0ciu\0ciu-drive\0ciu-sample"
+    clocks:
+    - [8, 462, 8, 76, 8, 154, 8, 155]
+    compatible:
+    - "rockchip,rk3399-dw-mshc\0rockchip,rk3288-dw-mshc"
+    fifo-depth:
+    - [256]
+    interrupts:
+    - [0, 65, 4, 0]
+    max-frequency:
+    - [150000000]
+    power-domains:
+    - [24, 27]
+    reg:
+    - [0, 4264689664, 0, 16384]
+    reset-names:
+    - reset
+    resets:
+    - [8, 122]
+    status:
+    - disabled
+  mmc@fe330000:
+    '#clock-cells':
+    - [0]
+    arasan,soc-ctl-syscon:
+    - [25]
+    assigned-clock-rates:
+    - [200000000]
+    assigned-clocks:
+    - [8, 78]
+    bus-width:
+    - [8]
+    clock-names:
+    - "clk_xin\0clk_ahb"
+    clock-output-names:
+    - emmc_cardclock
+    clocks:
+    - [8, 78, 8, 240]
+    compatible:
+    - "rockchip,rk3399-sdhci-5.1\0arasan,sdhci-5.1"
+    disable-cqe-dcmd: true
+    interrupts:
+    - [0, 11, 4, 0]
+    keep-power-in-suspend: true
+    mmc-hs400-1_8v: true
+    mmc-hs400-enhanced-strobe: true
+    non-removable: true
+    phy-names:
+    - phy_arasan
+    phys:
+    - [35]
+    power-domains:
+    - [24, 23]
+    reg:
+    - [0, 4264755200, 0, 65536]
+    status:
+    - okay
+    supports-emmc: true
+  model:
+  - RK3399 SW799
+  opp-table-0:
+    compatible:
+    - operating-points-v2
+    opp-shared: true
+    opp00:
+      clock-latency-ns:
+      - [40000]
+      opp-hz:
+      - [0, 408000000]
+      opp-microvolt:
+      - [825000, 825000, 1250000]
+    opp01:
+      opp-hz:
+      - [0, 600000000]
+      opp-microvolt:
+      - [825000, 825000, 1250000]
+    opp02:
+      opp-hz:
+      - [0, 816000000]
+      opp-microvolt:
+      - [850000, 850000, 1250000]
+    opp03:
+      opp-hz:
+      - [0, 1008000000]
+      opp-microvolt:
+      - [925000, 925000, 1250000]
+    opp04:
+      opp-hz:
+      - [0, 1200000000]
+      opp-microvolt:
+      - [1000000, 1000000, 1250000]
+    opp05:
+      opp-hz:
+      - [0, 1416000000]
+      opp-microvolt:
+      - [1125000, 1125000, 1250000]
+  opp-table-1:
+    compatible:
+    - operating-points-v2
+    opp-shared: true
+    opp00:
+      clock-latency-ns:
+      - [40000]
+      opp-hz:
+      - [0, 408000000]
+      opp-microvolt:
+      - [825000, 825000, 1250000]
+    opp01:
+      opp-hz:
+      - [0, 600000000]
+      opp-microvolt:
+      - [825000, 825000, 1250000]
+    opp02:
+      opp-hz:
+      - [0, 816000000]
+      opp-microvolt:
+      - [825000, 825000, 1250000]
+    opp03:
+      opp-hz:
+      - [0, 1008000000]
+      opp-microvolt:
+      - [875000, 875000, 1250000]
+    opp04:
+      opp-hz:
+      - [0, 1200000000]
+      opp-microvolt:
+      - [950000, 950000, 1250000]
+    opp05:
+      opp-hz:
+      - [0, 1416000000]
+      opp-microvolt:
+      - [1025000, 1025000, 1250000]
+    opp06:
+      opp-hz:
+      - [0, 1608000000]
+      opp-microvolt:
+      - [1100000, 1100000, 1250000]
+    opp07:
+      opp-hz:
+      - [0, 1800000000]
+      opp-microvolt:
+      - [1200000, 1200000, 1250000]
+  opp-table-2:
+    compatible:
+    - operating-points-v2
+    opp00:
+      opp-hz:
+      - [0, 200000000]
+      opp-microvolt:
+      - [825000, 825000, 1150000]
+    opp01:
+      opp-hz:
+      - [0, 297000000]
+      opp-microvolt:
+      - [825000, 825000, 1150000]
+    opp02:
+      opp-hz:
+      - [0, 400000000]
+      opp-microvolt:
+      - [825000, 825000, 1150000]
+    opp03:
+      opp-hz:
+      - [0, 500000000]
+      opp-microvolt:
+      - [875000, 875000, 1150000]
+    opp04:
+      opp-hz:
+      - [0, 600000000]
+      opp-microvolt:
+      - [925000, 925000, 1150000]
+    opp05:
+      opp-hz:
+      - [0, 800000000]
+      opp-microvolt:
+      - [1100000, 1100000, 1150000]
+  pcie@f8000000:
+    '#address-cells':
+    - [3]
+    '#interrupt-cells':
+    - [1]
+    '#size-cells':
+    - [2]
+    aspm-no-l0s: true
+    bus-range:
+    - [0, 31]
+    clock-names:
+    - "aclk\0aclk-perf\0hclk\0pm"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 197
+      - p:/clock-controller@ff760000
+      - 196
+      - p:/clock-controller@ff760000
+      - 327
+      - p:/clock-controller@ff760000
+      - 160
+    compatible:
+    - rockchip,rk3399-pcie
+    device_type:
+    - pci
+    interrupt-controller:
+      '#address-cells':
+      - [0]
+      '#interrupt-cells':
+      - [1]
+      interrupt-controller: true
+    interrupt-map:
+    - - 0
+      - 0
+      - 0
+      - 1
+      - p:/pcie@f8000000/interrupt-controller
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - p:/pcie@f8000000/interrupt-controller
+      - 1
+      - 0
+      - 0
+      - 0
+      - 3
+      - p:/pcie@f8000000/interrupt-controller
+      - 2
+      - 0
+      - 0
+      - 0
+      - 4
+      - p:/pcie@f8000000/interrupt-controller
+      - 3
+    interrupt-map-mask:
+    - [0, 0, 0, 7]
+    interrupt-names:
+    - "sys\0legacy\0client"
+    interrupts:
+    - [0, 49, 4, 0, 0, 50, 4, 0, 0, 51, 4, 0]
+    max-link-speed:
+    - [1]
+    msi-map:
+    - - 0
+      - p:/interrupt-controller@fee00000/interrupt-controller@fee20000
+      - 0
+      - 4096
+    phy-names:
+    - "pcie-phy-0\0pcie-phy-1\0pcie-phy-2\0pcie-phy-3"
+    phys:
+    - - p:/syscon@ff770000/pcie-phy
+    ranges:
+    - [2181038080, 0, 4194304000, 0, 4194304000, 0, 31457280, 2164260864, 0, 4225761280,
+      0, 4225761280, 0, 1048576]
+    reg:
+    - [0, 4160749568, 0, 33554432, 0, 4244635648, 0, 16777216]
+    reg-names:
+    - "axi-base\0apb-base"
+    reset-names:
+    - "core\0mgmt\0mgmt-sticky\0pipe\0pm\0pclk\0aclk"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 130
+      - p:/clock-controller@ff760000
+      - 131
+      - p:/clock-controller@ff760000
+      - 132
+      - p:/clock-controller@ff760000
+      - 133
+      - p:/clock-controller@ff760000
+      - 134
+      - p:/clock-controller@ff760000
+      - 129
+      - p:/clock-controller@ff760000
+      - 128
+    status:
+    - disabled
+  phy@ff7c0000:
+    assigned-clock-rates:
+    - [50000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 126
+    clock-names:
+    - "tcpdcore\0tcpdphy-ref"
+    clocks:
+    - - p:/clock-controller@ff760000
+    compatible:
+    - rockchip,rk3399-typec-phy
+    dp-port:
+      '#phy-cells':
+      - [0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 8
+    reg:
+    - [0, 4286316544, 0, 262144]
+    reset-names:
+    - "uphy\0uphy-pipe\0uphy-tcphy"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 149
+      - p:/clock-controller@ff760000
+      - 148
+      - p:/clock-controller@ff760000
+      - 332
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - okay
+    usb3-port:
+      '#phy-cells':
+      - [0]
+  phy@ff800000:
+    assigned-clock-rates:
+    - [50000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 128
+    clock-names:
+    - "tcpdcore\0tcpdphy-ref"
+    clocks:
+    - - p:/clock-controller@ff760000
+    compatible:
+    - rockchip,rk3399-typec-phy
+    dp-port:
+      '#phy-cells':
+      - [0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 9
+    reg:
+    - [0, 4286578688, 0, 262144]
+    reset-names:
+    - "uphy\0uphy-pipe\0uphy-tcphy"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 157
+      - p:/clock-controller@ff760000
+      - 156
+      - p:/clock-controller@ff760000
+      - 333
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    status:
+    - okay
+    usb3-port:
+      '#phy-cells':
+      - [0]
+  pinctrl:
+    '#address-cells':
+    - [2]
+    '#size-cells':
+    - [2]
+    cif:
+      cif-clkin:
+        rockchip,pins:
+        - [2, 10, 3, 162]
+      cif-clkouta:
+        rockchip,pins:
+        - [2, 11, 3, 162]
+    clock:
+      clk-32k:
+        rockchip,pins:
+        - [0, 0, 2, 162]
+    compatible:
+    - rockchip,rk3399-pinctrl
+    edp:
+      edp-hpd:
+        rockchip,pins:
+        - - 4
+          - 23
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    gmac:
+      rgmii-pins:
+        rockchip,pins:
+        - - 3
+          - 17
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 14
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 13
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 12
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 11
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 9
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 7
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 6
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 5
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 4
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 3
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 2
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 1
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 0
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+      rmii-pins:
+        rockchip,pins:
+        - - 3
+          - 13
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 12
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 11
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 10
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 9
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 7
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 6
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 5
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+          - 3
+          - 4
+          - 1
+          - p:/pinctrl/pcfg-pull-none-13ma
+    gpio@ff720000:
+      '#gpio-cells':
+      - [2]
+      '#interrupt-cells':
+      - [2]
+      clocks:
+      - [108, 23]
+      compatible:
+      - rockchip,gpio-bank
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts:
+      - [0, 14, 4, 0]
+      reg:
+      - [0, 4285661184, 0, 256]
+    gpio@ff730000:
+      '#gpio-cells':
+      - [2]
+      '#interrupt-cells':
+      - [2]
+      clocks:
+      - [108, 24]
+      compatible:
+      - rockchip,gpio-bank
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts:
+      - [0, 15, 4, 0]
+      reg:
+      - [0, 4285726720, 0, 256]
+    gpio@ff780000:
+      '#gpio-cells':
+      - [2]
+      '#interrupt-cells':
+      - [2]
+      clocks:
+      - [8, 336]
+      compatible:
+      - rockchip,gpio-bank
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts:
+      - [0, 16, 4, 0]
+      reg:
+      - [0, 4286054400, 0, 256]
+    gpio@ff788000:
+      '#gpio-cells':
+      - [2]
+      '#interrupt-cells':
+      - [2]
+      clocks:
+      - [8, 337]
+      compatible:
+      - rockchip,gpio-bank
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts:
+      - [0, 17, 4, 0]
+      reg:
+      - [0, 4286087168, 0, 256]
+    gpio@ff790000:
+      '#gpio-cells':
+      - [2]
+      '#interrupt-cells':
+      - [2]
+      clocks:
+      - [8, 338]
+      compatible:
+      - rockchip,gpio-bank
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts:
+      - [0, 18, 4, 0]
+      reg:
+      - [0, 4286119936, 0, 256]
+    hdmi:
+      hdmi-cec:
+        rockchip,pins:
+        - - 4
+          - 23
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      hdmi-i2c-xfer:
+        rockchip,pins:
+        - - 4
+          - 17
+          - 3
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 16
+          - 3
+          - p:/pinctrl/pcfg-pull-none
+    i2c0:
+      i2c0-xfer:
+        rockchip,pins:
+        - - 1
+          - 15
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+          - 1
+          - 16
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    i2c1:
+      i2c1-xfer:
+        rockchip,pins:
+        - - 4
+          - 2
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 1
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    i2c2:
+      i2c2-xfer:
+        rockchip,pins:
+        - - 2
+          - 1
+          - 2
+          - p:/pinctrl/pcfg-pull-none-12ma
+          - 2
+          - 0
+          - 2
+          - p:/pinctrl/pcfg-pull-none-12ma
+    i2c3:
+      i2c3-xfer:
+        rockchip,pins:
+        - - 4
+          - 17
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 16
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    i2c4:
+      i2c4-xfer:
+        rockchip,pins:
+        - - 1
+          - 12
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 1
+          - 11
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    i2c5:
+      i2c5-xfer:
+        rockchip,pins:
+        - - 3
+          - 11
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 10
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    i2c6:
+      i2c6-xfer:
+        rockchip,pins:
+        - - 2
+          - 10
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+          - 2
+          - 9
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    i2c7:
+      i2c7-xfer:
+        rockchip,pins:
+        - - 2
+          - 8
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+          - 2
+          - 7
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    i2c8:
+      i2c8-xfer:
+        rockchip,pins:
+        - - 1
+          - 21
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 1
+          - 20
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    i2s0:
+      i2s0-2ch-bus:
+        rockchip,pins:
+        - [3, 24, 1, 162, 3, 25, 1, 162, 3, 26, 1, 162, 3, 27, 1, 162, 3, 31, 1, 162,
+          4, 0, 1, 162]
+      i2s0-2ch-bus-bclk-off:
+        rockchip,pins:
+        - [3, 24, 0, 162, 3, 25, 1, 162, 3, 26, 1, 162, 3, 27, 1, 162, 3, 31, 1, 162,
+          4, 0, 1, 162]
+      i2s0-8ch-bus:
+        rockchip,pins:
+        - - 3
+          - 24
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 25
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 26
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 27
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 28
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 29
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 30
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 3
+          - 31
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      i2s0-8ch-bus-bclk-off:
+        rockchip,pins:
+        - [3, 24, 0, 162, 3, 25, 1, 162, 3, 26, 1, 162, 3, 27, 1, 162, 3, 28, 1, 162,
+          3, 29, 1, 162, 3, 30, 1, 162, 3, 31, 1, 162, 4, 0, 1, 162]
+    i2s1:
+      i2s1-2ch-bus:
+        rockchip,pins:
+        - - 4
+          - 3
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 4
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 5
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 6
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+          - 4
+          - 7
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      i2s1-2ch-bus-bclk-off:
+        rockchip,pins:
+        - [4, 3, 0, 162, 4, 4, 1, 162, 4, 5, 1, 162, 4, 6, 1, 162, 4, 7, 1, 162]
+    pcfg-input-enable:
+      input-enable: true
+    pcfg-input-pull-down:
+      bias-pull-down: true
+      input-enable: true
+    pcfg-input-pull-up:
+      bias-pull-up: true
+      input-enable: true
+    pcfg-output-high:
+      output-high: true
+    pcfg-output-low:
+      output-low: true
+    pcfg-pull-down:
+      bias-pull-down: true
+    pcfg-pull-down-12ma:
+      bias-pull-down: true
+      drive-strength:
+      - [12]
+    pcfg-pull-down-18ma:
+      bias-pull-down: true
+      drive-strength:
+      - [18]
+    pcfg-pull-down-20ma:
+      bias-pull-down: true
+      drive-strength:
+      - [20]
+    pcfg-pull-down-4ma:
+      bias-pull-down: true
+      drive-strength:
+      - [4]
+    pcfg-pull-down-8ma:
+      bias-pull-down: true
+      drive-strength:
+      - [8]
+    pcfg-pull-none:
+      bias-disable: true
+    pcfg-pull-none-12ma:
+      bias-disable: true
+      drive-strength:
+      - [12]
+    pcfg-pull-none-13ma:
+      bias-disable: true
+      drive-strength:
+      - [13]
+    pcfg-pull-none-18ma:
+      bias-disable: true
+      drive-strength:
+      - [18]
+    pcfg-pull-none-20ma:
+      bias-disable: true
+      drive-strength:
+      - [20]
+    pcfg-pull-up:
+      bias-pull-up: true
+    pcfg-pull-up-18ma:
+      bias-pull-up: true
+      drive-strength:
+      - [18]
+    pcfg-pull-up-20ma:
+      bias-pull-up: true
+      drive-strength:
+      - [20]
+    pcfg-pull-up-2ma:
+      bias-pull-up: true
+      drive-strength:
+      - [2]
+    pcfg-pull-up-8ma:
+      bias-pull-up: true
+      drive-strength:
+      - [8]
+    pcie:
+      pci-clkreqn-cpm:
+        rockchip,pins:
+        - - 2
+          - 26
+          - 0
+          - p:/pinctrl/pcfg-pull-none
+      pci-clkreqnb-cpm:
+        rockchip,pins:
+        - - 4
+          - 24
+          - 0
+          - p:/pinctrl/pcfg-pull-none
+    pwm0:
+      pwm0-pin:
+        rockchip,pins:
+        - - 4
+          - 18
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      pwm0-pin-pull-down:
+        rockchip,pins:
+        - - 4
+          - 18
+          - 1
+          - p:/pinctrl/pcfg-pull-down
+      vop0-pwm-pin:
+        rockchip,pins:
+        - - 4
+          - 18
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+      vop1-pwm-pin:
+        rockchip,pins:
+        - - 4
+          - 18
+          - 3
+          - p:/pinctrl/pcfg-pull-none
+    pwm1:
+      pwm1-pin:
+        rockchip,pins:
+        - - 4
+          - 22
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      pwm1-pin-pull-down:
+        rockchip,pins:
+        - - 4
+          - 22
+          - 1
+          - p:/pinctrl/pcfg-pull-down
+    pwm2:
+      pwm2-pin:
+        rockchip,pins:
+        - - 1
+          - 19
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      pwm2-pin-pull-down:
+        rockchip,pins:
+        - - 1
+          - 19
+          - 1
+          - p:/pinctrl/pcfg-pull-down
+    pwm3a:
+      pwm3a-pin:
+        rockchip,pins:
+        - - 0
+          - 6
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    pwm3b:
+      pwm3b-pin:
+        rockchip,pins:
+        - - 1
+          - 14
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    ranges: true
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    rockchip,pmu:
+    - - p:/syscon@ff320000
+    sdio0:
+      sdio0-bkpwr:
+        rockchip,pins:
+        - - 2
+          - 28
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-bus1:
+        rockchip,pins:
+        - - 2
+          - 20
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-bus4:
+        rockchip,pins:
+        - - 2
+          - 20
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 2
+          - 21
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 2
+          - 22
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 2
+          - 23
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-cd:
+        rockchip,pins:
+        - - 2
+          - 26
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-clk:
+        rockchip,pins:
+        - - 2
+          - 25
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      sdio0-cmd:
+        rockchip,pins:
+        - - 2
+          - 24
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-int:
+        rockchip,pins:
+        - - 0
+          - 4
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-pwr:
+        rockchip,pins:
+        - - 2
+          - 27
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdio0-wp:
+        rockchip,pins:
+        - - 0
+          - 3
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+    sdmmc:
+      sdmmc-bus1:
+        rockchip,pins:
+        - - 4
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdmmc-bus4:
+        rockchip,pins:
+        - - 4
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 9
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 10
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 11
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdmmc-cd:
+        rockchip,pins:
+        - [0, 7, 1, 165]
+      sdmmc-clk:
+        rockchip,pins:
+        - - 4
+          - 12
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      sdmmc-cmd:
+        rockchip,pins:
+        - - 4
+          - 13
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      sdmmc-wp:
+        rockchip,pins:
+        - - 0
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+    spdif:
+      spdif-bus:
+        rockchip,pins:
+        - - 4
+          - 21
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      spdif-bus-1:
+        rockchip,pins:
+        - - 3
+          - 16
+          - 3
+          - p:/pinctrl/pcfg-pull-none
+    spi0:
+      spi0-clk:
+        rockchip,pins:
+        - - 3
+          - 6
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi0-cs0:
+        rockchip,pins:
+        - - 3
+          - 7
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi0-cs1:
+        rockchip,pins:
+        - - 3
+          - 8
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi0-rx:
+        rockchip,pins:
+        - - 3
+          - 4
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi0-tx:
+        rockchip,pins:
+        - - 3
+          - 5
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+    spi1:
+      spi1-clk:
+        rockchip,pins:
+        - - 1
+          - 9
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi1-cs0:
+        rockchip,pins:
+        - - 1
+          - 10
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi1-rx:
+        rockchip,pins:
+        - - 1
+          - 7
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi1-tx:
+        rockchip,pins:
+        - - 1
+          - 8
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+    spi2:
+      spi2-clk:
+        rockchip,pins:
+        - - 2
+          - 11
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi2-cs0:
+        rockchip,pins:
+        - - 2
+          - 12
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi2-rx:
+        rockchip,pins:
+        - - 2
+          - 9
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi2-tx:
+        rockchip,pins:
+        - - 2
+          - 10
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+    spi3:
+      spi3-clk:
+        rockchip,pins:
+        - - 1
+          - 17
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi3-cs0:
+        rockchip,pins:
+        - - 1
+          - 18
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi3-rx:
+        rockchip,pins:
+        - - 1
+          - 15
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+      spi3-tx:
+        rockchip,pins:
+        - - 1
+          - 16
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+    spi4:
+      spi4-clk:
+        rockchip,pins:
+        - - 3
+          - 2
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi4-cs0:
+        rockchip,pins:
+        - - 3
+          - 3
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi4-rx:
+        rockchip,pins:
+        - - 3
+          - 0
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi4-tx:
+        rockchip,pins:
+        - - 3
+          - 1
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+    spi5:
+      spi5-clk:
+        rockchip,pins:
+        - - 2
+          - 22
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi5-cs0:
+        rockchip,pins:
+        - - 2
+          - 23
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi5-rx:
+        rockchip,pins:
+        - - 2
+          - 20
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+      spi5-tx:
+        rockchip,pins:
+        - - 2
+          - 21
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+    suspend:
+      ap-pwroff:
+        rockchip,pins:
+        - [1, 5, 1, 162]
+      ddrio-pwroff:
+        rockchip,pins:
+        - [0, 1, 1, 162]
+    testclk:
+      test-clkout0:
+        rockchip,pins:
+        - [0, 0, 1, 162]
+      test-clkout1:
+        rockchip,pins:
+        - [2, 25, 2, 162]
+      test-clkout2:
+        rockchip,pins:
+        - [0, 8, 3, 162]
+    tsadc:
+      otp-out:
+        rockchip,pins:
+        - - 1
+          - 6
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      otp-pin:
+        rockchip,pins:
+        - [1, 6, 0, 162]
+    uart0:
+      uart0-cts:
+        rockchip,pins:
+        - - 2
+          - 18
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      uart0-rts:
+        rockchip,pins:
+        - - 2
+          - 19
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+      uart0-xfer:
+        rockchip,pins:
+        - - 2
+          - 16
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 2
+          - 17
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    uart1:
+      uart1-xfer:
+        rockchip,pins:
+        - - 3
+          - 12
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+          - 3
+          - 13
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    uart2a:
+      uart2a-xfer:
+        rockchip,pins:
+        - - 4
+          - 8
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 9
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    uart2b:
+      uart2b-xfer:
+        rockchip,pins:
+        - - 4
+          - 16
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 17
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    uart2c:
+      uart2c-xfer:
+        rockchip,pins:
+        - - 4
+          - 19
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 20
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    uart3:
+      uart3-cts:
+        rockchip,pins:
+        - - 3
+          - 16
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+      uart3-rts:
+        rockchip,pins:
+        - - 3
+          - 17
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+      uart3-xfer:
+        rockchip,pins:
+        - - 3
+          - 14
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+          - 3
+          - 15
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+    uart4:
+      uart4-xfer:
+        rockchip,pins:
+        - - 1
+          - 7
+          - 1
+          - p:/pinctrl/pcfg-pull-up
+          - 1
+          - 8
+          - 1
+          - p:/pinctrl/pcfg-pull-none
+    uarthdcp:
+      uarthdcp-xfer:
+        rockchip,pins:
+        - - 4
+          - 21
+          - 2
+          - p:/pinctrl/pcfg-pull-up
+          - 4
+          - 22
+          - 2
+          - p:/pinctrl/pcfg-pull-none
+  pmu_a53:
+    compatible:
+    - arm,cortex-a53-pmu
+    interrupts:
+    - - 1
+      - 7
+      - 8
+      - p:/interrupt-controller@fee00000/ppi-partitions/interrupt-partition-0
+  pmu_a72:
+    compatible:
+    - arm,cortex-a72-pmu
+    interrupts:
+    - - 1
+      - 7
+      - 8
+      - p:/interrupt-controller@fee00000/ppi-partitions/interrupt-partition-1
+  power-management@ff310000:
+    compatible:
+    - "rockchip,rk3399-pmu\0syscon\0simple-mfd"
+    power-controller:
+      '#address-cells':
+      - [1]
+      '#power-domain-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      compatible:
+      - rockchip,rk3399-power-controller
+      power-domain@15:
+        '#address-cells':
+        - [1]
+        '#power-domain-cells':
+        - [1]
+        '#size-cells':
+        - [0]
+        power-domain@16:
+          '#address-cells':
+          - [1]
+          '#power-domain-cells':
+          - [1]
+          '#size-cells':
+          - [0]
+          power-domain@17:
+            '#power-domain-cells':
+            - [0]
+            clocks:
+            - [8, 217, 8, 473]
+            pm_qos:
+            - [105, 106]
+            reg:
+            - [17]
+          power-domain@18:
+            '#power-domain-cells':
+            - [0]
+            clocks:
+            - [8, 219, 8, 475]
+            pm_qos:
+            - [107]
+            reg:
+            - [18]
+          reg:
+          - [16]
+        power-domain@19:
+          '#power-domain-cells':
+          - [0]
+          clocks:
+          - [8, 229, 8, 479]
+          pm_qos:
+          - [101, 102]
+          reg:
+          - [19]
+        power-domain@20:
+          '#power-domain-cells':
+          - [0]
+          clocks:
+          - [8, 230, 8, 480]
+          pm_qos:
+          - [103, 104]
+          reg:
+          - [20]
+        power-domain@21:
+          '#power-domain-cells':
+          - [0]
+          clocks:
+          - [8, 222, 8, 487, 8, 370]
+          pm_qos:
+          - [100]
+          reg:
+          - [21]
+        reg:
+        - [15]
+      power-domain@22:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 213, 8, 358]
+        pm_qos:
+        - [95]
+        reg:
+        - [22]
+      power-domain@23:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 240]
+        pm_qos:
+        - [94]
+        reg:
+        - [23]
+      power-domain@24:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 244]
+        pm_qos:
+        - [98, 99]
+        reg:
+        - [24]
+      power-domain@25:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 364]
+        reg:
+        - [25]
+      power-domain@27:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 462, 8, 76]
+        pm_qos:
+        - [96]
+        reg:
+        - [27]
+      power-domain@28:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 494]
+        pm_qos:
+        - [97]
+        reg:
+        - [28]
+      power-domain@31:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 235, 8, 490]
+        pm_qos:
+        - [90]
+        reg:
+        - [31]
+      power-domain@32:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 237, 8, 492, 8, 159, 8, 158]
+        pm_qos:
+        - [91, 92]
+        reg:
+        - [32]
+      power-domain@33:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 220, 8, 485]
+        pm_qos:
+        - [88, 89]
+        reg:
+        - [33]
+      power-domain@34:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 225, 8, 477]
+        pm_qos:
+        - [87]
+        reg:
+        - [34]
+      power-domain@35:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 208]
+        pm_qos:
+        - [93]
+        reg:
+        - [35]
+      power-domain@8:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 126, 8, 125]
+        reg:
+        - [8]
+      power-domain@9:
+        '#power-domain-cells':
+        - [0]
+        clocks:
+        - [8, 128, 8, 127]
+        reg:
+        - [9]
+    reg:
+    - [0, 4281401344, 0, 4096]
+  psci:
+    compatible:
+    - arm,psci-1.0
+    method:
+    - smc
+  pwm@ff420000:
+    '#pwm-cells':
+    - [3]
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 30
+    compatible:
+    - "rockchip,rk3399-pwm\0rockchip,rk3288-pwm"
+    pinctrl-0:
+    - - p:/pinctrl/pwm0/pwm0-pin
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282515456, 0, 16]
+    status:
+    - disabled
+  pwm@ff420010:
+    '#pwm-cells':
+    - [3]
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 30
+    compatible:
+    - "rockchip,rk3399-pwm\0rockchip,rk3288-pwm"
+    pinctrl-0:
+    - - p:/pinctrl/pwm1/pwm1-pin
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282515472, 0, 16]
+    status:
+    - disabled
+  pwm@ff420020:
+    '#pwm-cells':
+    - [3]
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 30
+    compatible:
+    - "rockchip,rk3399-pwm\0rockchip,rk3288-pwm"
+    pinctrl-0:
+    - - p:/pinctrl/pwm2/pwm2-pin
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282515488, 0, 16]
+    status:
+    - okay
+  pwm@ff420030:
+    '#pwm-cells':
+    - [3]
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 30
+    compatible:
+    - "rockchip,rk3399-pwm\0rockchip,rk3288-pwm"
+    pinctrl-0:
+    - - p:/pinctrl/pwm3a/pwm3a-pin
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4282515504, 0, 16]
+    status:
+    - disabled
+  qos@ffa58000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289036288, 0, 32]
+  qos@ffa5c000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289052672, 0, 32]
+  qos@ffa60080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289069184, 0, 32]
+  qos@ffa60100:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289069312, 0, 32]
+  qos@ffa60180:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289069440, 0, 32]
+  qos@ffa70000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289134592, 0, 32]
+  qos@ffa70080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289134720, 0, 32]
+  qos@ffa74000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289150976, 0, 32]
+  qos@ffa76000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289159168, 0, 32]
+  qos@ffa90000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289265664, 0, 32]
+  qos@ffa98000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289298432, 0, 32]
+  qos@ffaa0000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289331200, 0, 32]
+  qos@ffaa0080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289331328, 0, 32]
+  qos@ffaa8000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289363968, 0, 32]
+  qos@ffaa8080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289364096, 0, 32]
+  qos@ffab0000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289396736, 0, 32]
+  qos@ffab0080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289396864, 0, 32]
+  qos@ffab8000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289429504, 0, 32]
+  qos@ffac0000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289462272, 0, 32]
+  qos@ffac0080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289462400, 0, 32]
+  qos@ffac8000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289495040, 0, 32]
+  qos@ffac8080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289495168, 0, 32]
+  qos@ffad0000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289527808, 0, 32]
+  qos@ffad8080:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289560704, 0, 32]
+  qos@ffae0000:
+    compatible:
+    - "rockchip,rk3399-qos\0syscon"
+    reg:
+    - [0, 4289593344, 0, 32]
+  rga@ff680000:
+    clock-names:
+    - "aclk\0hclk\0sclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 220
+      - p:/clock-controller@ff760000
+      - 485
+      - p:/clock-controller@ff760000
+      - 109
+    compatible:
+    - rockchip,rk3399-rga
+    interrupts:
+    - [0, 55, 4, 0]
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 33
+    reg:
+    - [0, 4285005824, 0, 65536]
+    reset-names:
+    - "core\0axi\0ahb"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 106
+      - p:/clock-controller@ff760000
+      - 103
+      - p:/clock-controller@ff760000
+      - 105
+  rktimer@ff850000:
+    clock-names:
+    - "pclk\0timer"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 360
+      - p:/clock-controller@ff760000
+      - 90
+    compatible:
+    - rockchip,rk3399-timer
+    interrupts:
+    - [0, 81, 4, 0]
+    reg:
+    - [0, 4286906368, 0, 4096]
+  rng@ff8b8000:
+    assigned-clock-rates:
+    - [150000000, 100000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 134
+      - p:/clock-controller@ff760000
+      - 467
+    clock-names:
+    - "clk_crypto\0hclk_crypto"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 134
+      - p:/clock-controller@ff760000
+      - 467
+    compatible:
+    - rockchip,cryptov1-rng
+    reg:
+    - [0, 4287332352, 0, 4096]
+    status:
+    - okay
+  saradc@ff100000:
+    '#io-channel-cells':
+    - [1]
+    clock-names:
+    - "saradc\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 80
+      - p:/clock-controller@ff760000
+      - 357
+    compatible:
+    - rockchip,rk3399-saradc
+    interrupts:
+    - [0, 62, 4, 0]
+    reg:
+    - [0, 4279238656, 0, 256]
+    reset-names:
+    - saradc-apb
+    resets:
+    - - p:/clock-controller@ff760000
+      - 212
+    status:
+    - disabled
+  sdio-pwrseq:
+    clock-names:
+    - ext_clock
+    clocks:
+    - - p:/i2c@ff3c0000/pmic@1b
+      - 1
+    compatible:
+    - mmc-pwrseq-simple
+    pinctrl-names:
+    - default
+    reset-gpios:
+    - - p:/pinctrl/gpio@ff720000
+      - 10
+      - 1
+  serial@ff180000:
+    clock-names:
+    - "baudclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 81
+      - p:/clock-controller@ff760000
+      - 352
+    compatible:
+    - "rockchip,rk3399-uart\0snps,dw-apb-uart"
+    interrupts:
+    - [0, 99, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/uart0/uart0-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279762944, 0, 256]
+    reg-io-width:
+    - [4]
+    reg-shift:
+    - [2]
+    status:
+    - disabled
+  serial@ff190000:
+    clock-names:
+    - "baudclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 82
+      - p:/clock-controller@ff760000
+      - 353
+    compatible:
+    - "rockchip,rk3399-uart\0snps,dw-apb-uart"
+    interrupts:
+    - [0, 98, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/uart1/uart1-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279828480, 0, 256]
+    reg-io-width:
+    - [4]
+    reg-shift:
+    - [2]
+    status:
+    - disabled
+  serial@ff1a0000:
+    clock-names:
+    - "baudclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 83
+      - p:/clock-controller@ff760000
+      - 354
+    compatible:
+    - "rockchip,rk3399-uart\0snps,dw-apb-uart"
+    interrupts:
+    - [0, 100, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/uart2c/uart2c-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279894016, 0, 256]
+    reg-io-width:
+    - [4]
+    reg-shift:
+    - [2]
+    status:
+    - okay
+  serial@ff1b0000:
+    clock-names:
+    - "baudclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 84
+      - p:/clock-controller@ff760000
+      - 355
+    compatible:
+    - "rockchip,rk3399-uart\0snps,dw-apb-uart"
+    interrupts:
+    - [0, 101, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/uart3/uart3-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4279959552, 0, 256]
+    reg-io-width:
+    - [4]
+    reg-shift:
+    - [2]
+    status:
+    - disabled
+  serial@ff370000:
+    clock-names:
+    - "baudclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 6
+      - p:/clock-controller@ff750000
+      - 34
+    compatible:
+    - "rockchip,rk3399-uart\0snps,dw-apb-uart"
+    interrupts:
+    - [0, 102, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/uart4/uart4-xfer
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4281794560, 0, 256]
+    reg-io-width:
+    - [4]
+    reg-shift:
+    - [2]
+    status:
+    - disabled
+  spdif@ff870000:
+    '#sound-dai-cells':
+    - [0]
+    clock-names:
+    - "mclk\0hclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 85
+      - p:/clock-controller@ff760000
+      - 471
+    compatible:
+    - rockchip,rk3399-spdif
+    dma-names:
+    - tx
+    dmas:
+    - - p:/dma-controller@ff6d0000
+      - 7
+    interrupts:
+    - [0, 66, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spdif/spdif-bus
+    pinctrl-names:
+    - default
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 28
+    reg:
+    - [0, 4287037440, 0, 4096]
+    status:
+    - disabled
+  spi@ff1c0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 71
+      - p:/clock-controller@ff760000
+      - 347
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6e0000
+      - 10
+      - p:/dma-controller@ff6e0000
+      - 11
+    interrupts:
+    - [0, 68, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi0/spi0-clk
+      - p:/pinctrl/spi0/spi0-tx
+      - p:/pinctrl/spi0/spi0-rx
+      - p:/pinctrl/spi0/spi0-cs0
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4280025088, 0, 4096]
+    status:
+    - disabled
+  spi@ff1d0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 72
+      - p:/clock-controller@ff760000
+      - 348
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6e0000
+      - 12
+      - p:/dma-controller@ff6e0000
+      - 13
+    interrupts:
+    - [0, 53, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi1/spi1-clk
+      - p:/pinctrl/spi1/spi1-tx
+      - p:/pinctrl/spi1/spi1-rx
+      - p:/pinctrl/spi1/spi1-cs0
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4280090624, 0, 4096]
+    status:
+    - disabled
+  spi@ff1e0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 73
+      - p:/clock-controller@ff760000
+      - 349
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6e0000
+      - 14
+      - p:/dma-controller@ff6e0000
+      - 15
+    interrupts:
+    - [0, 52, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi2/spi2-clk
+      - p:/pinctrl/spi2/spi2-tx
+      - p:/pinctrl/spi2/spi2-rx
+      - p:/pinctrl/spi2/spi2-cs0
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4280156160, 0, 4096]
+    status:
+    - disabled
+  spi@ff1f0000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 74
+      - p:/clock-controller@ff760000
+      - 350
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6e0000
+      - 18
+      - p:/dma-controller@ff6e0000
+      - 19
+    interrupts:
+    - [0, 67, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi4/spi4-clk
+      - p:/pinctrl/spi4/spi4-tx
+      - p:/pinctrl/spi4/spi4-rx
+      - p:/pinctrl/spi4/spi4-cs0
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4280221696, 0, 4096]
+    status:
+    - disabled
+  spi@ff200000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 75
+      - p:/clock-controller@ff760000
+      - 351
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    dma-names:
+    - "tx\0rx"
+    dmas:
+    - - p:/dma-controller@ff6d0000
+      - 8
+      - p:/dma-controller@ff6d0000
+      - 9
+    interrupts:
+    - [0, 132, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi5/spi5-clk
+      - p:/pinctrl/spi5/spi5-tx
+      - p:/pinctrl/spi5/spi5-rx
+      - p:/pinctrl/spi5/spi5-cs0
+    pinctrl-names:
+    - default
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 28
+    reg:
+    - [0, 4280287232, 0, 4096]
+    status:
+    - disabled
+  spi@ff350000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [0]
+    clock-names:
+    - "spiclk\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff750000
+      - 3
+      - p:/clock-controller@ff750000
+      - 31
+    compatible:
+    - "rockchip,rk3399-spi\0rockchip,rk3066-spi"
+    interrupts:
+    - [0, 60, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/spi3/spi3-clk
+      - p:/pinctrl/spi3/spi3-tx
+      - p:/pinctrl/spi3/spi3-rx
+      - p:/pinctrl/spi3/spi3-cs0
+    pinctrl-names:
+    - default
+    reg:
+    - [0, 4281663488, 0, 4096]
+    status:
+    - disabled
+  syscon@ff320000:
+    compatible:
+    - "rockchip,rk3399-pmugrf\0syscon\0simple-mfd"
+    io-domains:
+      compatible:
+      - rockchip,rk3399-pmu-io-voltage-domain
+      status:
+      - disabled
+    reg:
+    - [0, 4281466880, 0, 4096]
+  syscon@ff770000:
+    '#address-cells':
+    - [1]
+    '#size-cells':
+    - [1]
+    compatible:
+    - "rockchip,rk3399-grf\0syscon\0simple-mfd"
+    io-domains:
+      compatible:
+      - rockchip,rk3399-io-voltage-domain
+      status:
+      - disabled
+    mipi-dphy-rx0:
+      '#phy-cells':
+      - [0]
+      clock-names:
+      - "dphy-ref\0dphy-cfg\0grf"
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 119
+        - p:/clock-controller@ff760000
+        - 165
+        - p:/clock-controller@ff760000
+        - 367
+      compatible:
+      - rockchip,rk3399-mipi-dphy-rx0
+      power-domains:
+      - - p:/power-management@ff310000/power-controller
+        - 15
+      status:
+      - disabled
+    pcie-phy:
+      '#phy-cells':
+      - [1]
+      clock-names:
+      - refclk
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 138
+      compatible:
+      - rockchip,rk3399-pcie-phy
+      reset-names:
+      - phy
+      resets:
+      - - p:/clock-controller@ff760000
+        - 135
+      status:
+      - disabled
+    phy@f780:
+      '#phy-cells':
+      - [0]
+      clock-names:
+      - emmcclk
+      clocks:
+      - - p:/mmc@fe330000
+      compatible:
+      - rockchip,rk3399-emmc-phy
+      drive-impedance-ohm:
+      - [50]
+      reg:
+      - [63360, 36]
+      status:
+      - okay
+    reg:
+    - [0, 4285988864, 0, 65536]
+    usb2phy@e450:
+      '#clock-cells':
+      - [0]
+      clock-names:
+      - phyclk
+      clock-output-names:
+      - clk_usbphy0_480m
+      clocks:
+      - [8, 123]
+      compatible:
+      - rockchip,rk3399-usb2phy
+      host-port:
+        '#phy-cells':
+        - [0]
+        interrupt-names:
+        - linestate
+        interrupts:
+        - [0, 27, 4, 0]
+        status:
+        - okay
+      otg-port:
+        '#phy-cells':
+        - [0]
+        interrupt-names:
+        - "otg-bvalid\0otg-id\0linestate"
+        interrupts:
+        - [0, 103, 4, 0, 0, 104, 4, 0, 0, 106, 4, 0]
+        status:
+        - disable
+      reg:
+      - [58448, 16]
+      status:
+      - okay
+    usb2phy@e460:
+      '#clock-cells':
+      - [0]
+      clock-names:
+      - phyclk
+      clock-output-names:
+      - clk_usbphy1_480m
+      clocks:
+      - [8, 124]
+      compatible:
+      - rockchip,rk3399-usb2phy
+      host-port:
+        '#phy-cells':
+        - [0]
+        interrupt-names:
+        - linestate
+        interrupts:
+        - [0, 31, 4, 0]
+        status:
+        - okay
+      otg-port:
+        '#phy-cells':
+        - [0]
+        interrupt-names:
+        - "otg-bvalid\0otg-id\0linestate"
+        interrupts:
+        - [0, 108, 4, 0, 0, 109, 4, 0, 0, 111, 4, 0]
+        status:
+        - okay
+      reg:
+      - [58464, 16]
+      status:
+      - okay
+  thermal-zones:
+    cpu-thermal:
+      cooling-maps:
+        map0:
+          cooling-device:
+          - [6, 4294967295, 4294967295, 7, 4294967295, 4294967295]
+          trip:
+          - [81]
+        map1:
+          cooling-device:
+          - [2, 4294967295, 4294967295, 3, 4294967295, 4294967295, 4, 4294967295,
+            4294967295, 5, 4294967295, 4294967295, 6, 4294967295, 4294967295, 7, 4294967295,
+            4294967295]
+          trip:
+          - [82]
+      polling-delay:
+      - [1000]
+      polling-delay-passive:
+      - [100]
+      thermal-sensors:
+      - [80, 0]
+      trips:
+        cpu_alert0:
+          hysteresis:
+          - [2000]
+          temperature:
+          - [70000]
+          type:
+          - passive
+        cpu_alert1:
+          hysteresis:
+          - [2000]
+          temperature:
+          - [75000]
+          type:
+          - passive
+        cpu_crit:
+          hysteresis:
+          - [2000]
+          temperature:
+          - [95000]
+          type:
+          - critical
+    gpu-thermal:
+      cooling-maps:
+        map0:
+          cooling-device:
+          - [84, 4294967295, 4294967295]
+          trip:
+          - [83]
+      polling-delay:
+      - [1000]
+      polling-delay-passive:
+      - [100]
+      thermal-sensors:
+      - - p:/tsadc@ff260000
+        - 1
+      trips:
+        gpu_alert0:
+          hysteresis:
+          - [2000]
+          temperature:
+          - [75000]
+          type:
+          - passive
+        gpu_crit:
+          hysteresis:
+          - [2000]
+          temperature:
+          - [95000]
+          type:
+          - critical
+  timer:
+    arm,no-tick-in-suspend: true
+    compatible:
+    - arm,armv8-timer
+    interrupts:
+    - [1, 13, 8, 0, 1, 14, 8, 0, 1, 11, 8, 0, 1, 10, 8, 0]
+  tsadc@ff260000:
+    '#thermal-sensor-cells':
+    - [1]
+    assigned-clock-rates:
+    - [750000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 79
+    clock-names:
+    - "tsadc\0apb_pclk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 79
+      - p:/clock-controller@ff760000
+      - 356
+    compatible:
+    - rockchip,rk3399-tsadc
+    interrupts:
+    - [0, 97, 4, 0]
+    pinctrl-0:
+    - - p:/pinctrl/tsadc/otp-pin
+    pinctrl-1:
+    - - p:/pinctrl/tsadc/otp-out
+    pinctrl-2:
+    - [85]
+    pinctrl-names:
+    - "init\0default\0sleep"
+    reg:
+    - [0, 4280680448, 0, 256]
+    reset-names:
+    - tsadc-apb
+    resets:
+    - - p:/clock-controller@ff760000
+      - 232
+    rockchip,grf:
+    - - p:/syscon@ff770000
+    rockchip,hw-tshut-mode:
+    - [1]
+    rockchip,hw-tshut-polarity:
+    - [1]
+    rockchip,hw-tshut-temp:
+    - [95000]
+    status:
+    - okay
+  typec_power:
+    compatible:
+    - regulator-fixed
+    enable-active-high: true
+    gpio:
+    - [34, 8, 0]
+    pinctrl-names:
+    - default
+    regulator-always-on: true
+    regulator-name:
+    - typec_power
+    status:
+    - okay
+  usb@fe380000:
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 456
+      - p:/clock-controller@ff760000
+      - 457
+      - p:/syscon@ff770000/usb2phy@e450
+    compatible:
+    - generic-ehci
+    interrupts:
+    - [0, 26, 4, 0]
+    phy-names:
+    - usb
+    phys:
+    - - p:/syscon@ff770000/usb2phy@e450/host-port
+    reg:
+    - [0, 4265082880, 0, 131072]
+    status:
+    - okay
+  usb@fe3a0000:
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 456
+      - p:/clock-controller@ff760000
+      - 457
+      - p:/syscon@ff770000/usb2phy@e450
+    compatible:
+    - generic-ohci
+    interrupts:
+    - [0, 28, 4, 0]
+    phy-names:
+    - usb
+    phys:
+    - - p:/syscon@ff770000/usb2phy@e450/host-port
+    reg:
+    - [0, 4265213952, 0, 131072]
+    status:
+    - okay
+  usb@fe3c0000:
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 458
+      - p:/clock-controller@ff760000
+      - 459
+      - p:/syscon@ff770000/usb2phy@e460
+    compatible:
+    - generic-ehci
+    interrupts:
+    - [0, 30, 4, 0]
+    phy-names:
+    - usb
+    phys:
+    - - p:/syscon@ff770000/usb2phy@e460/host-port
+    reg:
+    - [0, 4265345024, 0, 131072]
+    status:
+    - okay
+  usb@fe3e0000:
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 458
+      - p:/clock-controller@ff760000
+      - 459
+      - p:/syscon@ff770000/usb2phy@e460
+    compatible:
+    - generic-ohci
+    interrupts:
+    - [0, 32, 4, 0]
+    phy-names:
+    - usb
+    phys:
+    - - p:/syscon@ff770000/usb2phy@e460/host-port
+    reg:
+    - [0, 4265476096, 0, 131072]
+    status:
+    - okay
+  usb@fe800000:
+    '#address-cells':
+    - [2]
+    '#size-cells':
+    - [2]
+    clock-names:
+    - "ref_clk\0suspend_clk\0bus_clk\0aclk_usb3_rksoc_axi_perf\0aclk_usb3\0grf_clk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 129
+      - p:/clock-controller@ff760000
+      - 131
+      - p:/clock-controller@ff760000
+      - 246
+    compatible:
+    - rockchip,rk3399-dwc3
+    ranges: true
+    reset-names:
+    - usb3-otg
+    resets:
+    - [8, 293]
+    status:
+    - disable
+    usb@fe800000:
+      clock-names:
+      - "ref\0bus_early\0suspend"
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 129
+        - p:/clock-controller@ff760000
+        - 246
+        - p:/clock-controller@ff760000
+        - 131
+      compatible:
+      - snps,dwc3
+      dr_mode:
+      - host
+      interrupts:
+      - [0, 105, 4, 0]
+      phy-names:
+      - "usb2-phy\0usb3-phy"
+      phy_type:
+      - utmi_wide
+      phys:
+      - - p:/syscon@ff770000/usb2phy@e450/otg-port
+      power-domains:
+      - - p:/power-management@ff310000/power-controller
+        - 24
+      reg:
+      - [0, 4269801472, 0, 1048576]
+      snps,dis-del-phy-power-chg-quirk: true
+      snps,dis-tx-ipgap-linecheck-quirk: true
+      snps,dis-u2-freeclk-exists-quirk: true
+      snps,dis_enblslpm_quirk: true
+      snps,dis_u2_susphy_quirk: true
+      status:
+      - disable
+  usb@fe900000:
+    '#address-cells':
+    - [2]
+    '#size-cells':
+    - [2]
+    clock-names:
+    - "ref_clk\0suspend_clk\0bus_clk\0aclk_usb3_rksoc_axi_perf\0aclk_usb3\0grf_clk"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 130
+      - p:/clock-controller@ff760000
+      - 132
+      - p:/clock-controller@ff760000
+      - 247
+    compatible:
+    - rockchip,rk3399-dwc3
+    ranges: true
+    reset-names:
+    - usb3-otg
+    resets:
+    - [8, 294]
+    status:
+    - okay
+    usb@fe900000:
+      clock-names:
+      - "ref\0bus_early\0suspend"
+      clocks:
+      - - p:/clock-controller@ff760000
+        - 130
+        - p:/clock-controller@ff760000
+        - 247
+        - p:/clock-controller@ff760000
+        - 132
+      compatible:
+      - snps,dwc3
+      dr_mode:
+      - host
+      interrupts:
+      - [0, 110, 4, 0]
+      phy-names:
+      - "usb2-phy\0usb3-phy"
+      phy_type:
+      - utmi_wide
+      phys:
+      - - p:/syscon@ff770000/usb2phy@e460/otg-port
+      power-domains:
+      - - p:/power-management@ff310000/power-controller
+        - 24
+      reg:
+      - [0, 4270850048, 0, 1048576]
+      snps,dis-del-phy-power-chg-quirk: true
+      snps,dis-tx-ipgap-linecheck-quirk: true
+      snps,dis-u2-freeclk-exists-quirk: true
+      snps,dis_enblslpm_quirk: true
+      snps,dis_u2_susphy_quirk: true
+      status:
+      - okay
+  usb_power:
+    compatible:
+    - regulator-fixed
+    enable-active-high: true
+    gpio:
+    - [169, 27, 0]
+    pinctrl-names:
+    - default
+    regulator-always-on: true
+    regulator-name:
+    - typec_power
+    status:
+    - okay
+  vcc-phy:
+    compatible:
+    - regulator-fixed
+    enable-active-high: true
+    gpio:
+    - [34, 12, 0]
+    pinctrl-names:
+    - default
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-name:
+    - vcc_phy
+  vcc3v3-sys:
+    compatible:
+    - regulator-fixed
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-max-microvolt:
+    - [3300000]
+    regulator-min-microvolt:
+    - [3300000]
+    regulator-name:
+    - vcc3v3_sys
+  vcc5v0-sys:
+    compatible:
+    - regulator-fixed
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-max-microvolt:
+    - [5000000]
+    regulator-min-microvolt:
+    - [5000000]
+    regulator-name:
+    - vcc5v0_sys
+  vdd-log:
+    compatible:
+    - pwm-regulator
+    pwms:
+    - - p:/pwm@ff420020
+      - 0
+      - 25000
+      - 1
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-max-microvolt:
+    - [1400000]
+    regulator-min-microvolt:
+    - "\0\f5"
+    regulator-name:
+    - vdd_log
+    rockchip,pwm_voltage:
+    - [900000]
+  video-codec@ff650000:
+    clock-names:
+    - "aclk\0hclk"
+    clocks:
+    - [8, 235, 8, 490]
+    compatible:
+    - rockchip,rk3399-vpu
+    interrupt-names:
+    - "vepu\0vdpu"
+    interrupts:
+    - [0, 114, 4, 0, 0, 113, 4, 0]
+    iommus:
+    - [125]
+    power-domains:
+    - [24, 31]
+    reg:
+    - [0, 4284809216, 0, 2048]
+  video-codec@ff660000:
+    clock-names:
+    - "axi\0ahb\0cabac\0core"
+    clocks:
+    - [8, 237, 8, 492, 8, 159, 8, 158]
+    compatible:
+    - rockchip,rk3399-vdec
+    interrupts:
+    - [0, 116, 4, 0]
+    iommus:
+    - [126]
+    power-domains:
+    - [24, 32]
+    reg:
+    - [0, 4284874752, 0, 1152]
+  vop@ff8f0000:
+    assigned-clock-rates:
+    - [400000000, 100000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 219
+    clock-names:
+    - "aclk_vop\0dclk_vop\0hclk_vop"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 219
+      - p:/clock-controller@ff760000
+      - 181
+      - p:/clock-controller@ff760000
+      - 475
+    compatible:
+    - rockchip,rk3399-vop-lit
+    interrupts:
+    - [0, 119, 4, 0]
+    iommus:
+    - - p:/iommu@ff8f3f00
+    port:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      endpoint@0:
+        reg:
+        - [0]
+        remote-endpoint:
+        - - p:/mipi@ff960000/ports/port@0/endpoint@1
+      endpoint@1:
+        reg:
+        - [1]
+        remote-endpoint:
+        - - p:/edp@ff970000/ports/port@0/endpoint@1
+      endpoint@2:
+        reg:
+        - [2]
+        remote-endpoint:
+        - - p:/hdmi@ff940000/ports/port/endpoint@1
+      endpoint@3:
+        reg:
+        - [3]
+        remote-endpoint:
+        - - p:/mipi@ff968000/ports/port@0/endpoint@1
+      endpoint@4:
+        reg:
+        - [4]
+        remote-endpoint:
+        - - p:/dp@fec00000/ports/port/endpoint@1
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 18
+    reg:
+    - [0, 4287561728, 0, 8192, 0, 4287569920, 0, 1024]
+    reset-names:
+    - "axi\0ahb\0dclk"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 275
+      - p:/clock-controller@ff760000
+      - 279
+      - p:/clock-controller@ff760000
+      - 281
+    status:
+    - disabled
+  vop@ff900000:
+    assigned-clock-rates:
+    - [400000000, 100000000]
+    assigned-clocks:
+    - - p:/clock-controller@ff760000
+      - 217
+    clock-names:
+    - "aclk_vop\0dclk_vop\0hclk_vop"
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 217
+      - p:/clock-controller@ff760000
+      - 180
+      - p:/clock-controller@ff760000
+      - 473
+    compatible:
+    - rockchip,rk3399-vop-big
+    interrupts:
+    - [0, 118, 4, 0]
+    iommus:
+    - - p:/iommu@ff903f00
+    port:
+      '#address-cells':
+      - [1]
+      '#size-cells':
+      - [0]
+      endpoint@0:
+        reg:
+        - [0]
+        remote-endpoint:
+        - - p:/edp@ff970000/ports/port@0/endpoint@0
+      endpoint@1:
+        reg:
+        - [1]
+        remote-endpoint:
+        - - p:/mipi@ff960000/ports/port@0/endpoint@0
+      endpoint@2:
+        reg:
+        - [2]
+        remote-endpoint:
+        - - p:/hdmi@ff940000/ports/port/endpoint@0
+      endpoint@3:
+        reg:
+        - [3]
+        remote-endpoint:
+        - - p:/mipi@ff968000/ports/port@0/endpoint@0
+      endpoint@4:
+        reg:
+        - [4]
+        remote-endpoint:
+        - - p:/dp@fec00000/ports/port/endpoint@0
+    power-domains:
+    - - p:/power-management@ff310000/power-controller
+      - 17
+    reg:
+    - [0, 4287627264, 0, 8192, 0, 4287635456, 0, 4096]
+    reset-names:
+    - "axi\0ahb\0dclk"
+    resets:
+    - - p:/clock-controller@ff760000
+      - 274
+      - p:/clock-controller@ff760000
+      - 278
+      - p:/clock-controller@ff760000
+      - 280
+    status:
+    - disabled
+  watchdog@ff848000:
+    clocks:
+    - - p:/clock-controller@ff760000
+      - 380
+    compatible:
+    - "rockchip,rk3399-wdt\0snps,dw-wdt"
+    interrupts:
+    - [0, 120, 4, 0]
+    reg:
+    - [0, 4286873600, 0, 256]
+  xin24m:
+    '#clock-cells':
+    - [0]
+    clock-frequency:
+    - [24000000]
+    clock-output-names:
+    - xin24m
+    compatible:
+    - fixed-clock

@@ -1,0 +1,3290 @@
+---
+- '#address-cells': [[0x2]]
+  '#size-cells': [[0x2]]
+  compatible: ["rockchip,rk3399-tw07\0rockchip,rk3399"]
+  interrupt-parent: [[0x1]]
+  ad82010-sound:
+    compatible: ["simple-audio-card"]
+    simple-audio-card,format: ["i2s"]
+    simple-audio-card,mclk-fs: [[0x100]]
+    simple-audio-card,name: ["rockchip,ad82010-codec"]
+    simple-audio-card,codec:
+      sound-dai: [[0xd9]]
+    simple-audio-card,cpu:
+      sound-dai: [[0xd8]]
+  aliases:
+    dsi0: ["/dsi@ff960000"]
+    dsi1: ["/dsi@ff968000"]
+    i2c0: ["/i2c@ff3c0000"]
+    i2c1: ["/i2c@ff110000"]
+    i2c2: ["/i2c@ff120000"]
+    i2c3: ["/i2c@ff130000"]
+    i2c4: ["/i2c@ff3d0000"]
+    i2c5: ["/i2c@ff140000"]
+    i2c6: ["/i2c@ff150000"]
+    i2c7: ["/i2c@ff160000"]
+    i2c8: ["/i2c@ff3e0000"]
+    serial0: ["/serial@ff180000"]
+    serial1: ["/serial@ff190000"]
+    serial2: ["/serial@ff1a0000"]
+    serial3: ["/serial@ff1b0000"]
+    serial4: ["/serial@ff370000"]
+  amba:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    compatible: ["arm,amba-bus"]
+    ranges: true
+    dma-controller@ff6d0000:
+      '#dma-cells': [[0x1]]
+      clock-names: ["apb_pclk"]
+      clocks: [[0x8, 0xd3]]
+      compatible: ["arm,pl330\0arm,primecell"]
+      interrupts: [[0x0, 0x5, 0x4, 0x0, 0x0, 0x6, 0x4, 0x0]]
+      peripherals-req-type-burst: true
+      phandle: [[0x5d]]
+      reg: [[0x0, 0xff6d0000, 0x0, 0x4000]]
+    dma-controller@ff6e0000:
+      '#dma-cells': [[0x1]]
+      clock-names: ["apb_pclk"]
+      clocks: [[0x8, 0xd4]]
+      compatible: ["arm,pl330\0arm,primecell"]
+      interrupts: [[0x0, 0x7, 0x4, 0x0, 0x0, 0x8, 0x4, 0x0]]
+      peripherals-req-type-burst: true
+      phandle: [[0x4b]]
+      reg: [[0x0, 0xff6e0000, 0x0, 0x4000]]
+  backlight:
+    brightness-levels: [[0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xa, 0xb,
+        0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18,
+        0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25,
+        0x26, 0x27, 0x28, 0x29, 0x2a, 0x2b, 0x2c, 0x2d, 0x2e, 0x2f, 0x30, 0x31, 0x32,
+        0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f,
+        0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x4c,
+        0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59,
+        0x5a, 0x5b, 0x5c, 0x5d, 0x5e, 0x5f, 0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66,
+        0x67, 0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73,
+        0x74, 0x75, 0x76, 0x77, 0x78, 0x79, 0x7a, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f, 0x80,
+        0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d,
+        0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x97, 0x98, 0x99, 0x9a,
+        0x9b, 0x9c, 0x9d, 0x9e, 0x9f, 0xa0, 0xa1, 0xa2, 0xa3, 0xa4, 0xa5, 0xa6, 0xa7,
+        0xa8, 0xa9, 0xaa, 0xab, 0xac, 0xad, 0xae, 0xaf, 0xb0, 0xb1, 0xb2, 0xb3, 0xb4,
+        0xb5, 0xb6, 0xb7, 0xb8, 0xb9, 0xba, 0xbb, 0xbc, 0xbd, 0xbe, 0xbf, 0xc0, 0xc1,
+        0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce,
+        0xcf, 0xd0, 0xd1, 0xd2, 0xd3, 0xd4, 0xd5, 0xd6, 0xd7, 0xd8, 0xd9, 0xda, 0xdb,
+        0xdc, 0xdd, 0xde, 0xdf, 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8,
+        0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xf5,
+        0xf6, 0xf7, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff]]
+    compatible: ["pwm-backlight"]
+    default-brightness-level: [[0xff]]
+    phandle: [[0xb6]]
+    pwms: [[0xd6, 0x0, 0x61a8, 0x0]]
+  backlight1:
+    brightness-levels: [[0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xa, 0xb,
+        0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18,
+        0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25,
+        0x26, 0x27, 0x28, 0x29, 0x2a, 0x2b, 0x2c, 0x2d, 0x2e, 0x2f, 0x30, 0x31, 0x32,
+        0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f,
+        0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x4c,
+        0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59,
+        0x5a, 0x5b, 0x5c, 0x5d, 0x5e, 0x5f, 0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66,
+        0x67, 0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73,
+        0x74, 0x75, 0x76, 0x77, 0x78, 0x79, 0x7a, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f, 0x80,
+        0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d,
+        0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x97, 0x98, 0x99, 0x9a,
+        0x9b, 0x9c, 0x9d, 0x9e, 0x9f, 0xa0, 0xa1, 0xa2, 0xa3, 0xa4, 0xa5, 0xa6, 0xa7,
+        0xa8, 0xa9, 0xaa, 0xab, 0xac, 0xad, 0xae, 0xaf, 0xb0, 0xb1, 0xb2, 0xb3, 0xb4,
+        0xb5, 0xb6, 0xb7, 0xb8, 0xb9, 0xba, 0xbb, 0xbc, 0xbd, 0xbe, 0xbf, 0xc0, 0xc1,
+        0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce,
+        0xcf, 0xd0, 0xd1, 0xd2, 0xd3, 0xd4, 0xd5, 0xd6, 0xd7, 0xd8, 0xd9, 0xda, 0xdb,
+        0xdc, 0xdd, 0xde, 0xdf, 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8,
+        0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xf5,
+        0xf6, 0xf7, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff]]
+    compatible: ["pwm-backlight"]
+    default-brightness-level: [[0xff]]
+    phandle: [[0xba]]
+    pwms: [[0xd7, 0x0, 0x61a8, 0x0]]
+  chosen:
+    bootargs: ["earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m"]
+  clock-controller@ff760000:
+    '#clock-cells': [[0x1]]
+    '#reset-cells': [[0x1]]
+    assigned-clock-rates: [[0x47868c0, 0x2faf080, 0x2faf080, 0x2faf080, 0x2faf080,
+        0x5f5e100, 0x2faf080, 0x8f0d180, 0x8f0d180, 0x8f0d180, 0x2faf080, 0x8f0d180,
+        0x2faf080, 0x5f5e100, 0x47868c0, 0x47868c0, 0x30a32c00, 0x30a32c00, 0x23c34600,
+        0xbebc200, 0x2faf0800, 0x8f0d180, 0x47868c0, 0x23c3460, 0x11e1a300, 0x5f5e100,
+        0x2faf080, 0x5f5e100, 0x2faf080, 0x5f5e100, 0x5f5e100, 0x5f5e100, 0x5f5e100,
+        0x5f5e100, 0x5f5e100, 0x2faf080, 0x2faf080, 0x2faf080, 0x2faf080, 0x2faf080,
+        0xbebc200, 0x17d78400, 0x17d78400, 0x5f5e100, 0x5f5e100, 0x5f5e100, 0x17d78400,
+        0x17d78400, 0xbebc200, 0x5f5e100, 0xbebc200, 0xbebc200, 0x5f5e100, 0x17d78400,
+        0x17d78400, 0x17d78400, 0x17d78400, 0x11e1a300, 0x17d78400, 0xbebc200, 0x17d78400,
+        0x11e1a300, 0x11e1a300, 0x11e1a300, 0x11e1a300, 0x11e1a300, 0x5f5e100, 0x8f0d180,
+        0x8f0d180, 0x17d78400, 0x5f5e100, 0x17d78400, 0x5f5e100]]
+    assigned-clocks: [[0x8, 0xc0, 0x8, 0xc2, 0x8, 0x1c2, 0x8, 0x4c, 0x8, 0xf0, 0x8,
+        0xcd, 0x8, 0x1cd, 0x8, 0x9f, 0x8, 0x9e, 0x8, 0xf4, 0x8, 0xbe, 0x8, 0xc9, 0x8,
+        0x186, 0x8, 0xd5, 0x8, 0x88, 0x8, 0x87, 0x8, 0x8, 0x8, 0x9, 0x8, 0x6, 0x8,
+        0xd0, 0x8, 0x5, 0x8, 0xc0, 0x8, 0x1c0, 0x8, 0x140, 0x8, 0xc2, 0x8, 0x1c1,
+        0x8, 0x142, 0x8, 0x1c2, 0x8, 0x143, 0x8, 0x41, 0x8, 0x42, 0x8, 0x43, 0x8,
+        0x44, 0x8, 0x45, 0x8, 0x46, 0x8, 0x47, 0x8, 0x48, 0x8, 0x49, 0x8, 0x4a, 0x8,
+        0x4b, 0x8, 0xfa, 0x8, 0xe5, 0x8, 0xe6, 0x8, 0x6b, 0x8, 0x6c, 0x8, 0x16a, 0x8,
+        0xde, 0x8, 0xe3, 0x8, 0x1cd, 0x8, 0x85, 0x8, 0x86, 0x8, 0x4e, 0x8, 0xf0, 0x8,
+        0xcd, 0x8, 0xe1, 0x8, 0xdc, 0x8, 0x6d, 0x8, 0xed, 0x8, 0xeb, 0x8, 0x178, 0x8,
+        0xd5, 0x8, 0x9f, 0x8, 0x9e, 0x8, 0xf4, 0x8, 0xbe, 0x8, 0xc9, 0x8, 0x186, 0x8,
+        0x88, 0x8, 0x87, 0x8, 0xd9, 0x8, 0x1d9, 0x8, 0xdb, 0x8, 0x1db]]
+    compatible: ["rockchip,rk3399-cru"]
+    phandle: [[0x8]]
+    reg: [[0x0, 0xff760000, 0x0, 0x1000]]
+  cpuinfo:
+    compatible: ["rockchip,cpuinfo"]
+    nvmem-cell-names: ["id"]
+    nvmem-cells: [[0xc8]]
+  cpus:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x0]]
+    cpu-map:
+      cluster0:
+        core0:
+          cpu: [[0x2]]
+        core1:
+          cpu: [[0x3]]
+        core2:
+          cpu: [[0x4]]
+        core3:
+          cpu: [[0x5]]
+      cluster1:
+        core0:
+          cpu: [[0x6]]
+        core1:
+          cpu: [[0x7]]
+    cpu@0:
+      '#cooling-cells': [[0x2]]
+      clocks: [[0x8, 0x8]]
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0xe]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x64]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xb]]
+      phandle: [[0x2]]
+      reg: [[0x0, 0x0]]
+      sched-energy-costs: [[0xc, 0xd]]
+    cpu@1:
+      clocks: [[0x8, 0x8]]
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0xe]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x64]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xb]]
+      phandle: [[0x3]]
+      reg: [[0x0, 0x1]]
+      sched-energy-costs: [[0xc, 0xd]]
+    cpu@100:
+      '#cooling-cells': [[0x2]]
+      clocks: [[0x8, 0x9]]
+      compatible: ["arm,cortex-a72\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0x12]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x1b4]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xf]]
+      phandle: [[0x6]]
+      reg: [[0x0, 0x100]]
+      sched-energy-costs: [[0x10, 0x11]]
+    cpu@101:
+      clocks: [[0x8, 0x9]]
+      compatible: ["arm,cortex-a72\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0x12]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x1b4]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xf]]
+      phandle: [[0x7]]
+      reg: [[0x0, 0x101]]
+      sched-energy-costs: [[0x10, 0x11]]
+    cpu@2:
+      clocks: [[0x8, 0x8]]
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0xe]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x64]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xb]]
+      phandle: [[0x4]]
+      reg: [[0x0, 0x2]]
+      sched-energy-costs: [[0xc, 0xd]]
+    cpu@3:
+      clocks: [[0x8, 0x8]]
+      compatible: ["arm,cortex-a53\0arm,armv8"]
+      cpu-idle-states: [[0x9, 0xa]]
+      cpu-supply: [[0xe]]
+      device_type: ["cpu"]
+      dynamic-power-coefficient: [[0x64]]
+      enable-method: ["psci"]
+      operating-points-v2: [[0xb]]
+      phandle: [[0x5]]
+      reg: [[0x0, 0x3]]
+      sched-energy-costs: [[0xc, 0xd]]
+    idle-states:
+      entry-method: ["psci"]
+      cluster-sleep:
+        arm,psci-suspend-param: [[0x1010000]]
+        compatible: ["arm,idle-state"]
+        entry-latency-us: [[0x190]]
+        exit-latency-us: [[0x1f4]]
+        local-timer-stop: true
+        min-residency-us: [[0x7d0]]
+        phandle: [[0xa]]
+      cpu-sleep:
+        arm,psci-suspend-param: [[0x10000]]
+        compatible: ["arm,idle-state"]
+        entry-latency-us: [[0x78]]
+        exit-latency-us: [[0xfa]]
+        local-timer-stop: true
+        min-residency-us: [[0x384]]
+        phandle: [[0x9]]
+  ddr_timing:
+    auto_lp_dis_freq: [[0x29a]]
+    compatible: ["rockchip,ddr-timing"]
+    ddr3_dll_dis_freq: [[0x12c]]
+    ddr3_drv: [[0x28]]
+    ddr3_odt: [[0x78]]
+    ddr3_odt_dis_freq: [[0x29a]]
+    ddr3_speed_bin: [[0x15]]
+    lpddr3_drv: [[0x22]]
+    lpddr3_odt: [[0xf0]]
+    lpddr3_odt_dis_freq: [[0x29a]]
+    lpddr4_ca_odt: [[0x0]]
+    lpddr4_dq_odt: [[0x28]]
+    lpddr4_drv: [[0xf0]]
+    lpddr4_odt_dis_freq: [[0x320]]
+    pd_idle: [[0x0]]
+    phandle: [[0x91]]
+    phy_ddr3_ca_drv: [[0x28]]
+    phy_ddr3_dq_drv: [[0x28]]
+    phy_ddr3_odt: [[0xf0]]
+    phy_dll_dis_freq: [[0x104]]
+    phy_lpddr3_ca_drv: [[0x22]]
+    phy_lpddr3_dq_drv: [[0x22]]
+    phy_lpddr3_odt: [[0xf0]]
+    phy_lpddr4_ca_drv: [[0x28]]
+    phy_lpddr4_ck_cs_drv: [[0x28]]
+    phy_lpddr4_dq_drv: [[0x3c]]
+    phy_lpddr4_odt: [[0x28]]
+    sr_idle: [[0x0]]
+    sr_mc_gate_idle: [[0x0]]
+    srpd_lite_idle: [[0x0]]
+    standby_idle: [[0x0]]
+  dfi@ff630000:
+    clock-names: ["pclk_ddr_mon"]
+    clocks: [[0x8, 0x179]]
+    compatible: ["rockchip,rk3399-dfi"]
+    phandle: [[0x90]]
+    reg: [[0x0, 0xff630000, 0x0, 0x4000]]
+    rockchip,pmu: [[0x8f]]
+    status: ["okay"]
+  display-subsystem:
+    clock-names: ["hdmi-tmds-pll\0default-vop-pll"]
+    clocks: [[0x8, 0x7, 0x8, 0x4]]
+    compatible: ["rockchip,display-subsystem"]
+    devfreq: [[0xae]]
+    logo-memory-region: [[0xc1]]
+    ports: [[0xbf, 0xc0]]
+    secure-memory-region: [[0xc2]]
+    status: ["okay"]
+    route:
+      route-dsi:
+        charge_logo,mode: ["center"]
+        connect: [[0xb4]]
+        logo,kernel: ["logo_kernel.bmp"]
+        logo,mode: ["center"]
+        logo,uboot: ["logo.bmp"]
+        status: ["okay"]
+      route-dsi1:
+        charge_logo,mode: ["center"]
+        connect: [[0xb9]]
+        logo,kernel: ["logo_kernel.bmp"]
+        logo,mode: ["center"]
+        logo,uboot: ["logo.bmp"]
+        status: ["okay"]
+      route-edp:
+        charge_logo,mode: ["center"]
+        connect: [[0xbd]]
+        logo,kernel: ["logo_kernel.bmp"]
+        logo,mode: ["center"]
+        logo,uboot: ["logo.bmp"]
+        status: ["disabled"]
+      route-hdmi:
+        charge_logo,mode: ["center"]
+        connect: [[0xb2]]
+        logo,kernel: ["logo_kernel.bmp"]
+        logo,mode: ["center"]
+        logo,uboot: ["logo.bmp"]
+        status: ["disabled"]
+  dmc:
+    auto-freq-en: [[0x1]]
+    auto-min-freq: [[0x65900]]
+    center-supply: [[0x93]]
+    clock-names: ["dmc_clk"]
+    clocks: [[0x8, 0xaa]]
+    compatible: ["rockchip,rk3399-dmc"]
+    ddr_timing: [[0x91]]
+    devfreq-events: [[0x90]]
+    downdifferential: [[0x14]]
+    interrupts: [[0x0, 0x1, 0x4, 0x0]]
+    operating-points-v2: [[0x92]]
+    phandle: [[0xae]]
+    status: ["disabled"]
+    system-status-freq: [[0x1, 0xd0fc0, 0x8, 0x65900, 0x2, 0x65900, 0x20, 0x65900,
+        0x10, 0xd0fc0, 0x10000, 0xd0fc0, 0x2000, 0xd0fc0, 0x1000, 0xd0fc0, 0xc00,
+        0xd0fc0, 0x4000, 0xd0fc0]]
+    upthreshold: [[0x28]]
+    vop-bw-dmc-freq: [[0x0, 0x241, 0x65900, 0x242, 0x1869f, 0xd0fc0]]
+    vop-pn-msch-readlatency: [[0x0, 0x0, 0x4, 0x20]]
+  dp@fec00000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    '#sound-dai-cells': [[0x1]]
+    assigned-clock-rates: [[0x5f5e100]]
+    assigned-clocks: [[0x8, 0x72]]
+    clock-names: ["core-clk\0pclk\0spdif\0grf"]
+    clocks: [[0x8, 0x72, 0x8, 0x175, 0x8, 0xa1, 0x8, 0x16f]]
+    compatible: ["rockchip,rk3399-cdn-dp"]
+    interrupts: [[0x0, 0x9, 0x4, 0x0]]
+    phys: [[0x2b, 0x2c]]
+    power-domains: [[0x16, 0x15]]
+    reg: [[0x0, 0xfec00000, 0x0, 0x100000]]
+    reset-names: ["spdif\0dptx\0apb\0core"]
+    resets: [[0x8, 0x103, 0x8, 0x148, 0x8, 0x14a, 0x8, 0xfd]]
+    rockchip,grf: [[0x15]]
+    status: ["disabled"]
+    ports:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      port:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        endpoint@0:
+          phandle: [[0xab]]
+          reg: [[0x0]]
+          remote-endpoint: [[0x2d]]
+          status: ["disabled"]
+        endpoint@1:
+          phandle: [[0xa4]]
+          reg: [[0x1]]
+          remote-endpoint: [[0x2e]]
+  dsi@ff960000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["ref\0pclk\0phy_cfg"]
+    clocks: [[0x8, 0xa2, 0x8, 0x170, 0x8, 0xa3]]
+    compatible: ["rockchip,rk3399-mipi-dsi"]
+    interrupts: [[0x0, 0x2d, 0x4, 0x0]]
+    power-domains: [[0x16, 0xf]]
+    reg: [[0x0, 0xff960000, 0x0, 0x8000]]
+    reset-names: ["apb"]
+    resets: [[0x8, 0xfb]]
+    rockchip,grf: [[0x15]]
+    rockchip,lane-rate: [[0x14a]]
+    status: ["okay"]
+    panel@0:
+      backlight: [[0xb6]]
+      compatible: ["simple-panel-dsi"]
+      disable-delay-ms: [[0x32]]
+      dsi,flags: [[0xa03]]
+      dsi,format: [[0x0]]
+      dsi,lanes: [[0x4]]
+      enable-delay-ms: [[0xdc]]
+      enable1-gpios: [[0x18, 0x0, 0x0]]
+      height-mm: [[0x56]]
+      init-delay-ms: [[0x3c]]
+      lcd-gpios: [[0x33, 0x14, 0x0]]
+      ldoen-gpios: [[0x3f, 0x5, 0x0]]
+      panel-exit-sequence: [[0x5000128, 0x5780110]]
+      panel-init-sequence: [!u8 [0x15, 0x0, 0x2, 0x80, 0x59, 0x15, 0x0, 0x2, 0x81,
+          0xff, 0x15, 0x0, 0x2, 0x82, 0xe7, 0x15, 0x0, 0x2, 0x83, 0x5d, 0x15, 0x0,
+          0x2, 0x84, 0xe0, 0x15, 0x0, 0x2, 0x85, 0x11, 0x15, 0x0, 0x2, 0x86, 0xe0,
+          0x5, 0xd8, 0x1, 0x11, 0x5, 0x25, 0x1, 0x29]]
+      prepare-delay-ms: [[0x14]]
+      reg: [[0x0]]
+      reset-delay-ms: [[0x1e]]
+      reset-gpios: [[0x33, 0x0, 0x0]]
+      stb-gpios: [[0x18, 0x1c, 0x0]]
+      unprepare-delay-ms: [[0x1e]]
+      vcc-gpios: [[0x33, 0x12, 0x0]]
+      width-mm: [[0x9a]]
+      display-timings:
+        native-mode: [[0xb7]]
+        timing0:
+          clock-frequency: [[0x2faf080]]
+          de-active: [[0x0]]
+          hactive: [[0x400]]
+          hback-porch: [[0xa0]]
+          hfront-porch: [[0xa0]]
+          hsync-active: [[0x0]]
+          hsync-len: [[0xa]]
+          phandle: [[0xb7]]
+          pixelclk-active: [[0x0]]
+          vactive: [[0x258]]
+          vback-porch: [[0x17]]
+          vfront-porch: [[0xc]]
+          vsync-active: [[0x0]]
+          vsync-len: [[0x1]]
+    ports:
+      port:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        endpoint@0:
+          phandle: [[0xa9]]
+          reg: [[0x0]]
+          remote-endpoint: [[0xb4]]
+          status: ["okay"]
+        endpoint@1:
+          phandle: [[0xa1]]
+          reg: [[0x1]]
+          remote-endpoint: [[0xb5]]
+          status: ["disabled"]
+  dsi@ff968000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["ref\0pclk\0phy_cfg"]
+    clocks: [[0x8, 0xa2, 0x8, 0x171, 0x8, 0xa4]]
+    compatible: ["rockchip,rk3399-mipi-dsi"]
+    interrupts: [[0x0, 0x2e, 0x4, 0x0]]
+    power-domains: [[0x16, 0xf]]
+    reg: [[0x0, 0xff968000, 0x0, 0x8000]]
+    reset-names: ["apb"]
+    resets: [[0x8, 0xfc]]
+    rockchip,grf: [[0x15]]
+    rockchip,lane-rate: [[0x14a]]
+    status: ["okay"]
+    panel@0:
+      backlight: [[0xba]]
+      compatible: ["simple-panel-dsi"]
+      disable-delay-ms: [[0x0]]
+      disp-gpios: [[0x3b, 0x5, 0x0]]
+      dsi,flags: [[0xa43]]
+      dsi,format: [[0x0]]
+      dsi,lanes: [[0x1]]
+      enable-delay-ms: [[0x64]]
+      icn-3v3: [[0x3b, 0x4, 0x0]]
+      icn-rstn: [[0x18, 0x1d, 0x0]]
+      init-delay-ms: [[0x0]]
+      panel-exit-sequence: [[0x5000128, 0x5780110]]
+      panel-init-sequence: [[0x5d80111, 0x5250129]]
+      prepare-delay-ms: [[0x0]]
+      reg: [[0x0]]
+      reset-delay-ms: [[0x0]]
+      unprepare-delay-ms: [[0x0]]
+      vdd-gpios: [[0x3f, 0x6, 0x0]]
+      display-timings:
+        native-mode: [[0xbb]]
+        timing1:
+          clock-frequency: [[0xc65d40]]
+          de-active: [[0x0]]
+          hactive: [[0x1e0]]
+          hback-porch: [[0x2b]]
+          hfront-porch: [[0x4b]]
+          hsync-active: [[0x0]]
+          hsync-len: [[0x4b]]
+          phandle: [[0xbb]]
+          pixelclk-active: [[0x0]]
+          vactive: [[0x110]]
+          vback-porch: [[0xc]]
+          vfront-porch: [[0x25]]
+          vsync-active: [[0x0]]
+          vsync-len: [[0x25]]
+    ports:
+      port:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        endpoint@0:
+          phandle: [[0xac]]
+          reg: [[0x0]]
+          remote-endpoint: [[0xb8]]
+          status: ["disabled"]
+        endpoint@1:
+          phandle: [[0xa5]]
+          reg: [[0x1]]
+          remote-endpoint: [[0xb9]]
+          status: ["okay"]
+  dummy_cpll:
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    clock-output-names: ["dummy_cpll"]
+    compatible: ["fixed-clock"]
+  dummy_vpll:
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x0]]
+    clock-output-names: ["dummy_vpll"]
+    compatible: ["fixed-clock"]
+  dwmmc@fe310000:
+    bus-width: [[0x4]]
+    cap-sd-highspeed: true
+    cap-sdio-irq: true
+    clock-freq-min-max: [[0x30d40, 0x8f0d180]]
+    clock-frequency: [[0x5f5e100]]
+    clock-names: ["biu\0ciu\0ciu-drive\0ciu-sample"]
+    clocks: [[0x8, 0x1ee, 0x8, 0x4d, 0x8, 0x9c, 0x8, 0x9d]]
+    compatible: ["rockchip,rk3399-dw-mshc\0rockchip,rk3288-dw-mshc"]
+    disable-wp: true
+    fifo-depth: [[0x100]]
+    interrupts: [[0x0, 0x40, 0x4, 0x0]]
+    keep-power-in-suspend: true
+    mmc-pwrseq: [[0x1b]]
+    non-removable: true
+    num-slots: [[0x1]]
+    pinctrl-0: [[0x1c, 0x1d, 0x1e]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xfe310000, 0x0, 0x4000]]
+    rockchip,default-sample-phase: [[0x5a]]
+    sd-uhs-sdr104: true
+    status: ["okay"]
+    supports-sdio: true
+  dwmmc@fe320000:
+    bus-width: [[0x4]]
+    cap-mmc-highspeed: true
+    cap-sd-highspeed: true
+    clock-freq-min-max: [[0x61a80, 0x8f0d180]]
+    clock-frequency: [[0x2faf080]]
+    clock-names: ["biu\0ciu\0ciu-drive\0ciu-sample"]
+    clocks: [[0x8, 0x1ce, 0x8, 0x4c, 0x8, 0x9a, 0x8, 0x9b]]
+    compatible: ["rockchip,rk3399-dw-mshc\0rockchip,rk3288-dw-mshc"]
+    disable-wp: true
+    fifo-depth: [[0x100]]
+    interrupts: [[0x0, 0x41, 0x4, 0x0]]
+    num-slots: [[0x1]]
+    pinctrl-0: [[0x20, 0x21, 0x22, 0x23]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1b]]
+    reg: [[0x0, 0xfe320000, 0x0, 0x4000]]
+    status: ["okay"]
+    supports-sd: true
+    vqmmc-supply: [[0x1f]]
+  ec20ce:
+    EC20_MOD_RST: [[0x33, 0x1, 0x8]]
+    EC20_POWER_EN: [[0x39, 0xd, 0x8]]
+    EC20_STATUS: [[0x33, 0x3, 0x8]]
+    EC20_VBAT_4V: [[0x3f, 0x19, 0x8]]
+    EC20_WAKEUP_IN: [[0x39, 0x2, 0x8]]
+    compatible: ["rockchip,ec20ce"]
+  edp@ff970000:
+    clock-names: ["dp\0pclk"]
+    clocks: [[0x8, 0x16a, 0x8, 0x16c]]
+    compatible: ["rockchip,rk3399-edp"]
+    interrupts: [[0x0, 0xa, 0x4, 0x0]]
+    pinctrl-0: [[0xbc]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x19]]
+    reg: [[0x0, 0xff970000, 0x0, 0x8000]]
+    reset-names: ["dp"]
+    resets: [[0x8, 0x11d]]
+    rockchip,grf: [[0x15]]
+    status: ["disabled"]
+    ports:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      port@0:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        reg: [[0x0]]
+        endpoint@0:
+          phandle: [[0xa8]]
+          reg: [[0x0]]
+          remote-endpoint: [[0xbd]]
+          status: ["disabled"]
+        endpoint@1:
+          phandle: [[0xa2]]
+          reg: [[0x1]]
+          remote-endpoint: [[0xbe]]
+          status: ["disabled"]
+  efuse@ff690000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x1]]
+    clock-names: ["pclk_efuse"]
+    clocks: [[0x8, 0x17d]]
+    compatible: ["rockchip,rk3399-efuse"]
+    reg: [[0x0, 0xff690000, 0x0, 0x80]]
+    center-leakage@19:
+      reg: [[0x19, 0x1]]
+    cpu-id@7:
+      phandle: [[0xc8]]
+      reg: [[0x7, 0x10]]
+    cpu-leakage@17:
+      phandle: [[0xd2]]
+      reg: [[0x17, 0x1]]
+    cpu-leakage@1a:
+      phandle: [[0xd0]]
+      reg: [[0x1a, 0x1]]
+    gpu-leakage@18:
+      phandle: [[0xd3]]
+      reg: [[0x18, 0x1]]
+    logic-leakage@1b:
+      reg: [[0x1b, 0x1]]
+    specification-serial-number@6:
+      bits: [[0x0, 0x5]]
+      phandle: [[0xd1]]
+      reg: [[0x6, 0x1]]
+    wafer-info@1c:
+      reg: [[0x1c, 0x1]]
+  energy-costs:
+    rk3399-cluster-cost0:
+      busy-cost-data: [[0x6c, 0x2e, 0x9f, 0x43, 0xd8, 0x5a, 0x10b, 0x78, 0x13e, 0x99,
+          0x177, 0xc6, 0x191, 0xde]]
+      idle-cost-data: [[0x38, 0x38, 0x38, 0x38]]
+      phandle: [[0xd]]
+    rk3399-cluster-cost1:
+      busy-cost-data: [[0xd2, 0x81, 0x134, 0xb8, 0x1a3, 0xf6, 0x206, 0x14f, 0x269,
+          0x1ac, 0x2d8, 0x23d, 0x33b, 0x2d4, 0x39d, 0x384, 0x400, 0x454]]
+      idle-cost-data: [[0x41, 0x41, 0x41, 0x41]]
+      phandle: [[0x11]]
+    rk3399-core-cost0:
+      busy-cost-data: [[0x6c, 0x2e, 0x9f, 0x43, 0xd8, 0x5a, 0x10b, 0x78, 0x13e, 0x99,
+          0x177, 0xc6, 0x191, 0xde]]
+      idle-cost-data: [[0x6, 0x6, 0x0, 0x0]]
+      phandle: [[0xc]]
+    rk3399-core-cost1:
+      busy-cost-data: [[0xd2, 0x81, 0x134, 0xb8, 0x1a3, 0xf6, 0x206, 0x14f, 0x269,
+          0x1ac, 0x2d8, 0x23d, 0x33b, 0x2d4, 0x39d, 0x384, 0x400, 0x454]]
+      idle-cost-data: [[0xf, 0xf, 0x0, 0x0]]
+      phandle: [[0x10]]
+  ethernet@fe300000:
+    assigned-clock-parents: [[0x19]]
+    assigned-clocks: [[0x8, 0x69]]
+    clock-names: ["stmmaceth\0mac_clk_rx\0mac_clk_tx\0clk_mac_ref\0clk_mac_refout\0aclk_mac\0pclk_mac"]
+    clock_in_out: ["output"]
+    clocks: [[0x8, 0x69, 0x8, 0x67, 0x8, 0x68, 0x8, 0x66, 0x8, 0x6a, 0x8, 0xd5, 0x8,
+        0x166]]
+    compatible: ["rockchip,rk3399-gmac"]
+    interrupt-names: ["macirq"]
+    interrupts: [[0x0, 0xc, 0x4, 0x0]]
+    phy-mode: ["rmii"]
+    phy-supply: [[0x17]]
+    pinctrl-0: [[0x1a]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x16]]
+    reg: [[0x0, 0xfe300000, 0x0, 0x10000]]
+    reset-names: ["stmmaceth"]
+    resets: [[0x8, 0x89]]
+    rockchip,grf: [[0x15]]
+    rx_delay: [[0x11]]
+    snps,reset-active-low: true
+    snps,reset-delays-us: [[0x0, 0x2710, 0xc350]]
+    snps,reset-gpio: [[0x18, 0x3, 0x1]]
+    status: ["okay"]
+    tx_delay: [[0x28]]
+  external-gmac-clock:
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x7735940]]
+    clock-output-names: ["clkin_gmac"]
+    compatible: ["fixed-clock"]
+  fiq-debugger:
+    compatible: ["rockchip,fiq-debugger"]
+    interrupts: [[0x0, 0x96, 0x4, 0x0]]
+    pinctrl-0: [[0x47]]
+    pinctrl-names: ["default"]
+    rockchip,baudrate: [[0x16e360]]
+    rockchip,irq-mode-enable: [[0x0]]
+    rockchip,serial-id: [[0x2]]
+    rockchip,wake-irq: [[0x0]]
+  firmware:
+    android:
+      compatible: ["android,firmware"]
+      fstab:
+        compatible: ["android,fstab"]
+        system:
+          compatible: ["android,system"]
+          dev: ["/dev/block/platform/fe330000.sdhci/by-name/system"]
+          fsmgr_flags: ["wait,verify"]
+          mnt_flags: ["ro,barrier=1,inode_readahead_blks=8"]
+          type: ["ext4"]
+        vendor:
+          compatible: ["android,vendor"]
+          dev: ["/dev/block/platform/fe330000.sdhci/by-name/vendor"]
+          fsmgr_flags: ["wait,verify"]
+          mnt_flags: ["ro,barrier=1,inode_readahead_blks=8"]
+          type: ["ext4"]
+  gpu@ff9a0000:
+    '#cooling-cells': [[0x2]]
+    clock-names: ["clk_mali"]
+    clocks: [[0x8, 0xd0]]
+    compatible: ["arm,malit860\0arm,malit86x\0arm,malit8xx\0arm,mali-midgard"]
+    interrupt-names: ["GPU\0JOB\0MMU"]
+    interrupts: [[0x0, 0x13, 0x4, 0x0, 0x0, 0x14, 0x4, 0x0, 0x0, 0x15, 0x4, 0x0]]
+    mali-supply: [[0x9f]]
+    operating-points-v2: [[0x9e]]
+    phandle: [[0x64]]
+    power-domains: [[0x16, 0x23]]
+    power-off-delay-ms: [[0xc8]]
+    reg: [[0x0, 0xff9a0000, 0x0, 0x10000]]
+    status: ["okay"]
+    power_model:
+      compatible: ["arm,mali-simple-power-model"]
+      dynamic-power: [[0x18c]]
+      frequency: [[0x1f4]]
+      static-power: [[0x12c]]
+      thermal-zone: ["gpu-thermal"]
+      ts: [[0x7d00, 0x125c, 0xffffffb0, 0x2]]
+      voltage: [[0x384]]
+  hdmi-hdcp2@ff988000:
+    clock-names: ["aclk_hdcp2\0pclk_hdcp2\0hdcp2_clk_hdmi"]
+    clocks: [[0x8, 0xe0, 0x8, 0x176, 0x8, 0x1e9]]
+    compatible: ["rockchip,rk3399-hdmi-hdcp2"]
+    interrupts: [[0x0, 0x16, 0x4, 0x0]]
+    reg: [[0x0, 0xff988000, 0x0, 0x2000]]
+    status: ["disabled"]
+  hdmi@ff940000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    '#sound-dai-cells': [[0x0]]
+    clock-names: ["iahb\0isfr\0vpll\0grf\0cec"]
+    clocks: [[0x8, 0x174, 0x8, 0x71, 0x8, 0x7, 0x8, 0x16f, 0x8, 0x70]]
+    compatible: ["rockchip,rk3399-dw-hdmi"]
+    ddc-i2c-scl-high-time-ns: [[0x2599]]
+    ddc-i2c-scl-low-time-ns: [[0x2710]]
+    interrupts: [[0x0, 0x17, 0x4, 0x0]]
+    pinctrl-0: [[0xb1]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x15]]
+    reg: [[0x0, 0xff940000, 0x0, 0x20000]]
+    reg-io-width: [[0x4]]
+    rockchip,grf: [[0x15]]
+    status: ["disabled"]
+    ports:
+      port:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        endpoint@0:
+          phandle: [[0xaa]]
+          reg: [[0x0]]
+          remote-endpoint: [[0xb2]]
+          status: ["disabled"]
+        endpoint@1:
+          phandle: [[0xa3]]
+          reg: [[0x1]]
+          remote-endpoint: [[0xb3]]
+          status: ["disabled"]
+  i2c@ff110000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x41, 0x8, 0x155]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0x1e]]
+    i2c-scl-rising-time-ns: [[0x8c]]
+    interrupts: [[0x0, 0x3b, 0x4, 0x0]]
+    pinctrl-0: [[0x38]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff110000, 0x0, 0x1000]]
+    status: ["okay"]
+    rs5c372@32:
+      compatible: ["rs5c372a"]
+      irq_gpio: [[0x39, 0x8, 0x0]]
+      reg: [[0x32]]
+      status: ["okay"]
+  i2c@ff120000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x61a80]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x42, 0x8, 0x156]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0xb]]
+    i2c-scl-rising-time-ns: [[0x159]]
+    interrupts: [[0x0, 0x23, 0x4, 0x0]]
+    pinctrl-0: [[0x3a]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff120000, 0x0, 0x1000]]
+    status: ["okay"]
+    icn6211@2c:
+      compatible: ["cvte,icn6211"]
+      icn,gpio_3v3: [[0x3b, 0x4, 0x0]]
+      icn,gpio_rstn: [[0x18, 0x1d, 0x0]]
+      reg: [[0x2c]]
+      status: ["okay"]
+  i2c@ff130000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x186a0]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x43, 0x8, 0x157]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0xb]]
+    i2c-scl-rising-time-ns: [[0x159]]
+    interrupts: [[0x0, 0x22, 0x4, 0x0]]
+    pinctrl-0: [[0x3c]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff130000, 0x0, 0x1000]]
+    status: ["okay"]
+    atsha204a@64:
+      compatible: ["atmel,atsha204a"]
+      reg: [[0x64]]
+      status: ["okay"]
+  i2c@ff140000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x44, 0x8, 0x158]]
+    compatible: ["rockchip,rk3399-i2c"]
+    interrupts: [[0x0, 0x26, 0x4, 0x0]]
+    pinctrl-0: [[0x3d]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff140000, 0x0, 0x1000]]
+    status: ["disabled"]
+  i2c@ff150000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x61a80]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x45, 0x8, 0x159]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0xb]]
+    i2c-scl-rising-time-ns: [[0x159]]
+    interrupts: [[0x0, 0x25, 0x4, 0x0]]
+    pinctrl-0: [[0x3e]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff150000, 0x0, 0x1000]]
+    status: ["okay"]
+    ad82010@30:
+      '#sound-dai-cells': [[0x0]]
+      clock-names: ["mclk"]
+      clocks: [[0x8, 0x59]]
+      compatible: ["ESMT, ad82010"]
+      mute-gpio: [[0x18, 0x1, 0x0]]
+      phandle: [[0xd9]]
+      pinctrl-0: [[0x40]]
+      pinctrl-names: ["default"]
+      reg: [[0x30]]
+    pn547@28:
+      compatible: ["nxp,pn547"]
+      enable-gpios: [[0x3f, 0x3, 0x0]]
+      interrupt-gpios: [[0x3f, 0x4, 0x4]]
+      reg: [[0x28]]
+      status: ["okay"]
+  i2c@ff160000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x61a80]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x8, 0x46, 0x8, 0x15a]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0xb]]
+    i2c-scl-rising-time-ns: [[0x159]]
+    interrupts: [[0x0, 0x24, 0x4, 0x0]]
+    pinctrl-0: [[0x41]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff160000, 0x0, 0x1000]]
+    status: ["okay"]
+    goodix_ts@5d:
+      compatible: ["goodix,gt9xx"]
+      goodix,cfg-group0: [!u8 [0x43, 0x0, 0x4, 0x58, 0x2, 0x5, 0x8d, 0x0, 0x1, 0x8,
+          0x28, 0x5, 0x50, 0x32, 0x3, 0x5, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x8c, 0x2e, 0xe, 0x23, 0x21, 0xf1, 0x8, 0x0, 0x0, 0x0, 0xba,
+          0x3, 0x1c, 0x0, 0x0, 0x0, 0x0, 0x0, 0x3, 0x64, 0x32, 0x0, 0x0, 0x0, 0xf,
+          0x41, 0x94, 0xc5, 0x2, 0x7, 0x0, 0x0, 0x4, 0xeb, 0x11, 0x0, 0xb2, 0x17,
+          0x0, 0x87, 0x1f, 0x0, 0x67, 0x2a, 0x0, 0x50, 0x38, 0x0, 0x50, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x2, 0x4, 0x6, 0x8, 0xa, 0xc, 0xe, 0x10, 0x12, 0x14,
+          0x16, 0x18, 0x1a, 0x1c, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+          0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x0, 0x2, 0x4, 0x6, 0x8,
+          0xa, 0xc, 0xf, 0x10, 0x12, 0x13, 0x14, 0x16, 0x18, 0x1c, 0x1d, 0x1e, 0x1f,
+          0x20, 0x21, 0x22, 0x24, 0x26, 0x28, 0x29, 0x2a, 0xff, 0xff, 0xff, 0xff,
+          0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+          0xc, 0x1]]
+      goodix,cfg-group2: [!u8 [0x48, 0xd0, 0x2, 0x0, 0x5, 0x5, 0x75, 0x1, 0x1, 0xf,
+          0x24, 0xf, 0x64, 0x3c, 0x3, 0x5, 0x0, 0x0, 0x0, 0x2, 0x0, 0x0, 0x0, 0x16,
+          0x19, 0x1c, 0x14, 0x8c, 0xe, 0xe, 0x24, 0x0, 0x31, 0xd, 0x0, 0x0, 0x0, 0x83,
+          0x33, 0x1d, 0x0, 0x41, 0x0, 0x0, 0x3c, 0xa, 0x14, 0x8, 0xa, 0x0, 0x2b, 0x1c,
+          0x3c, 0x94, 0xd5, 0x3, 0x8, 0x0, 0x0, 0x4, 0x93, 0x1e, 0x0, 0x82, 0x23,
+          0x0, 0x74, 0x29, 0x0, 0x69, 0x2f, 0x0, 0x5f, 0x37, 0x0, 0x5f, 0x20, 0x40,
+          0x60, 0x0, 0xf0, 0x40, 0x30, 0x55, 0x50, 0x27, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x14, 0x19, 0x0, 0x0, 0x50, 0x50, 0x2, 0x4, 0x6, 0x8, 0xa, 0xc, 0xe, 0x10,
+          0x12, 0x14, 0x16, 0x18, 0x1a, 0x1c, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22,
+          0x24, 0x26, 0x28, 0x29, 0x2a, 0x1c, 0x18, 0x16, 0x14, 0x13, 0x12, 0x10,
+          0xf, 0xc, 0xa, 0x8, 0x6, 0x4, 0x2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+          0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x3c, 0x1]]
+      goodix,irq-gpio: [[0x33, 0x17, 0x8]]
+      goodix,rst-gpio: [[0x33, 0x16, 0x0]]
+      pinctrl-0: [[0x43]]
+      pinctrl-names: ["default"]
+      reg: [[0x5d]]
+      vcc_i2c-supply: [[0x42]]
+  i2c@ff3c0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x61a80]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x2f, 0x9, 0x2f, 0x1b]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0x4]]
+    i2c-scl-rising-time-ns: [[0xa8]]
+    interrupts: [[0x0, 0x39, 0x4, 0x0]]
+    pinctrl-0: [[0x30]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff3c0000, 0x0, 0x1000]]
+    status: ["okay"]
+    external-gmac-clock:
+      '#clock-cells': [[0x0]]
+      clock-frequency: [[0x2faf080]]
+      clock-output-names: ["ext_gmac"]
+      compatible: ["fixed-clock"]
+      phandle: [[0x19]]
+    pmic@1b:
+      '#clock-cells': [[0x1]]
+      clock-output-names: ["xin32k\0rk808-clkout2"]
+      compatible: ["rockchip,rk808"]
+      interrupt-parent: [[0x33]]
+      interrupts: [[0x15, 0x8]]
+      phandle: [[0xdc]]
+      pinctrl-0: [[0x35]]
+      pinctrl-names: ["default"]
+      reg: [[0x1b]]
+      rockchip,system-power-controller: true
+      status: ["okay"]
+      vcc1-supply: [[0x36]]
+      vcc10-supply: [[0x36]]
+      vcc11-supply: [[0x36]]
+      vcc12-supply: [[0x36]]
+      vcc2-supply: [[0x36]]
+      vcc3-supply: [[0x36]]
+      vcc4-supply: [[0x36]]
+      vcc6-supply: [[0x36]]
+      vcc7-supply: [[0x36]]
+      vcc8-supply: [[0x36]]
+      vcc9-supply: [[0x36]]
+      vddio-supply: [[0x37]]
+      wakeup-source: true
+      regulators:
+        DCDC_REG1:
+          phandle: [[0x93]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x149970]]
+          regulator-min-microvolt: [[0xb71b0]]
+          regulator-name: ["vdd_center"]
+          regulator-ramp-delay: [[0x1771]]
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        DCDC_REG2:
+          phandle: [[0xe]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x149970]]
+          regulator-min-microvolt: [[0xb71b0]]
+          regulator-name: ["vdd_cpu_l"]
+          regulator-ramp-delay: [[0x1771]]
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        DCDC_REG3:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name: ["vcc_ddr"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+        DCDC_REG4:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x1b7740]]
+          regulator-min-microvolt: [[0x1b7740]]
+          regulator-name: ["vcc_1v8"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x1b7740]]
+        LDO_REG1:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x1b7740]]
+          regulator-min-microvolt: [[0x1b7740]]
+          regulator-name: ["vcc1v8_dvp"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x1b7740]]
+        LDO_REG2:
+          phandle: [[0x42]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x2dc6c0]]
+          regulator-min-microvolt: [[0x2dc6c0]]
+          regulator-name: ["vcc3v0_tp"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x2dc6c0]]
+        LDO_REG3:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x1b7740]]
+          regulator-min-microvolt: [[0x1b7740]]
+          regulator-name: ["vcca_1v8"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x1b7740]]
+        LDO_REG4:
+          phandle: [[0x1f]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x2dc6c0]]
+          regulator-min-microvolt: [[0x1b7740]]
+          regulator-name: ["vcc_sd"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x2dc6c0]]
+        LDO_REG5:
+          phandle: [[0x97]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x2dc6c0]]
+          regulator-min-microvolt: [[0x2dc6c0]]
+          regulator-name: ["vcc3v0_sd"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x325aa0]]
+        LDO_REG6:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x16e360]]
+          regulator-min-microvolt: [[0x16e360]]
+          regulator-name: ["vcc_1v5"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x16e360]]
+        LDO_REG7:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x1b7740]]
+          regulator-min-microvolt: [[0x1b7740]]
+          regulator-name: ["vcca1v8_codec"]
+          regulator-state-mem:
+            regulator-off-in-suspend: true
+        LDO_REG8:
+          phandle: [[0x37]]
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-max-microvolt: [[0x2dc6c0]]
+          regulator-min-microvolt: [[0x2dc6c0]]
+          regulator-name: ["vcc_3v0"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+            regulator-suspend-microvolt: [[0x2dc6c0]]
+        OTG_SWITCH:
+          regulator-name: ["otg_switch"]
+        SWITCH_REG1:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name: ["vcc3v3_s3"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+        SWITCH_REG2:
+          regulator-always-on: true
+          regulator-boot-on: true
+          regulator-name: ["vcc3v3_s0"]
+          regulator-state-mem:
+            regulator-on-in-suspend: true
+    syr827@40:
+      compatible: ["silergy,syr827"]
+      fcs,suspend-voltage-selector: [[0x1]]
+      phandle: [[0x12]]
+      pinctrl-0: [[0x32]]
+      reg: [[0x40]]
+      regulator-always-on: true
+      regulator-boot-on: true
+      regulator-compatible: ["fan53555-reg"]
+      regulator-max-microvolt: [[0x16e360]]
+      regulator-min-microvolt: [[0xadf34]]
+      regulator-name: ["vdd_cpu_b"]
+      regulator-ramp-delay: [[0x3e8]]
+      vin-supply: [[0x31]]
+      vsel-gpios: [[0x33, 0x11, 0x0]]
+      regulator-state-mem:
+        regulator-off-in-suspend: true
+    syr828@41:
+      compatible: ["silergy,syr828"]
+      fcs,suspend-voltage-selector: [[0x1]]
+      phandle: [[0x9f]]
+      pinctrl-0: [[0x34]]
+      reg: [[0x41]]
+      regulator-always-on: true
+      regulator-boot-on: true
+      regulator-compatible: ["fan53555-reg"]
+      regulator-initial-mode: [[0x1]]
+      regulator-max-microvolt: [[0x16e360]]
+      regulator-min-microvolt: [[0xadf34]]
+      regulator-name: ["vdd_gpu"]
+      regulator-ramp-delay: [[0x3e8]]
+      status: ["okay"]
+      vin-supply: [[0x31]]
+      vsel-gpios: [[0x33, 0xe, 0x0]]
+      regulator-state-mem:
+        regulator-off-in-suspend: true
+  i2c@ff3d0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-frequency: [[0x61a80]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x2f, 0xa, 0x2f, 0x1c]]
+    compatible: ["rockchip,rk3399-i2c"]
+    i2c-scl-falling-time-ns: [[0xb]]
+    i2c-scl-rising-time-ns: [[0x159]]
+    interrupts: [[0x0, 0x38, 0x4, 0x0]]
+    pinctrl-0: [[0x85]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff3d0000, 0x0, 0x1000]]
+    status: ["okay"]
+    bma250@18:
+      compatible: ["bma2xx_acc"]
+      irq_enable: [[0x0]]
+      layout: [[0x6]]
+      poll_delay_ms: [[0xc8]]
+      reg: [[0x18]]
+      reprobe_en: [[0x1]]
+      status: ["okay"]
+      type: [[0x2]]
+    fusb30x@22:
+      compatible: ["fairchild,fusb302"]
+      int-n-gpios: [[0x33, 0x2, 0x0]]
+      phandle: [[0x9a]]
+      pinctrl-0: [[0x86]]
+      pinctrl-names: ["default"]
+      reg: [[0x22]]
+      status: ["okay"]
+  i2c@ff3e0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["i2c\0pclk"]
+    clocks: [[0x2f, 0xb, 0x2f, 0x1d]]
+    compatible: ["rockchip,rk3399-i2c"]
+    interrupts: [[0x0, 0x3a, 0x4, 0x0]]
+    pinctrl-0: [[0x87]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff3e0000, 0x0, 0x1000]]
+    status: ["disabled"]
+  i2s@ff880000:
+    '#sound-dai-cells': [[0x0]]
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xae]]
+    clock-names: ["i2s_clk\0i2s_hclk"]
+    clocks: [[0x8, 0x56, 0x8, 0x1d4]]
+    compatible: ["rockchip,rk3399-i2s\0rockchip,rk3066-i2s"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x5d, 0x0, 0x5d, 0x1]]
+    interrupts: [[0x0, 0x27, 0x4, 0x0]]
+    phandle: [[0xd8]]
+    pinctrl-0: [[0x9c]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xff880000, 0x0, 0x1000]]
+    rockchip,capture-channels: [[0x8]]
+    rockchip,grf: [[0x15]]
+    rockchip,i2s-broken-burst-len: true
+    rockchip,playback-channels: [[0x8]]
+    status: ["okay"]
+  i2s@ff890000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xaf]]
+    clock-names: ["i2s_clk\0i2s_hclk"]
+    clocks: [[0x8, 0x57, 0x8, 0x1d5]]
+    compatible: ["rockchip,rk3399-i2s\0rockchip,rk3066-i2s"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x5d, 0x2, 0x5d, 0x3]]
+    interrupts: [[0x0, 0x28, 0x4, 0x0]]
+    pinctrl-0: [[0x9d]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xff890000, 0x0, 0x1000]]
+    status: ["disabled"]
+  i2s@ff8a0000:
+    '#sound-dai-cells': [[0x0]]
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xb0]]
+    clock-names: ["i2s_clk\0i2s_hclk"]
+    clocks: [[0x8, 0x58, 0x8, 0x1d6]]
+    compatible: ["rockchip,rk3399-i2s\0rockchip,rk3066-i2s"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x5d, 0x4, 0x5d, 0x5]]
+    interrupts: [[0x0, 0x29, 0x4, 0x0]]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xff8a0000, 0x0, 0x1000]]
+    rockchip,bclk-fs: [[0x80]]
+    status: ["disabled"]
+  iep@ff670000:
+    allocator: [[0x1]]
+    clock-names: ["aclk_iep\0hclk_iep"]
+    clocks: [[0x8, 0xe1, 0x8, 0x1dd]]
+    compatible: ["rockchip,iep"]
+    interrupts: [[0x0, 0x2a, 0x4, 0x0]]
+    iommu_enabled: [[0x1]]
+    iommus: [[0x96]]
+    power-domains: [[0x16, 0x22]]
+    reg: [[0x0, 0xff670000, 0x0, 0x800]]
+    status: ["okay"]
+    version: [[0x2]]
+  indicator-lamp:
+    blue: [[0x3f, 0x15, 0x0]]
+    compatible: ["indicator-lamp"]
+    red: [[0x3f, 0x18, 0x0]]
+  interrupt-controller@fee00000:
+    '#address-cells': [[0x2]]
+    '#interrupt-cells': [[0x4]]
+    '#size-cells': [[0x2]]
+    compatible: ["arm,gic-v3"]
+    interrupt-controller: true
+    interrupts: [[0x1, 0x9, 0x4, 0x0]]
+    phandle: [[0x1]]
+    ranges: true
+    reg: [[0x0, 0xfee00000, 0x0, 0x10000, 0x0, 0xfef00000, 0x0, 0xc0000, 0x0, 0xfff00000,
+        0x0, 0x10000, 0x0, 0xfff10000, 0x0, 0x10000, 0x0, 0xfff20000, 0x0, 0x10000]]
+    interrupt-controller@fee20000:
+      compatible: ["arm,gic-v3-its"]
+      msi-controller: true
+      phandle: [[0x88]]
+      reg: [[0x0, 0xfee20000, 0x0, 0x20000]]
+    ppi-partitions:
+      interrupt-partition-0:
+        affinity: [[0x2, 0x3, 0x4, 0x5]]
+        phandle: [[0x13]]
+      interrupt-partition-1:
+        affinity: [[0x6, 0x7]]
+        phandle: [[0x14]]
+  iommu@ff650800:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xeb, 0x8, 0x1ea]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["vpu_mmu"]
+    interrupts: [[0x0, 0x73, 0x4, 0x0]]
+    phandle: [[0x94]]
+    power-domains: [[0x16, 0x1f]]
+    reg: [[0x0, 0xff650800, 0x0, 0x40]]
+  iommu@ff660480:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xed, 0x8, 0x1ec]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["vdec_mmu"]
+    interrupts: [[0x0, 0x75, 0x4, 0x0]]
+    phandle: [[0x95]]
+    power-domains: [[0x16, 0x20]]
+    reg: [[0x0, 0xff660480, 0x0, 0x40, 0x0, 0xff6604c0, 0x0, 0x40]]
+  iommu@ff670800:
+    '#iommu-cells': [[0x0]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["iep_mmu"]
+    interrupts: [[0x0, 0x2a, 0x4, 0x0]]
+    phandle: [[0x96]]
+    reg: [[0x0, 0xff670800, 0x0, 0x40]]
+    status: ["okay"]
+  iommu@ff8f3f00:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xdb, 0x8, 0x1db]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["vopl_mmu"]
+    interrupts: [[0x0, 0x77, 0x4, 0x0]]
+    phandle: [[0xa0]]
+    power-domains: [[0x16, 0x12]]
+    reg: [[0x0, 0xff8f3f00, 0x0, 0x100]]
+    status: ["okay"]
+  iommu@ff903f00:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xd9, 0x8, 0x1d9]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["vopb_mmu"]
+    interrupts: [[0x0, 0x76, 0x4, 0x0]]
+    phandle: [[0xa7]]
+    power-domains: [[0x16, 0x11]]
+    reg: [[0x0, 0xff903f00, 0x0, 0x100]]
+    status: ["okay"]
+  iommu@ff914000:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xe7, 0x8, 0x1e1]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["isp0_mmu"]
+    interrupts: [[0x0, 0x2b, 0x4, 0x0]]
+    phandle: [[0xaf]]
+    power-domains: [[0x16, 0x13]]
+    reg: [[0x0, 0xff914000, 0x0, 0x100, 0x0, 0xff915000, 0x0, 0x100]]
+    rk_iommu,disable_reset_quirk: true
+    status: ["disabled"]
+  iommu@ff924000:
+    '#iommu-cells': [[0x0]]
+    clock-names: ["aclk\0hclk"]
+    clocks: [[0x8, 0xe8, 0x8, 0x1e2]]
+    compatible: ["rockchip,iommu"]
+    interrupt-names: ["isp1_mmu"]
+    interrupts: [[0x0, 0x2c, 0x4, 0x0]]
+    phandle: [[0xb0]]
+    power-domains: [[0x16, 0x14]]
+    reg: [[0x0, 0xff924000, 0x0, 0x100, 0x0, 0xff925000, 0x0, 0x100]]
+    rk_iommu,disable_reset_quirk: true
+    status: ["disabled"]
+  isp@ff910000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clock-rates: [[0x2faf0800]]
+    assigned-clocks: [[0x8, 0xb2]]
+    clock-names: ["clk_cif_out\0clk_cif_pll\0pclk_dphytxrx\0pclk_dphy_ref\0aclk_isp0_noc\0aclk_isp0_wrapper\0hclk_isp0_noc\0hclk_isp0_wrapper\0clk_isp0\0pclk_dphyrx"]
+    clocks: [[0x8, 0x89, 0x8, 0xb2, 0x8, 0xa4, 0x8, 0x77, 0x8, 0xe7, 0x8, 0xe9, 0x8,
+        0x1e1, 0x8, 0x1e3, 0x8, 0x6e, 0x8, 0xa5]]
+    compatible: ["rockchip,rk3399-isp\0rockchip,isp"]
+    interrupts: [[0x0, 0x2b, 0x4, 0x0]]
+    iommus: [[0xaf]]
+    pinctrl-0: [[0xcb]]
+    pinctrl-1: [[0xcb, 0xcc]]
+    pinctrl-2: [[0xcb]]
+    pinctrl-3: [[0xcb, 0xcd]]
+    pinctrl-4: [[0xce]]
+    pinctrl-5: [[0xcf]]
+    pinctrl-names: ["cif_clkout\0isp_dvp8bit0\0isp_mipi_fl\0isp_mipi_fl_prefl\0isp_flash_as_gpio\0isp_flash_as_trigger_out"]
+    power-domains: [[0x16, 0x13]]
+    reg: [[0x0, 0xff910000, 0x0, 0x4000]]
+    rockchip,cru: [[0x8]]
+    rockchip,gpios: [[0x33, 0x3, 0x0]]
+    rockchip,grf: [[0x15]]
+    rockchip,isp,cifphy: [[0x1]]
+    rockchip,isp,dsiphy,reg: [[0xff968000, 0x8000]]
+    rockchip,isp,iommu-enable: [[0x1]]
+    rockchip,isp,mipiphy: [[0x2]]
+    status: ["disabled"]
+  isp@ff920000:
+    clock-names: ["aclk_isp1_noc\0aclk_isp1_wrapper\0hclk_isp1_noc\0hclk_isp1_wrapper\0clk_isp1\0clk_cif_out\0clk_cif_pll\0pclk_dphytxrx\0pclk_dphy_ref\0pclk_isp1\0pclk_dphyrx\0pclk_mipi_dsi\0mipi_dphy_cfg"]
+    clocks: [[0x8, 0xe8, 0x8, 0xea, 0x8, 0x1e2, 0x8, 0x1e4, 0x8, 0x6f, 0x8, 0x89,
+        0x8, 0xb2, 0x8, 0xa4, 0x8, 0x77, 0x8, 0x17b, 0x8, 0xa5, 0x8, 0x171, 0x8, 0x78]]
+    compatible: ["rockchip,rk3399-isp\0rockchip,isp"]
+    interrupts: [[0x0, 0x2c, 0x4, 0x0]]
+    iommus: [[0xb0]]
+    pinctrl-0: [[0xcb]]
+    pinctrl-1: [[0xcc]]
+    pinctrl-2: [[0xcb]]
+    pinctrl-3: [[0xcd]]
+    pinctrl-4: [[0xce]]
+    pinctrl-5: [[0xcf]]
+    pinctrl-names: ["cif_clkout\0isp_dvp8bit0\0isp_mipi_fl\0isp_mipi_fl_prefl\0isp_flash_as_gpio\0isp_flash_as_trigger_out"]
+    power-domains: [[0x16, 0x14]]
+    reg: [[0x0, 0xff920000, 0x0, 0x4000]]
+    rockchip,cru: [[0x8]]
+    rockchip,gpios: [[0x33, 0x3, 0x0]]
+    rockchip,grf: [[0x15]]
+    rockchip,isp,cifphy: [[0x1]]
+    rockchip,isp,dsiphy,reg: [[0xff968000, 0x8000]]
+    rockchip,isp,iommu-enable: [[0x1]]
+    rockchip,isp,mipiphy: [[0x2]]
+    status: ["disabled"]
+  led-control:
+    compatible: ["gpio-leds"]
+    blue:
+      default-state: ["on"]
+      gpios: [[0x3f, 0x1a, 0x1]]
+      label: ["blue"]
+      linux,default-trigger: ["backlight"]
+      retain-state-suspended: true
+    red:
+      default-state: ["on"]
+      gpios: [[0x3f, 0x1e, 0x0]]
+      label: ["blue"]
+      linux,default-trigger: ["backlight"]
+      retain-state-suspended: true
+  misc_interface:
+    compatible: ["misc-interface"]
+    reset-mcu-gpios: [[0x3f, 0x1c, 0x0]]
+    status: ["okay"]
+  nocp-cci-msch0@ffa86000:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa86000, 0x0, 0x400]]
+  nocp-cci-msch1@ffa8e000:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8e000, 0x0, 0x400]]
+  nocp-gpu-msch0@ffa86400:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa86400, 0x0, 0x400]]
+  nocp-gpu-msch1@ffa8e400:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8e400, 0x0, 0x400]]
+  nocp-hp-msch0@ffa86800:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa86800, 0x0, 0x400]]
+  nocp-hp-msch1@ffa8e800:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8e800, 0x0, 0x400]]
+  nocp-lp-msch0@ffa86c00:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa86c00, 0x0, 0x400]]
+  nocp-lp-msch1@ffa8ec00:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8ec00, 0x0, 0x400]]
+  nocp-video-msch0@ffa87000:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa87000, 0x0, 0x400]]
+  nocp-video-msch1@ffa8f000:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8f000, 0x0, 0x400]]
+  nocp-vio0-msch0@ffa87400:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa87400, 0x0, 0x400]]
+  nocp-vio0-msch1@ffa8f400:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8f400, 0x0, 0x400]]
+  nocp-vio1-msch0@ffa87800:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa87800, 0x0, 0x400]]
+  nocp-vio1-msch1@ffa8f800:
+    compatible: ["rockchip,rk3399-nocp"]
+    reg: [[0x0, 0xffa8f800, 0x0, 0x400]]
+  opp-table0:
+    clocks: [[0x8, 0x1]]
+    compatible: ["operating-points-v2"]
+    nvmem-cell-names: ["cpu_leakage\0specification_serial_number"]
+    nvmem-cells: [[0xd0, 0xd1]]
+    opp-shared: true
+    phandle: [[0xb]]
+    rockchip,avs-scale: [[0x14]]
+    rockchip,bin-scaling-sel: [[0x0, 0x1e, 0x1, 0x22]]
+    rockchip,low-temp: [[0x2710]]
+    rockchip,low-temp-min-volt: [[0xdbba0]]
+    rockchip,pvtm-ch: [[0x0, 0x0]]
+    rockchip,pvtm-error: [[0x3e8]]
+    rockchip,pvtm-freq: [[0x639c0]]
+    rockchip,pvtm-number: [[0xa]]
+    rockchip,pvtm-ref-temp: [[0x29]]
+    rockchip,pvtm-sample-time: [[0x3e8]]
+    rockchip,pvtm-temp-prop: [[0x73, 0x42]]
+    rockchip,pvtm-volt: [[0xf4240]]
+    rockchip,pvtm-voltage-sel: [[0x0, 0x2308c, 0x0, 0x2308d, 0x24414, 0x1, 0x24415,
+        0x251c0, 0x2, 0x251c1, 0xf423f, 0x3]]
+    rockchip,temp-hysteresis: [[0x1388]]
+    rockchip,thermal-zone: ["soc-thermal"]
+    opp-1008000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x3c14dc00]]
+      opp-microvolt: [[0xe1d48, 0xe1d48, 0x1312d0]]
+      opp-microvolt-L0: [[0xe1d48, 0xe1d48, 0x1312d0]]
+      opp-microvolt-L1: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L2: [[0xd59f8, 0xd59f8, 0x1312d0]]
+      opp-microvolt-L3: [[0xcf850, 0xcf850, 0x1312d0]]
+    opp-1200000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x47868c00]]
+      opp-microvolt: [[0xf4240, 0xf4240, 0x1312d0]]
+      opp-microvolt-L0: [[0xf4240, 0xf4240, 0x1312d0]]
+      opp-microvolt-L1: [[0xee098, 0xee098, 0x1312d0]]
+      opp-microvolt-L2: [[0xe7ef0, 0xe7ef0, 0x1312d0]]
+      opp-microvolt-L3: [[0xe1d48, 0xe1d48, 0x1312d0]]
+    opp-1416000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x54667200]]
+      opp-microvolt: [[0x112a88, 0x112a88, 0x1312d0]]
+      opp-microvolt-L0: [[0x112a88, 0x112a88, 0x1312d0]]
+      opp-microvolt-L1: [[0x10c8e0, 0x10c8e0, 0x1312d0]]
+      opp-microvolt-L2: [[0x106738, 0x106738, 0x1312d0]]
+      opp-microvolt-L3: [[0x100590, 0x100590, 0x1312d0]]
+    opp-408000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x18519600]]
+      opp-microvolt: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L0: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L1: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L2: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L3: [[0xdbba0, 0xdbba0, 0x1312d0]]
+    opp-600000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L0: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L1: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L2: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L3: [[0xdbba0, 0xdbba0, 0x1312d0]]
+    opp-816000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x30a32c00]]
+      opp-microvolt: [[0xcf850, 0xcf850, 0x1312d0]]
+      opp-microvolt-L0: [[0xcf850, 0xcf850, 0x1312d0]]
+      opp-microvolt-L1: [[0xc96a8, 0xc96a8, 0x1312d0]]
+      opp-microvolt-L2: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L3: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-suspend: true
+  opp-table1:
+    clocks: [[0x8, 0x2]]
+    compatible: ["operating-points-v2"]
+    nvmem-cell-names: ["cpu_leakage\0specification_serial_number"]
+    nvmem-cells: [[0xd2, 0xd1]]
+    opp-shared: true
+    phandle: [[0xf]]
+    rockchip,avs-scale: [[0x8]]
+    rockchip,bin-scaling-sel: [[0x0, 0x8, 0x1, 0x11]]
+    rockchip,low-temp: [[0x2710]]
+    rockchip,low-temp-min-volt: [[0xdbba0]]
+    rockchip,pvtm-ch: [[0x1, 0x0]]
+    rockchip,pvtm-error: [[0x3e8]]
+    rockchip,pvtm-freq: [[0x639c0]]
+    rockchip,pvtm-number: [[0xa]]
+    rockchip,pvtm-ref-temp: [[0x29]]
+    rockchip,pvtm-sample-time: [[0x3e8]]
+    rockchip,pvtm-temp-prop: [[0x47, 0x23]]
+    rockchip,pvtm-volt: [[0xf4240]]
+    rockchip,pvtm-voltage-sel: [[0x0, 0x24608, 0x0, 0x24609, 0x25d78, 0x1, 0x25d79,
+        0x27100, 0x2, 0x27101, 0xf423f, 0x3]]
+    rockchip,temp-hysteresis: [[0x1388]]
+    rockchip,thermal-zone: ["soc-thermal"]
+    opp-1008000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x3c14dc00]]
+      opp-microvolt: [[0xd59f8, 0xd59f8, 0x1312d0]]
+      opp-microvolt-L0: [[0xd59f8, 0xd59f8, 0x1312d0]]
+      opp-microvolt-L1: [[0xcf850, 0xcf850, 0x1312d0]]
+      opp-microvolt-L2: [[0xcf850, 0xcf850, 0x1312d0]]
+      opp-microvolt-L3: [[0xcf850, 0xcf850, 0x1312d0]]
+    opp-1200000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x47868c00]]
+      opp-microvolt: [[0xe7ef0, 0xe7ef0, 0x1312d0]]
+      opp-microvolt-L0: [[0xe7ef0, 0xe7ef0, 0x1312d0]]
+      opp-microvolt-L1: [[0xe1d48, 0xe1d48, 0x1312d0]]
+      opp-microvolt-L2: [[0xdbba0, 0xdbba0, 0x1312d0]]
+      opp-microvolt-L3: [[0xd59f8, 0xd59f8, 0x1312d0]]
+    opp-1416000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x54667200]]
+      opp-microvolt: [[0xfa3e8, 0xfa3e8, 0x1312d0]]
+      opp-microvolt-L0: [[0xfa3e8, 0xfa3e8, 0x1312d0]]
+      opp-microvolt-L1: [[0xf4240, 0xf4240, 0x1312d0]]
+      opp-microvolt-L2: [[0xf4240, 0xf4240, 0x1312d0]]
+      opp-microvolt-L3: [[0xee098, 0xee098, 0x1312d0]]
+    opp-1608000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x5fd82200]]
+      opp-microvolt: [[0x10c8e0, 0x10c8e0, 0x1312d0]]
+      opp-microvolt-L0: [[0x10c8e0, 0x10c8e0, 0x1312d0]]
+      opp-microvolt-L1: [[0x106738, 0x106738, 0x1312d0]]
+      opp-microvolt-L2: [[0x100590, 0x100590, 0x1312d0]]
+      opp-microvolt-L3: [[0xfa3e8, 0xfa3e8, 0x1312d0]]
+    opp-1800000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x6b49d200]]
+      opp-microvolt: [[0x124f80, 0x124f80, 0x1312d0]]
+      opp-microvolt-L0: [[0x124f80, 0x124f80, 0x1312d0]]
+      opp-microvolt-L1: [[0x11edd8, 0x11edd8, 0x1312d0]]
+      opp-microvolt-L2: [[0x118c30, 0x118c30, 0x1312d0]]
+      opp-microvolt-L3: [[0x112a88, 0x112a88, 0x1312d0]]
+    opp-408000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x18519600]]
+      opp-microvolt: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L0: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L1: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L2: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L3: [[0xc3500, 0xc3500, 0x1312d0]]
+    opp-600000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L0: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L1: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L2: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L3: [[0xc3500, 0xc3500, 0x1312d0]]
+    opp-816000000:
+      clock-latency-ns: [[0x9c40]]
+      opp-hz: [[0x0, 0x30a32c00]]
+      opp-microvolt: [[0xc96a8, 0xc96a8, 0x1312d0]]
+      opp-microvolt-L0: [[0xc96a8, 0xc96a8, 0x1312d0]]
+      opp-microvolt-L1: [[0xc96a8, 0xc96a8, 0x1312d0]]
+      opp-microvolt-L2: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-microvolt-L3: [[0xc3500, 0xc3500, 0x1312d0]]
+      opp-suspend: true
+  opp-table2:
+    compatible: ["operating-points-v2"]
+    nvmem-cell-names: ["gpu_leakage"]
+    nvmem-cells: [[0xd3]]
+    phandle: [[0x9e]]
+    rockchip,low-temp: [[0x2710]]
+    rockchip,low-temp-min-volt: [[0xdbba0]]
+    rockchip,pvtm-ch: [[0x3, 0x0]]
+    rockchip,pvtm-error: [[0x3e8]]
+    rockchip,pvtm-freq: [[0x30d40]]
+    rockchip,pvtm-number: [[0xa]]
+    rockchip,pvtm-ref-temp: [[0x29]]
+    rockchip,pvtm-sample-time: [[0x3e8]]
+    rockchip,pvtm-temp-prop: [[0x2e, 0xc]]
+    rockchip,pvtm-thermal-zone: ["gpu-thermal"]
+    rockchip,pvtm-volt: [[0xdbba0]]
+    rockchip,pvtm-voltage-sel: [[0x0, 0x1d8a8, 0x0, 0x1d8a9, 0x1ea3c, 0x1, 0x1ea3d,
+        0x1f5f4, 0x2, 0x1f5f5, 0xf423f, 0x3]]
+    rockchip,temp-hysteresis: [[0x1388]]
+    rockchip,thermal-zone: ["soc-thermal"]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: ["\0\f5"]
+      opp-microvolt-L0: ["\0\f5"]
+      opp-microvolt-L1: ["\0\f5"]
+      opp-microvolt-L2: ["\0\f5"]
+      opp-microvolt-L3: ["\0\f5"]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: ["\0\f5"]
+      opp-microvolt-L0: ["\0\f5"]
+      opp-microvolt-L1: ["\0\f5"]
+      opp-microvolt-L2: ["\0\f5"]
+      opp-microvolt-L3: ["\0\f5"]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xc96a8]]
+      opp-microvolt-L0: [[0xc96a8]]
+      opp-microvolt-L1: [[0xc96a8]]
+      opp-microvolt-L2: ["\0\f5"]
+      opp-microvolt-L3: ["\0\f5"]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xe1d48]]
+      opp-microvolt-L0: [[0xe1d48]]
+      opp-microvolt-L1: [[0xe1d48]]
+      opp-microvolt-L2: [[0xdbba0]]
+      opp-microvolt-L3: [[0xdbba0]]
+    opp-800000000:
+      opp-hz: [[0x0, 0x2faf0800]]
+      opp-microvolt: [[0x10c8e0]]
+      opp-microvolt-L0: [[0x10c8e0]]
+      opp-microvolt-L1: [[0x106738]]
+      opp-microvolt-L2: [[0x100590]]
+      opp-microvolt-L3: [[0xfa3e8]]
+  opp-table3:
+    compatible: ["operating-points-v2"]
+    phandle: [[0x92]]
+    opp-1056000000:
+      opp-hz: [[0x0, 0x3ef14800]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-200000000:
+      opp-hz: [[0x0, 0xbebc200]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-300000000:
+      opp-hz: [[0x0, 0x11e1a300]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-400000000:
+      opp-hz: [[0x0, 0x17d78400]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-416000000:
+      opp-hz: [[0x0, 0x18cba800]]
+      opp-microvolt: [[0xdbba0]]
+    opp-528000000:
+      opp-hz: [[0x0, 0x1f78a400]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-600000000:
+      opp-hz: [[0x0, 0x23c34600]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-800000000:
+      opp-hz: [[0x0, 0x2faf0800]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+    opp-856000000:
+      opp-hz: [[0x0, 0x33058600]]
+      opp-microvolt: [[0xdbba0]]
+    opp-928000000:
+      opp-hz: [[0x0, 0x37502800]]
+      opp-microvolt: [[0xdbba0]]
+      status: ["disabled"]
+  pcie-phy:
+    '#phy-cells': [[0x0]]
+    clock-names: ["refclk"]
+    clocks: [[0x8, 0x8a]]
+    compatible: ["rockchip,rk3399-pcie-phy"]
+    phandle: [[0x8a]]
+    reset-names: ["phy"]
+    resets: [[0x8, 0x87]]
+    rockchip,grf: [[0x15]]
+    status: ["disabled"]
+  pcie@f8000000:
+    '#address-cells': [[0x3]]
+    '#interrupt-cells': [[0x1]]
+    '#size-cells': [[0x2]]
+    aspm-no-l0s: true
+    bus-range: [[0x0, 0x1f]]
+    clock-names: ["aclk\0aclk-perf\0hclk\0pm"]
+    clocks: [[0x8, 0xc5, 0x8, 0xc4, 0x8, 0x147, 0x8, 0xa0]]
+    compatible: ["rockchip,rk3399-pcie"]
+    interrupt-map: [[0x0, 0x0, 0x0, 0x1, 0x89, 0x0, 0x0, 0x0, 0x0, 0x2, 0x89, 0x1,
+        0x0, 0x0, 0x0, 0x3, 0x89, 0x2, 0x0, 0x0, 0x0, 0x4, 0x89, 0x3]]
+    interrupt-map-mask: [[0x0, 0x0, 0x0, 0x7]]
+    interrupt-names: ["sys\0legacy\0client"]
+    interrupts: [[0x0, 0x31, 0x4, 0x0, 0x0, 0x32, 0x4, 0x0, 0x0, 0x33, 0x4, 0x0]]
+    linux,pci-domain: [[0x0]]
+    max-link-speed: [[0x1]]
+    msi-map: [[0x0, 0x88, 0x0, 0x1000]]
+    phy-names: ["pcie-phy"]
+    phys: [[0x8a]]
+    ranges: [[0x83000000, 0x0, 0xfa000000, 0x0, 0xfa000000, 0x0, 0x1e00000, 0x81000000,
+        0x0, 0xfbe00000, 0x0, 0xfbe00000, 0x0, 0x100000]]
+    reg: [[0x0, 0xf8000000, 0x0, 0x2000000, 0x0, 0xfd000000, 0x0, 0x1000000]]
+    reg-names: ["axi-base\0apb-base"]
+    reset-names: ["core\0mgmt\0mgmt-sticky\0pipe\0pm\0pclk\0aclk"]
+    resets: [[0x8, 0x82, 0x8, 0x83, 0x8, 0x84, 0x8, 0x85, 0x8, 0x86, 0x8, 0x81, 0x8,
+        0x80]]
+    status: ["disabled"]
+    interrupt-controller:
+      '#address-cells': [[0x0]]
+      '#interrupt-cells': [[0x1]]
+      interrupt-controller: true
+      phandle: [[0x89]]
+  phy@ff7c0000:
+    '#phy-cells': [[0x1]]
+    assigned-clock-rates: [[0x2faf080]]
+    assigned-clocks: [[0x8, 0x7e]]
+    clock-names: ["tcpdcore\0tcpdphy-ref"]
+    clocks: [[0x8, 0x7e, 0x8, 0x7d]]
+    compatible: ["rockchip,rk3399-typec-phy"]
+    extcon: [[0x9a]]
+    power-domains: [[0x16, 0x8]]
+    reg: [[0x0, 0xff7c0000, 0x0, 0x40000]]
+    reset-names: ["uphy\0uphy-pipe\0uphy-tcphy"]
+    resets: [[0x8, 0x95, 0x8, 0x94, 0x8, 0x14c]]
+    rockchip,external-psm: [[0xe588, 0xe, 0x1e]]
+    rockchip,grf: [[0x15]]
+    rockchip,pipe-status: [[0xe5c0, 0x0, 0x0]]
+    rockchip,typec-conn-dir: [[0xe580, 0x0, 0x10]]
+    rockchip,uphy-dp-sel: [[0x6268, 0x13, 0x13]]
+    rockchip,usb3-host-disable: [[0x2434, 0x0, 0x10]]
+    rockchip,usb3-host-port: [[0x2434, 0xc, 0x1c]]
+    rockchip,usb3tousb2-en: [[0xe580, 0x3, 0x13]]
+    status: ["disabled"]
+    dp-port:
+      '#phy-cells': [[0x0]]
+      phandle: [[0x2b]]
+    usb3-port:
+      '#phy-cells': [[0x0]]
+  phy@ff800000:
+    '#phy-cells': [[0x1]]
+    assigned-clock-rates: [[0x2faf080]]
+    assigned-clocks: [[0x8, 0x80]]
+    clock-names: ["tcpdcore\0tcpdphy-ref"]
+    clocks: [[0x8, 0x80, 0x8, 0x7f]]
+    compatible: ["rockchip,rk3399-typec-phy"]
+    power-domains: [[0x16, 0x9]]
+    reg: [[0x0, 0xff800000, 0x0, 0x40000]]
+    reset-names: ["uphy\0uphy-pipe\0uphy-tcphy"]
+    resets: [[0x8, 0x9d, 0x8, 0x9c, 0x8, 0x14d]]
+    rockchip,external-psm: [[0xe594, 0xe, 0x1e]]
+    rockchip,grf: [[0x15]]
+    rockchip,pipe-status: [[0xe5c0, 0x10, 0x10]]
+    rockchip,typec-conn-dir: [[0xe58c, 0x0, 0x10]]
+    rockchip,uphy-dp-sel: [[0x6268, 0x3, 0x13]]
+    rockchip,usb3-host-disable: [[0x2444, 0x0, 0x10]]
+    rockchip,usb3-host-port: [[0x2444, 0xc, 0x1c]]
+    rockchip,usb3tousb2-en: [[0xe58c, 0x3, 0x13]]
+    status: ["okay"]
+    dp-port:
+      '#phy-cells': [[0x0]]
+      phandle: [[0x2c]]
+    usb3-port:
+      '#phy-cells': [[0x0]]
+      phandle: [[0x2a]]
+  pinctrl:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    compatible: ["rockchip,rk3399-pinctrl"]
+    ranges: true
+    rockchip,grf: [[0x15]]
+    rockchip,pmu: [[0x8f]]
+    ak8963:
+      ak8963-irq-gpio:
+        rockchip,pins: [[0x2, 0x1c, 0x0, 0xc5]]
+    backlight:
+      pwm0-pin-pull-up:
+        phandle: [[0x8b]]
+        rockchip,pins: [[0x4, 0x12, 0x1, 0xc3]]
+    cm3218:
+      cm3218-irq-gpio:
+        rockchip,pins: [[0x4, 0x18, 0x0, 0xc3]]
+    edp:
+      edp-hpd:
+        phandle: [[0xbc]]
+        rockchip,pins: [[0x4, 0x17, 0x2, 0xc5]]
+    emmc:
+      emmc-pwr:
+        rockchip,pins: [[0x0, 0x5, 0x1, 0xc3]]
+    fusb30x:
+      fusb0-int:
+        phandle: [[0x86]]
+        rockchip,pins: [[0x1, 0x2, 0x0, 0xc3]]
+    gmac:
+      rgmii-pins:
+        rockchip,pins: [[0x3, 0x11, 0x1, 0xc4, 0x3, 0xe, 0x1, 0xc5, 0x3, 0xd, 0x1,
+            0xc5, 0x3, 0xc, 0x1, 0xc4, 0x3, 0xb, 0x1, 0xc5, 0x3, 0x9, 0x1, 0xc5, 0x3,
+            0x8, 0x1, 0xc5, 0x3, 0x7, 0x1, 0xc5, 0x3, 0x6, 0x1, 0xc5, 0x3, 0x5, 0x1,
+            0xc4, 0x3, 0x4, 0x1, 0xc4, 0x3, 0x3, 0x1, 0xc5, 0x3, 0x2, 0x1, 0xc5, 0x3,
+            0x1, 0x1, 0xc4, 0x3, 0x0, 0x1, 0xc4]]
+      rmii-pins:
+        phandle: [[0x1a]]
+        rockchip,pins: [[0x3, 0xd, 0x1, 0xc5, 0x3, 0xc, 0x1, 0xc4, 0x3, 0xb, 0x1,
+            0xc5, 0x3, 0xa, 0x1, 0xc5, 0x3, 0x9, 0x1, 0xc5, 0x3, 0x8, 0x1, 0xc5, 0x3,
+            0x7, 0x1, 0xc5, 0x3, 0x6, 0x1, 0xc5, 0x3, 0x5, 0x1, 0xc4, 0x3, 0x4, 0x1,
+            0xc4]]
+    gpio0@ff720000:
+      '#gpio-cells': [[0x2]]
+      '#interrupt-cells': [[0x2]]
+      clocks: [[0x2f, 0x17]]
+      compatible: ["rockchip,gpio-bank"]
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts: [[0x0, 0xe, 0x4, 0x0]]
+      phandle: [[0x39]]
+      reg: [[0x0, 0xff720000, 0x0, 0x100]]
+    gpio1@ff730000:
+      '#gpio-cells': [[0x2]]
+      '#interrupt-cells': [[0x2]]
+      clocks: [[0x2f, 0x18]]
+      compatible: ["rockchip,gpio-bank"]
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts: [[0x0, 0xf, 0x4, 0x0]]
+      phandle: [[0x33]]
+      reg: [[0x0, 0xff730000, 0x0, 0x100]]
+    gpio2@ff780000:
+      '#gpio-cells': [[0x2]]
+      '#interrupt-cells': [[0x2]]
+      clocks: [[0x8, 0x150]]
+      compatible: ["rockchip,gpio-bank"]
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts: [[0x0, 0x10, 0x4, 0x0]]
+      phandle: [[0x3b]]
+      reg: [[0x0, 0xff780000, 0x0, 0x100]]
+    gpio3@ff788000:
+      '#gpio-cells': [[0x2]]
+      '#interrupt-cells': [[0x2]]
+      clocks: [[0x8, 0x151]]
+      compatible: ["rockchip,gpio-bank"]
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts: [[0x0, 0x11, 0x4, 0x0]]
+      phandle: [[0x18]]
+      reg: [[0x0, 0xff788000, 0x0, 0x100]]
+    gpio4@ff790000:
+      '#gpio-cells': [[0x2]]
+      '#interrupt-cells': [[0x2]]
+      clocks: [[0x8, 0x152]]
+      compatible: ["rockchip,gpio-bank"]
+      gpio-controller: true
+      interrupt-controller: true
+      interrupts: [[0x0, 0x12, 0x4, 0x0]]
+      phandle: [[0x3f]]
+      reg: [[0x0, 0xff790000, 0x0, 0x100]]
+    hdmi:
+      hdmi-cec:
+        rockchip,pins: [[0x4, 0x17, 0x1, 0xc5]]
+      hdmi-i2c-xfer:
+        phandle: [[0xb1]]
+        rockchip,pins: [[0x4, 0x11, 0x3, 0xc5, 0x4, 0x10, 0x3, 0xc5]]
+    i2c0:
+      i2c0-xfer:
+        phandle: [[0x30]]
+        rockchip,pins: [[0x1, 0xf, 0x2, 0xc5, 0x1, 0x10, 0x2, 0xc5]]
+    i2c1:
+      i2c1-xfer:
+        phandle: [[0x38]]
+        rockchip,pins: [[0x4, 0x2, 0x1, 0xc5, 0x4, 0x1, 0x1, 0xc5]]
+    i2c2:
+      i2c2-xfer:
+        phandle: [[0x3a]]
+        rockchip,pins: [[0x2, 0x1, 0x2, 0xc6, 0x2, 0x0, 0x2, 0xc6]]
+    i2c3:
+      i2c3-xfer:
+        phandle: [[0x3c]]
+        rockchip,pins: [[0x4, 0x11, 0x1, 0xc5, 0x4, 0x10, 0x1, 0xc5]]
+      i2c3_gpio:
+        rockchip,pins: [[0x4, 0x11, 0x0, 0xc5, 0x4, 0x10, 0x0, 0xc5]]
+    i2c4:
+      i2c4-xfer:
+        phandle: [[0x85]]
+        rockchip,pins: [[0x1, 0xc, 0x1, 0xc5, 0x1, 0xb, 0x1, 0xc5]]
+    i2c5:
+      i2c5-xfer:
+        phandle: [[0x3d]]
+        rockchip,pins: [[0x3, 0xb, 0x2, 0xc5, 0x3, 0xa, 0x2, 0xc5]]
+    i2c6:
+      i2c6-xfer:
+        phandle: [[0x3e]]
+        rockchip,pins: [[0x2, 0xa, 0x2, 0xc5, 0x2, 0x9, 0x2, 0xc5]]
+    i2c7:
+      i2c7-xfer:
+        phandle: [[0x41]]
+        rockchip,pins: [[0x2, 0x8, 0x2, 0xc5, 0x2, 0x7, 0x2, 0xc5]]
+    i2c8:
+      i2c8-xfer:
+        phandle: [[0x87]]
+        rockchip,pins: [[0x1, 0x15, 0x1, 0xc5, 0x1, 0x14, 0x1, 0xc5]]
+    i2s0:
+      i2s-8ch-mclk:
+        phandle: [[0x40]]
+        rockchip,pins: [[0x4, 0x0, 0x1, 0xc5]]
+      i2s0-8ch-bus:
+        phandle: [[0x9c]]
+        rockchip,pins: [[0x3, 0x18, 0x1, 0xc5, 0x3, 0x19, 0x1, 0xc5, 0x3, 0x1a, 0x1,
+            0xc5, 0x3, 0x1b, 0x1, 0xc5, 0x3, 0x1f, 0x1, 0xc5]]
+    i2s1:
+      i2s1-2ch-bus:
+        phandle: [[0x9d]]
+        rockchip,pins: [[0x4, 0x3, 0x1, 0xc5, 0x4, 0x4, 0x1, 0xc5, 0x4, 0x5, 0x1,
+            0xc5, 0x4, 0x6, 0x1, 0xc5, 0x4, 0x7, 0x1, 0xc5]]
+    isp:
+      cif-clkout:
+        phandle: [[0xcb]]
+        rockchip,pins: [[0x2, 0xb, 0x3, 0xc5]]
+      isp-dvp-d0d7:
+        phandle: [[0xcc]]
+        rockchip,pins: [[0x2, 0x0, 0x3, 0xc5, 0x2, 0x1, 0x3, 0xc5, 0x2, 0x2, 0x3,
+            0xc5, 0x2, 0x3, 0x3, 0xc5, 0x2, 0x4, 0x3, 0xc5, 0x2, 0x5, 0x3, 0xc5, 0x2,
+            0x6, 0x3, 0xc5, 0x2, 0x7, 0x3, 0xc5, 0x2, 0x8, 0x3, 0xc5, 0x2, 0x9, 0x3,
+            0xc5, 0x2, 0xa, 0x3, 0xc5]]
+      isp-flash-trigger:
+        phandle: [[0xcf]]
+        rockchip,pins: [[0x1, 0x3, 0x1, 0xc5]]
+      isp-prelight:
+        phandle: [[0xcd]]
+        rockchip,pins: [[0x1, 0x4, 0x1, 0xc5]]
+      isp-shutter:
+        rockchip,pins: [[0x1, 0x1, 0x1, 0xc5, 0x1, 0x0, 0x1, 0xc5]]
+      isp_flash_trigger_as_gpio:
+        phandle: [[0xce]]
+        rockchip,pins: [[0x1, 0x3, 0x0, 0xc5]]
+    lsm330_a:
+      lsm330a-irq-gpio:
+        rockchip,pins: [[0x2, 0x1b, 0x0, 0xc5]]
+    lsm330_g:
+      lsm330g-irq-gpio:
+        rockchip,pins: [[0x1, 0x14, 0x0, 0xc5]]
+    mpu6500:
+      mpu6500-irq-gpio:
+        phandle: [[0x54]]
+        rockchip,pins: [[0x2, 0x1b, 0x0, 0xc5]]
+    pcfg-input:
+      input-enable: true
+    pcfg-output-high:
+      output-high: true
+    pcfg-output-low:
+      output-low: true
+    pcfg-pull-down:
+      bias-pull-down: true
+      phandle: [[0xc7]]
+    pcfg-pull-down-12ma:
+      bias-pull-down: true
+      drive-strength: [[0xc]]
+    pcfg-pull-down-4ma:
+      bias-pull-down: true
+      drive-strength: [[0x4]]
+    pcfg-pull-none:
+      bias-disable: true
+      phandle: [[0xc5]]
+    pcfg-pull-none-12ma:
+      bias-disable: true
+      drive-strength: [[0xc]]
+      phandle: [[0xc6]]
+    pcfg-pull-none-13ma:
+      bias-disable: true
+      drive-strength: [[0xd]]
+      phandle: [[0xc4]]
+    pcfg-pull-none-18ma:
+      bias-disable: true
+      drive-strength: [[0x12]]
+    pcfg-pull-none-20ma:
+      bias-disable: true
+      drive-strength: [[0x14]]
+    pcfg-pull-up:
+      bias-pull-up: true
+      phandle: [[0xc3]]
+    pcfg-pull-up-20ma:
+      bias-pull-up: true
+      drive-strength: [[0x14]]
+    pcfg-pull-up-2ma:
+      bias-pull-up: true
+      drive-strength: [[0x2]]
+    pcfg-pull-up-8ma:
+      bias-pull-up: true
+      drive-strength: [[0x8]]
+    pcie:
+      pci-clkreqn:
+        rockchip,pins: [[0x2, 0x1a, 0x2, 0xc5]]
+      pci-clkreqn-cpm:
+        rockchip,pins: [[0x2, 0x1a, 0x0, 0xc5]]
+      pci-clkreqnb:
+        rockchip,pins: [[0x4, 0x18, 0x1, 0xc5]]
+      pci-clkreqnb-cpm:
+        rockchip,pins: [[0x4, 0x18, 0x0, 0xc5]]
+    pmic:
+      pmic-dvs2:
+        rockchip,pins: [[0x1, 0x12, 0x0, 0xc7]]
+      pmic-int-l:
+        phandle: [[0x35]]
+        rockchip,pins: [[0x1, 0x15, 0x0, 0xc3]]
+      vsel1-gpio:
+        phandle: [[0x32]]
+        rockchip,pins: [[0x1, 0x11, 0x0, 0xc7]]
+      vsel2-gpio:
+        phandle: [[0x34]]
+        rockchip,pins: [[0x1, 0xe, 0x0, 0xc7]]
+    pwm0:
+      pwm0-pin:
+        rockchip,pins: [[0x4, 0x12, 0x1, 0xc5]]
+      vop0-pwm-pin:
+        phandle: [[0xad]]
+        rockchip,pins: [[0x4, 0x12, 0x2, 0xc5]]
+      vop1-pwm-pin:
+        phandle: [[0xa6]]
+        rockchip,pins: [[0x4, 0x12, 0x3, 0xc5]]
+    pwm1:
+      pwm1-pin:
+        phandle: [[0x8c]]
+        rockchip,pins: [[0x4, 0x16, 0x1, 0xc5]]
+    pwm2:
+      pwm2-pin:
+        phandle: [[0x8d]]
+        rockchip,pins: [[0x1, 0x13, 0x1, 0xc5]]
+    pwm3a:
+      pwm3a-pin:
+        phandle: [[0x8e]]
+        rockchip,pins: [[0x0, 0x6, 0x1, 0xc5]]
+    pwm3b:
+      pwm3b-pin:
+        rockchip,pins: [[0x1, 0xe, 0x1, 0xc5]]
+    sdio-pwrseq:
+      wifi-enable-h:
+        phandle: [[0xdd]]
+        rockchip,pins: [[0x0, 0xa, 0x0, 0xc5]]
+    sdio0:
+      sdio0-bkpwr:
+        rockchip,pins: [[0x2, 0x1c, 0x1, 0xc3]]
+      sdio0-bus1:
+        rockchip,pins: [[0x2, 0x14, 0x1, 0xc3]]
+      sdio0-bus4:
+        phandle: [[0x1c]]
+        rockchip,pins: [[0x2, 0x14, 0x1, 0xc3, 0x2, 0x15, 0x1, 0xc3, 0x2, 0x16, 0x1,
+            0xc3, 0x2, 0x17, 0x1, 0xc3]]
+      sdio0-cd:
+        rockchip,pins: [[0x2, 0x1a, 0x1, 0xc3]]
+      sdio0-clk:
+        phandle: [[0x1e]]
+        rockchip,pins: [[0x2, 0x19, 0x1, 0xc5]]
+      sdio0-cmd:
+        phandle: [[0x1d]]
+        rockchip,pins: [[0x2, 0x18, 0x1, 0xc3]]
+      sdio0-int:
+        rockchip,pins: [[0x0, 0x4, 0x1, 0xc3]]
+      sdio0-pwr:
+        rockchip,pins: [[0x2, 0x1b, 0x1, 0xc3]]
+      sdio0-wp:
+        rockchip,pins: [[0x0, 0x3, 0x1, 0xc3]]
+    sdmmc:
+      sdmcc-cd:
+        phandle: [[0x22]]
+        rockchip,pins: [[0x0, 0x7, 0x1, 0xc3]]
+      sdmmc-bus1:
+        rockchip,pins: [[0x4, 0x8, 0x1, 0xc3]]
+      sdmmc-bus4:
+        phandle: [[0x23]]
+        rockchip,pins: [[0x4, 0x8, 0x1, 0xc3, 0x4, 0x9, 0x1, 0xc3, 0x4, 0xa, 0x1,
+            0xc3, 0x4, 0xb, 0x1, 0xc3]]
+      sdmmc-clk:
+        phandle: [[0x20]]
+        rockchip,pins: [[0x4, 0xc, 0x1, 0xc5]]
+      sdmmc-cmd:
+        phandle: [[0x21]]
+        rockchip,pins: [[0x4, 0xd, 0x1, 0xc3]]
+      sdmmc-wp:
+        rockchip,pins: [[0x0, 0x8, 0x1, 0xc3]]
+    spdif:
+      spdif-bus:
+        phandle: [[0x9b]]
+        rockchip,pins: [[0x4, 0x15, 0x1, 0xc5]]
+      spdif-bus-1:
+        rockchip,pins: [[0x3, 0x10, 0x3, 0xc5]]
+    spi0:
+      spi0-clk:
+        phandle: [[0x4c]]
+        rockchip,pins: [[0x3, 0x6, 0x2, 0xc3]]
+      spi0-cs0:
+        phandle: [[0x4f]]
+        rockchip,pins: [[0x3, 0x7, 0x2, 0xc3]]
+      spi0-cs1:
+        rockchip,pins: [[0x3, 0x8, 0x2, 0xc3]]
+      spi0-rx:
+        phandle: [[0x4e]]
+        rockchip,pins: [[0x3, 0x4, 0x2, 0xc3]]
+      spi0-tx:
+        phandle: [[0x4d]]
+        rockchip,pins: [[0x3, 0x5, 0x2, 0xc3]]
+    spi1:
+      spi1-clk:
+        phandle: [[0x50]]
+        rockchip,pins: [[0x1, 0x9, 0x2, 0xc3]]
+      spi1-cs0:
+        phandle: [[0x53]]
+        rockchip,pins: [[0x1, 0xa, 0x2, 0xc3]]
+      spi1-rx:
+        phandle: [[0x52]]
+        rockchip,pins: [[0x1, 0x7, 0x2, 0xc3]]
+      spi1-tx:
+        phandle: [[0x51]]
+        rockchip,pins: [[0x1, 0x8, 0x2, 0xc3]]
+    spi2:
+      spi2-clk:
+        phandle: [[0x55]]
+        rockchip,pins: [[0x2, 0xb, 0x1, 0xc3]]
+      spi2-cs0:
+        phandle: [[0x58]]
+        rockchip,pins: [[0x2, 0xc, 0x1, 0xc3]]
+      spi2-rx:
+        phandle: [[0x57]]
+        rockchip,pins: [[0x2, 0x9, 0x1, 0xc3]]
+      spi2-tx:
+        phandle: [[0x56]]
+        rockchip,pins: [[0x2, 0xa, 0x1, 0xc3]]
+    spi3:
+      spi3-clk:
+        phandle: [[0x80]]
+        rockchip,pins: [[0x1, 0x11, 0x1, 0xc3]]
+      spi3-cs0:
+        phandle: [[0x83]]
+        rockchip,pins: [[0x1, 0x12, 0x1, 0xc3]]
+      spi3-rx:
+        phandle: [[0x82]]
+        rockchip,pins: [[0x1, 0xf, 0x1, 0xc3]]
+      spi3-tx:
+        phandle: [[0x81]]
+        rockchip,pins: [[0x1, 0x10, 0x1, 0xc3]]
+    spi4:
+      spi4-clk:
+        phandle: [[0x59]]
+        rockchip,pins: [[0x3, 0x2, 0x2, 0xc3]]
+      spi4-cs0:
+        phandle: [[0x5c]]
+        rockchip,pins: [[0x3, 0x3, 0x2, 0xc3]]
+      spi4-rx:
+        phandle: [[0x5b]]
+        rockchip,pins: [[0x3, 0x0, 0x2, 0xc3]]
+      spi4-tx:
+        phandle: [[0x5a]]
+        rockchip,pins: [[0x3, 0x1, 0x2, 0xc3]]
+    spi5:
+      spi5-clk:
+        phandle: [[0x5e]]
+        rockchip,pins: [[0x2, 0x16, 0x2, 0xc3]]
+      spi5-cs0:
+        phandle: [[0x61]]
+        rockchip,pins: [[0x2, 0x17, 0x2, 0xc3]]
+      spi5-rx:
+        phandle: [[0x60]]
+        rockchip,pins: [[0x2, 0x14, 0x2, 0xc3]]
+      spi5-tx:
+        phandle: [[0x5f]]
+        rockchip,pins: [[0x2, 0x15, 0x2, 0xc3]]
+    tpsensor:
+      tp-irq-gpio:
+        phandle: [[0x43]]
+        rockchip,pins: [[0x1, 0x17, 0x0, 0xc3]]
+    tsadc:
+      otp-gpio:
+        phandle: [[0x65]]
+        rockchip,pins: [[0x1, 0x6, 0x0, 0xc5]]
+      otp-out:
+        phandle: [[0x66]]
+        rockchip,pins: [[0x1, 0x6, 0x1, 0xc5]]
+    uart0:
+      uart0-cts:
+        phandle: [[0x45]]
+        rockchip,pins: [[0x2, 0x12, 0x1, 0xc5]]
+      uart0-rts:
+        phandle: [[0xde]]
+        rockchip,pins: [[0x2, 0x13, 0x1, 0xc5]]
+      uart0-xfer:
+        phandle: [[0x44]]
+        rockchip,pins: [[0x2, 0x10, 0x1, 0xc3, 0x2, 0x11, 0x1, 0xc5]]
+    uart1:
+      uart1-xfer:
+        phandle: [[0x46]]
+        rockchip,pins: [[0x3, 0xc, 0x2, 0xc3, 0x3, 0xd, 0x2, 0xc5]]
+    uart2a:
+      uart2a-xfer:
+        rockchip,pins: [[0x4, 0x8, 0x2, 0xc3, 0x4, 0x9, 0x2, 0xc5]]
+    uart2b:
+      uart2b-xfer:
+        rockchip,pins: [[0x4, 0x10, 0x2, 0xc3, 0x4, 0x11, 0x2, 0xc5]]
+    uart2c:
+      uart2c-xfer:
+        phandle: [[0x47]]
+        rockchip,pins: [[0x4, 0x13, 0x1, 0xc3, 0x4, 0x14, 0x1, 0xc5]]
+    uart3:
+      uart3-cts:
+        phandle: [[0x49]]
+        rockchip,pins: [[0x3, 0x10, 0x2, 0xc5]]
+      uart3-rts:
+        phandle: [[0x4a]]
+        rockchip,pins: [[0x3, 0x11, 0x2, 0xc5]]
+      uart3-xfer:
+        phandle: [[0x48]]
+        rockchip,pins: [[0x3, 0xe, 0x2, 0xc3, 0x3, 0xf, 0x2, 0xc5]]
+    uart4:
+      uart4-xfer:
+        phandle: [[0x84]]
+        rockchip,pins: [[0x1, 0x7, 0x1, 0xc3, 0x1, 0x8, 0x1, 0xc5]]
+    uarthdcp:
+      uarthdcp-xfer:
+        rockchip,pins: [[0x4, 0x15, 0x2, 0xc3, 0x4, 0x16, 0x2, 0xc5]]
+    usb2:
+      host-vbus-drv:
+        phandle: [[0xd4]]
+        rockchip,pins: [[0x4, 0x19, 0x0, 0xc5]]
+    wireless-bluetooth:
+      uart0-gpios:
+        phandle: [[0xdf]]
+        rockchip,pins: [[0x2, 0x13, 0x0, 0xc5]]
+  pmu-clock-controller@ff750000:
+    '#clock-cells': [[0x1]]
+    '#reset-cells': [[0x1]]
+    assigned-clock-rates: [[0x284af100, 0x5c81a40]]
+    assigned-clocks: [[0x2f, 0x1, 0x2f, 0x2c]]
+    compatible: ["rockchip,rk3399-pmucru"]
+    phandle: [[0x2f]]
+    reg: [[0x0, 0xff750000, 0x0, 0x1000]]
+  pmu_a53:
+    compatible: ["arm,cortex-a53-pmu"]
+    interrupts: [[0x1, 0x7, 0x8, 0x13]]
+  pmu_a72:
+    compatible: ["arm,cortex-a72-pmu"]
+    interrupts: [[0x1, 0x7, 0x8, 0x14]]
+  power-management@ff310000:
+    compatible: ["rockchip,rk3399-pmu\0syscon\0simple-mfd"]
+    reg: [[0x0, 0xff310000, 0x0, 0x1000]]
+    power-controller:
+      '#address-cells': [[0x1]]
+      '#power-domain-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      compatible: ["rockchip,rk3399-power-controller"]
+      phandle: [[0x16]]
+      pd_edp@25:
+        clocks: [[0x8, 0x16c]]
+        reg: [[0x19]]
+      pd_emmc@23:
+        clocks: [[0x8, 0xf0]]
+        pm_qos: [[0x6e]]
+        reg: [[0x17]]
+      pd_gmac@22:
+        clocks: [[0x8, 0xd5, 0x8, 0x166]]
+        pm_qos: [[0x6f]]
+        reg: [[0x16]]
+      pd_gpu@35:
+        clocks: [[0x8, 0xd0]]
+        pm_qos: [[0x6d]]
+        reg: [[0x23]]
+      pd_iep@34:
+        clocks: [[0x8, 0xe1, 0x8, 0x1dd]]
+        pm_qos: [[0x67]]
+        reg: [[0x22]]
+      pd_perihp@14:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        clocks: [[0x8, 0xc0]]
+        pm_qos: [[0x70, 0x71, 0x72, 0x73]]
+        reg: [[0xe]]
+        pd_sd@27:
+          clocks: [[0x8, 0x1ce, 0x8, 0x4c]]
+          pm_qos: [[0x74]]
+          reg: [[0x1b]]
+      pd_rga@33:
+        clocks: [[0x8, 0xdc, 0x8, 0x1e5]]
+        pm_qos: [[0x68, 0x69]]
+        reg: [[0x21]]
+      pd_sdioaudio@28:
+        clocks: [[0x8, 0x1ee]]
+        pm_qos: [[0x75]]
+        reg: [[0x1c]]
+      pd_usb3@24:
+        clocks: [[0x8, 0xf4]]
+        pm_qos: [[0x76, 0x77]]
+        reg: [[0x18]]
+      pd_vcodec@31:
+        clocks: [[0x8, 0xeb, 0x8, 0x1ea]]
+        pm_qos: [[0x6a]]
+        reg: [[0x1f]]
+      pd_vdu@32:
+        clocks: [[0x8, 0xed, 0x8, 0x1ec]]
+        pm_qos: [[0x6b, 0x6c]]
+        reg: [[0x20]]
+      pd_vio@15:
+        '#address-cells': [[0x1]]
+        '#size-cells': [[0x0]]
+        reg: [[0xf]]
+        pd_hdcp@21:
+          clocks: [[0x8, 0xde, 0x8, 0x1e7, 0x8, 0x172]]
+          pm_qos: [[0x78]]
+          reg: [[0x15]]
+        pd_isp0@19:
+          clocks: [[0x8, 0xe5, 0x8, 0x1df]]
+          pm_qos: [[0x79, 0x7a]]
+          reg: [[0x13]]
+        pd_isp1@20:
+          clocks: [[0x8, 0xe6, 0x8, 0x1e0]]
+          pm_qos: [[0x7b, 0x7c]]
+          reg: [[0x14]]
+        pd_tcpc0@RK3399_PD_TCPC0:
+          clocks: [[0x8, 0x7e, 0x8, 0x7d]]
+          reg: [[0x8]]
+        pd_tcpc1@RK3399_PD_TCPC1:
+          clocks: [[0x8, 0x80, 0x8, 0x7f]]
+          reg: [[0x9]]
+        pd_vo@16:
+          '#address-cells': [[0x1]]
+          '#size-cells': [[0x0]]
+          reg: [[0x10]]
+          pd_vopb@17:
+            clocks: [[0x8, 0xd9, 0x8, 0x1d9]]
+            pm_qos: [[0x7d, 0x7e]]
+            reg: [[0x11]]
+          pd_vopl@18:
+            clocks: [[0x8, 0xdb, 0x8, 0x1db]]
+            pm_qos: [[0x7f]]
+            reg: [[0x12]]
+  psci:
+    compatible: ["arm,psci-1.0"]
+    method: ["smc"]
+  pwm@ff420000:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x2f, 0x1e]]
+    compatible: ["rockchip,rk3399-pwm\0rockchip,rk3288-pwm"]
+    phandle: [[0xd6]]
+    pinctrl-0: [[0x8b]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff420000, 0x0, 0x10]]
+    status: ["okay"]
+  pwm@ff420010:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x2f, 0x1e]]
+    compatible: ["rockchip,rk3399-pwm\0rockchip,rk3288-pwm"]
+    phandle: [[0xd7]]
+    pinctrl-0: [[0x8c]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff420010, 0x0, 0x10]]
+    status: ["okay"]
+  pwm@ff420020:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x2f, 0x1e]]
+    compatible: ["rockchip,rk3399-pwm\0rockchip,rk3288-pwm"]
+    phandle: [[0xd5]]
+    pinctrl-0: [[0x8d]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff420020, 0x0, 0x10]]
+    status: ["okay"]
+  pwm@ff420030:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x2f, 0x1e]]
+    compatible: ["rockchip,rk3399-pwm\0rockchip,rk3288-pwm"]
+    pinctrl-0: [[0x8e]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff420030, 0x0, 0x10]]
+    status: ["disabled"]
+  qos@ffa58000:
+    compatible: ["syscon"]
+    phandle: [[0x6e]]
+    reg: [[0x0, 0xffa58000, 0x0, 0x20]]
+  qos@ffa5c000:
+    compatible: ["syscon"]
+    phandle: [[0x6f]]
+    reg: [[0x0, 0xffa5c000, 0x0, 0x20]]
+  qos@ffa60080:
+    compatible: ["syscon"]
+    phandle: [[0x71]]
+    reg: [[0x0, 0xffa60080, 0x0, 0x20]]
+  qos@ffa60100:
+    compatible: ["syscon"]
+    phandle: [[0x72]]
+    reg: [[0x0, 0xffa60100, 0x0, 0x20]]
+  qos@ffa60180:
+    compatible: ["syscon"]
+    phandle: [[0x73]]
+    reg: [[0x0, 0xffa60180, 0x0, 0x20]]
+  qos@ffa70000:
+    compatible: ["syscon"]
+    phandle: [[0x76]]
+    reg: [[0x0, 0xffa70000, 0x0, 0x20]]
+  qos@ffa70080:
+    compatible: ["syscon"]
+    phandle: [[0x77]]
+    reg: [[0x0, 0xffa70080, 0x0, 0x20]]
+  qos@ffa74000:
+    compatible: ["syscon"]
+    phandle: [[0x74]]
+    reg: [[0x0, 0xffa74000, 0x0, 0x20]]
+  qos@ffa76000:
+    compatible: ["syscon"]
+    phandle: [[0x75]]
+    reg: [[0x0, 0xffa76000, 0x0, 0x20]]
+  qos@ffa90000:
+    compatible: ["syscon"]
+    phandle: [[0x78]]
+    reg: [[0x0, 0xffa90000, 0x0, 0x20]]
+  qos@ffa98000:
+    compatible: ["syscon"]
+    phandle: [[0x67]]
+    reg: [[0x0, 0xffa98000, 0x0, 0x20]]
+  qos@ffaa0000:
+    compatible: ["syscon"]
+    phandle: [[0x79]]
+    reg: [[0x0, 0xffaa0000, 0x0, 0x20]]
+  qos@ffaa0080:
+    compatible: ["syscon"]
+    phandle: [[0x7a]]
+    reg: [[0x0, 0xffaa0080, 0x0, 0x20]]
+  qos@ffaa8000:
+    compatible: ["syscon"]
+    phandle: [[0x7b]]
+    reg: [[0x0, 0xffaa8000, 0x0, 0x20]]
+  qos@ffaa8080:
+    compatible: ["syscon"]
+    phandle: [[0x7c]]
+    reg: [[0x0, 0xffaa8080, 0x0, 0x20]]
+  qos@ffab0000:
+    compatible: ["syscon"]
+    phandle: [[0x68]]
+    reg: [[0x0, 0xffab0000, 0x0, 0x20]]
+  qos@ffab0080:
+    compatible: ["syscon"]
+    phandle: [[0x69]]
+    reg: [[0x0, 0xffab0080, 0x0, 0x20]]
+  qos@ffab8000:
+    compatible: ["syscon"]
+    phandle: [[0x6a]]
+    reg: [[0x0, 0xffab8000, 0x0, 0x20]]
+  qos@ffac0000:
+    compatible: ["syscon"]
+    phandle: [[0x6b]]
+    reg: [[0x0, 0xffac0000, 0x0, 0x20]]
+  qos@ffac0080:
+    compatible: ["syscon"]
+    phandle: [[0x6c]]
+    reg: [[0x0, 0xffac0080, 0x0, 0x20]]
+  qos@ffac8000:
+    compatible: ["syscon"]
+    phandle: [[0x7d]]
+    reg: [[0x0, 0xffac8000, 0x0, 0x20]]
+  qos@ffac8080:
+    compatible: ["syscon"]
+    phandle: [[0x7e]]
+    reg: [[0x0, 0xffac8080, 0x0, 0x20]]
+  qos@ffad0000:
+    compatible: ["syscon"]
+    phandle: [[0x7f]]
+    reg: [[0x0, 0xffad0000, 0x0, 0x20]]
+  qos@ffad8080:
+    compatible: ["syscon"]
+    phandle: [[0x70]]
+    reg: [[0x0, 0xffad8080, 0x0, 0x20]]
+  qos@ffae0000:
+    compatible: ["syscon"]
+    phandle: [[0x6d]]
+    reg: [[0x0, 0xffae0000, 0x0, 0x20]]
+  ramoops:
+    compatible: ["ramoops"]
+    console-size: [[0x0, 0x80000]]
+    ftrace-size: [[0x0, 0x0]]
+    memory-region: [[0xc9]]
+    pmsg-size: [[0x0, 0x50000]]
+    record-size: [[0x0, 0x20000]]
+  ramoops_mem:
+    phandle: [[0xc9]]
+    reg: [[0x0, 0x110000, 0x0, 0xf0000]]
+    reg-names: ["ramoops_mem"]
+  reserved-memory:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    ranges: true
+    drm-logo@00000000:
+      compatible: ["rockchip,drm-logo"]
+      phandle: [[0xc1]]
+      reg: [[0x0, 0x0, 0x0, 0x0]]
+    secure-memory@20000000:
+      compatible: ["rockchip,secure-memory"]
+      phandle: [[0xc2]]
+      reg: [[0x0, 0x20000000, 0x0, 0x10000000]]
+      status: ["disabled"]
+    stb-devinfo@00000000:
+      compatible: ["rockchip,stb-devinfo"]
+      reg: [[0x0, 0x0, 0x0, 0x0]]
+  rga@ff680000:
+    clock-names: ["aclk_rga\0hclk_rga\0clk_rga"]
+    clocks: [[0x8, 0xdc, 0x8, 0x1e5, 0x8, 0x6d]]
+    compatible: ["rockchip,rga2"]
+    dev_mode: [[0x1]]
+    dma-coherent: true
+    interrupts: [[0x0, 0x37, 0x4, 0x0]]
+    power-domains: [[0x16, 0x21]]
+    reg: [[0x0, 0xff680000, 0x0, 0x1000]]
+    reset-names: ["core\0axi\0ahb"]
+    resets: [[0x8, 0x6a, 0x8, 0x67, 0x8, 0x69]]
+    status: ["okay"]
+  rkisp1@ff910000:
+    clock-names: ["clk_isp\0aclk_isp\0hclk_isp\0aclk_isp_wrap\0hclk_isp_wrap"]
+    clocks: [[0x8, 0x6e, 0x8, 0xe5, 0x8, 0x1df, 0x8, 0xe9, 0x8, 0x1e3]]
+    compatible: ["rockchip,rk3399-rkisp1"]
+    devfreq: [[0xae]]
+    interrupts: [[0x0, 0x2b, 0x4, 0x0]]
+    iommus: [[0xaf]]
+    power-domains: [[0x16, 0x13]]
+    reg: [[0x0, 0xff910000, 0x0, 0x4000]]
+    status: ["disabled"]
+  rkisp1@ff920000:
+    clock-names: ["clk_isp\0aclk_isp\0hclk_isp\0aclk_isp_wrap\0hclk_isp_wrap"]
+    clocks: [[0x8, 0x6f, 0x8, 0xe6, 0x8, 0x1e0, 0x8, 0xea, 0x8, 0x1e4]]
+    compatible: ["rockchip,rk3399-rkisp1"]
+    devfreq: [[0xae]]
+    interrupts: [[0x0, 0x2c, 0x4, 0x0]]
+    iommus: [[0xb0]]
+    power-domains: [[0x16, 0x14]]
+    reg: [[0x0, 0xff920000, 0x0, 0x4000]]
+    status: ["disabled"]
+  rktimer@ff850000:
+    clock-names: ["pclk\0timer"]
+    clocks: [[0x8, 0x168, 0x8, 0x5a]]
+    compatible: ["rockchip,rk3399-timer"]
+    interrupts: [[0x0, 0x51, 0x4, 0x0]]
+    reg: [[0x0, 0xff850000, 0x0, 0x1000]]
+  rkvdec@ff660000:
+    allocator: [[0x1]]
+    clock-names: ["aclk_vcodec\0hclk_vcodec\0clk_cabac\0clk_core"]
+    clocks: [[0x8, 0xed, 0x8, 0x1ec, 0x8, 0x9f, 0x8, 0x9e]]
+    compatible: ["rockchip,rkvdec"]
+    dev_mode: [[0x2]]
+    interrupt-names: ["irq_dec"]
+    interrupts: [[0x0, 0x74, 0x4, 0x0]]
+    iommu_enabled: [[0x1]]
+    iommus: [[0x95]]
+    power-domains: [[0x16, 0x20]]
+    reg: [[0x0, 0xff660000, 0x0, 0x400]]
+    reset-names: ["video_h\0video_a\0video_core\0video_cabac\0niu_a\0niu_h"]
+    resets: [[0x8, 0x5b, 0x8, 0x59, 0x8, 0x5c, 0x8, 0x5d, 0x8, 0x58, 0x8, 0x5a]]
+    rockchip,grf: [[0x15]]
+    status: ["okay"]
+  rockchip-key:
+    compatible: ["rockchip,key"]
+    io-channels: [[0xca, 0x1]]
+    status: ["okay"]
+    power-key:
+      gpio-key,wakeup: true
+      gpios: [[0x39, 0x5, 0x1]]
+      label: ["power"]
+      linux,code: [[0x74]]
+  rockchip-suspend:
+    compatible: ["rockchip,pm-rk3399"]
+    rockchip,power-ctrl: [[0x33, 0x11, 0x0, 0x33, 0xe, 0x0]]
+    rockchip,pwm-regulator-config: [[0x4]]
+    rockchip,sleep-debug-en: [[0x0]]
+    rockchip,sleep-mode-config: [[0xde]]
+    rockchip,virtual-poweroff: [[0x0]]
+    rockchip,wakeup-config: [[0x804]]
+    status: ["okay"]
+  saradc@ff100000:
+    '#io-channel-cells': [[0x1]]
+    clock-names: ["saradc\0apb_pclk"]
+    clocks: [[0x8, 0x50, 0x8, 0x165]]
+    compatible: ["rockchip,rk3399-saradc"]
+    interrupts: [[0x0, 0x3e, 0x4, 0x0]]
+    phandle: [[0xca]]
+    reg: [[0x0, 0xff100000, 0x0, 0x100]]
+    reset-names: ["saradc-apb"]
+    resets: [[0x8, 0xd4]]
+    status: ["okay"]
+  screen:
+    compatible: ["rockchip,screen"]
+    status: ["okay"]
+  sdhci@fe330000:
+    '#clock-cells': [[0x0]]
+    arasan,soc-ctl-syscon: [[0x15]]
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clock-rates: [[0xbebc200]]
+    assigned-clocks: [[0x8, 0x4e]]
+    bus-width: [[0x8]]
+    clock-names: ["clk_xin\0clk_ahb"]
+    clock-output-names: ["emmc_cardclock"]
+    clocks: [[0x8, 0x4e, 0x8, 0xf0]]
+    compatible: ["rockchip,rk3399-sdhci-5.1\0arasan,sdhci-5.1"]
+    interrupts: [[0x0, 0xb, 0x4, 0x0]]
+    keep-power-in-suspend: true
+    mmc-hs400-1_8v: true
+    mmc-hs400-enhanced-strobe: true
+    non-removable: true
+    phandle: [[0x98]]
+    phy-names: ["phy_arasan"]
+    phys: [[0x24]]
+    power-domains: [[0x16, 0x17]]
+    reg: [[0x0, 0xfe330000, 0x0, 0x10000]]
+    status: ["okay"]
+    supports-emmc: true
+  sdio-pwrseq:
+    clock-names: ["ext_clock"]
+    clocks: [[0xdc, 0x1]]
+    compatible: ["mmc-pwrseq-simple"]
+    phandle: [[0x1b]]
+    pinctrl-0: [[0xdd]]
+    pinctrl-names: ["default"]
+    reset-gpios: [[0x39, 0xa, 0x1]]
+  serial@ff180000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xac]]
+    clock-names: ["baudclk\0apb_pclk"]
+    clocks: [[0x8, 0x51, 0x8, 0x160]]
+    compatible: ["rockchip,rk3399-uart\0snps,dw-apb-uart"]
+    interrupts: [[0x0, 0x63, 0x4, 0x0]]
+    pinctrl-0: [[0x44, 0x45]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff180000, 0x0, 0x100]]
+    reg-io-width: [[0x4]]
+    reg-shift: [[0x2]]
+    status: ["okay"]
+  serial@ff190000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xad]]
+    clock-names: ["baudclk\0apb_pclk"]
+    clocks: [[0x8, 0x52, 0x8, 0x161]]
+    compatible: ["rockchip,rk3399-uart\0snps,dw-apb-uart"]
+    interrupts: [[0x0, 0x62, 0x4, 0x0]]
+    pinctrl-0: [[0x46]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff190000, 0x0, 0x100]]
+    reg-io-width: [[0x4]]
+    reg-shift: [[0x2]]
+    status: ["disabled"]
+  serial@ff1a0000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xad]]
+    clock-names: ["baudclk\0apb_pclk"]
+    clocks: [[0x8, 0x53, 0x8, 0x162]]
+    compatible: ["rockchip,rk3399-uart\0snps,dw-apb-uart"]
+    interrupts: [[0x0, 0x64, 0x4, 0x0]]
+    pinctrl-0: [[0x47]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1a0000, 0x0, 0x100]]
+    reg-io-width: [[0x4]]
+    reg-shift: [[0x2]]
+    status: ["disable"]
+  serial@ff1b0000:
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xad]]
+    clock-names: ["baudclk\0apb_pclk"]
+    clocks: [[0x8, 0x54, 0x8, 0x163]]
+    compatible: ["rockchip,rk3399-uart\0snps,dw-apb-uart"]
+    interrupts: [[0x0, 0x65, 0x4, 0x0]]
+    pinctrl-0: [[0x48, 0x49, 0x4a]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1b0000, 0x0, 0x100]]
+    reg-io-width: [[0x4]]
+    reg-shift: [[0x2]]
+    status: ["okay"]
+  serial@ff370000:
+    assigned-clock-parents: [[0x2f, 0x1]]
+    assigned-clocks: [[0x2f, 0xc]]
+    clock-names: ["baudclk\0apb_pclk"]
+    clocks: [[0x2f, 0x6, 0x2f, 0x22]]
+    compatible: ["rockchip,rk3399-uart\0snps,dw-apb-uart"]
+    interrupts: [[0x0, 0x66, 0x4, 0x0]]
+    pinctrl-0: [[0x84]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff370000, 0x0, 0x100]]
+    reg-io-width: [[0x4]]
+    reg-shift: [[0x2]]
+    status: ["okay"]
+  spdif-out:
+    '#sound-dai-cells': [[0x0]]
+    compatible: ["linux,spdif-dit"]
+    phandle: [[0xdb]]
+  spdif-sound:
+    compatible: ["simple-audio-card"]
+    simple-audio-card,name: ["rockchip,spdif"]
+    simple-audio-card,codec:
+      sound-dai: [[0xdb]]
+    simple-audio-card,cpu:
+      sound-dai: [[0xda]]
+  spdif@ff870000:
+    '#sound-dai-cells': [[0x0]]
+    assigned-clock-parents: [[0x8, 0x5]]
+    assigned-clocks: [[0x8, 0xb1]]
+    clock-names: ["mclk\0hclk"]
+    clocks: [[0x8, 0x55, 0x8, 0x1d7]]
+    compatible: ["rockchip,rk3399-spdif"]
+    dma-names: ["tx"]
+    dmas: [[0x5d, 0x7]]
+    interrupts: [[0x0, 0x42, 0x4, 0x0]]
+    phandle: [[0xda]]
+    pinctrl-0: [[0x9b]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xff870000, 0x0, 0x1000]]
+    status: ["disabled"]
+  spi@ff1c0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x8, 0x47, 0x8, 0x15b]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x4b, 0xa, 0x4b, 0xb]]
+    interrupts: [[0x0, 0x44, 0x4, 0x0]]
+    pinctrl-0: [[0x4c, 0x4d, 0x4e, 0x4f]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1c0000, 0x0, 0x1000]]
+    status: ["disabled"]
+  spi@ff1d0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x8, 0x48, 0x8, 0x15c]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x4b, 0xc, 0x4b, 0xd]]
+    interrupts: [[0x0, 0x35, 0x4, 0x0]]
+    max-freq: [[0x2faf080]]
+    pinctrl-0: [[0x50, 0x51, 0x52, 0x53]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1d0000, 0x0, 0x1000]]
+    status: ["disabled"]
+    mpu6500@0:
+      compatible: ["inv-spi,mpu6500"]
+      irq-gpio: [[0x3b, 0x1b, 0x1]]
+      mpu-debug: [[0x1]]
+      mpu-int_config: [[0x0]]
+      mpu-level_shifter: [[0x0]]
+      mpu-orientation: [[0x1, 0x0, 0x0, 0x0, 0x1, 0x0, 0x0, 0x0, 0x1]]
+      orientation-x: [[0x1]]
+      orientation-y: [[0x0]]
+      orientation-z: [[0x1]]
+      pinctrl-0: [[0x54]]
+      pinctrl-names: ["default"]
+      reg: [[0x0]]
+      spi-cpha: true
+      spi-cpol: true
+      spi-max-frequency: [[0xf4240]]
+      status: ["disabled"]
+      support-hw-poweroff: [[0x1]]
+  spi@ff1e0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x8, 0x49, 0x8, 0x15d]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x4b, 0xe, 0x4b, 0xf]]
+    interrupts: [[0x0, 0x34, 0x4, 0x0]]
+    pinctrl-0: [[0x55, 0x56, 0x57, 0x58]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1e0000, 0x0, 0x1000]]
+    status: ["disabled"]
+  spi@ff1f0000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x8, 0x4a, 0x8, 0x15e]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x4b, 0x12, 0x4b, 0x13]]
+    interrupts: [[0x0, 0x43, 0x4, 0x0]]
+    pinctrl-0: [[0x59, 0x5a, 0x5b, 0x5c]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff1f0000, 0x0, 0x1000]]
+    status: ["disabled"]
+  spi@ff200000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x8, 0x4b, 0x8, 0x15f]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    dma-names: ["tx\0rx"]
+    dmas: [[0x5d, 0x8, 0x5d, 0x9]]
+    interrupts: [[0x0, 0x84, 0x4, 0x0]]
+    pinctrl-0: [[0x5e, 0x5f, 0x60, 0x61]]
+    pinctrl-names: ["default"]
+    power-domains: [[0x16, 0x1c]]
+    reg: [[0x0, 0xff200000, 0x0, 0x1000]]
+    status: ["disabled"]
+  spi@ff350000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x0]]
+    clock-names: ["spiclk\0apb_pclk"]
+    clocks: [[0x2f, 0x3, 0x2f, 0x1f]]
+    compatible: ["rockchip,rk3399-spi\0rockchip,rk3066-spi"]
+    interrupts: [[0x0, 0x3c, 0x4, 0x0]]
+    pinctrl-0: [[0x80, 0x81, 0x82, 0x83]]
+    pinctrl-names: ["default"]
+    reg: [[0x0, 0xff350000, 0x0, 0x1000]]
+    status: ["disabled"]
+  syscon@ff320000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x1]]
+    compatible: ["rockchip,rk3399-pmugrf\0syscon\0simple-mfd"]
+    phandle: [[0x8f]]
+    reg: [[0x0, 0xff320000, 0x0, 0x1000]]
+    io-domains:
+      compatible: ["rockchip,rk3399-pmu-io-voltage-domain"]
+      pmu1830-supply: [[0x37]]
+      status: ["okay"]
+    pmu-pvtm:
+      clock-names: ["pmu"]
+      clocks: [[0x2f, 0x7]]
+      compatible: ["rockchip,rk3399-pmu-pvtm"]
+      reset-names: ["pmu"]
+      resets: [[0x8, 0x1b]]
+      status: ["disabled"]
+    reboot-mode:
+      compatible: ["syscon-reboot-mode"]
+      mode-bootloader: [[0x5242c301]]
+      mode-charge: [[0x5242c30b]]
+      mode-fastboot: [[0x5242c309]]
+      mode-loader: [[0x5242c301]]
+      mode-normal: [[0x5242c300]]
+      mode-recovery: [[0x5242c303]]
+      mode-ums: [[0x5242c30c]]
+      offset: [[0x300]]
+  syscon@ff770000:
+    '#address-cells': [[0x1]]
+    '#size-cells': [[0x1]]
+    compatible: ["rockchip,rk3399-grf\0syscon\0simple-mfd"]
+    phandle: [[0x15]]
+    reg: [[0x0, 0xff770000, 0x0, 0x10000]]
+    io-domains:
+      audio-supply: [[0x97]]
+      bt656-supply: [[0x37]]
+      compatible: ["rockchip,rk3399-io-voltage-domain"]
+      gpio1830-supply: [[0x37]]
+      sdmmc-supply: [[0x1f]]
+      status: ["okay"]
+    mipi-dphy-rx0:
+      clock-names: ["dphy-ref\0dphy-cfg\0grf"]
+      clocks: [[0x8, 0x77, 0x8, 0xa5, 0x8, 0x16f]]
+      compatible: ["rockchip,rk3399-mipi-dphy"]
+      power-domains: [[0x16, 0xf]]
+      status: ["disabled"]
+    phy@f780:
+      '#phy-cells': [[0x0]]
+      clock-names: ["emmcclk"]
+      clocks: [[0x98]]
+      compatible: ["rockchip,rk3399-emmc-phy"]
+      phandle: [[0x24]]
+      reg: [[0xf780, 0x24]]
+      status: ["okay"]
+    pvtm:
+      clock-names: ["core_l\0core_b\0gpu\0ddr"]
+      clocks: [[0x8, 0x73, 0x8, 0x74, 0x8, 0x75, 0x8, 0x76]]
+      compatible: ["rockchip,rk3399-pvtm"]
+      reset-names: ["core_l\0core_b\0gpu\0ddr"]
+      resets: [[0x8, 0x1f, 0x8, 0x2f, 0x8, 0x123, 0x8, 0x4f]]
+      status: ["okay"]
+    usb2-phy@e450:
+      '#clock-cells': [[0x0]]
+      clock-names: ["phyclk"]
+      clock-output-names: ["clk_usbphy0_480m"]
+      clocks: [[0x8, 0x7b]]
+      compatible: ["rockchip,rk3399-usb2phy"]
+      phandle: [[0x27]]
+      reg: [[0xe450, 0x10]]
+      status: ["okay"]
+      host-port:
+        '#phy-cells': [[0x0]]
+        interrupt-names: ["linestate"]
+        interrupts: [[0x0, 0x1b, 0x4, 0x0]]
+        phandle: [[0x25]]
+        phy-supply: [[0x99]]
+        status: ["okay"]
+      otg-port:
+        '#phy-cells': [[0x0]]
+        interrupt-names: ["otg-bvalid\0otg-id\0linestate"]
+        interrupts: [[0x0, 0x67, 0x4, 0x0, 0x0, 0x68, 0x4, 0x0, 0x0, 0x6a, 0x4, 0x0]]
+        phandle: [[0x28]]
+        status: ["okay"]
+    usb2-phy@e460:
+      '#clock-cells': [[0x0]]
+      clock-names: ["phyclk"]
+      clock-output-names: ["clk_usbphy1_480m"]
+      clocks: [[0x8, 0x7c]]
+      compatible: ["rockchip,rk3399-usb2phy"]
+      reg: [[0xe460, 0x10]]
+      status: ["okay"]
+      host-port:
+        '#phy-cells': [[0x0]]
+        interrupt-names: ["linestate"]
+        interrupts: [[0x0, 0x1f, 0x4, 0x0]]
+        phandle: [[0x26]]
+        phy-supply: [[0x99]]
+        status: ["okay"]
+      otg-port:
+        '#phy-cells': [[0x0]]
+        interrupt-names: ["otg-bvalid\0otg-id\0linestate"]
+        interrupts: [[0x0, 0x6c, 0x4, 0x0, 0x0, 0x6d, 0x4, 0x0, 0x0, 0x6f, 0x4, 0x0]]
+        phandle: [[0x29]]
+        status: ["okay"]
+  thermal-zones:
+    gpu-thermal:
+      polling-delay: [[0x3e8]]
+      polling-delay-passive: [[0x64]]
+      thermal-sensors: [[0x62, 0x1]]
+    soc-thermal:
+      polling-delay: [[0x3e8]]
+      polling-delay-passive: [[0x14]]
+      sustainable-power: [[0x3e8]]
+      thermal-sensors: [[0x62, 0x0]]
+      cooling-maps:
+        map0:
+          contribution: [[0x1000]]
+          cooling-device: [[0x2, 0xffffffff, 0xffffffff]]
+          trip: [[0x63]]
+        map1:
+          contribution: [[0x400]]
+          cooling-device: [[0x6, 0xffffffff, 0xffffffff]]
+          trip: [[0x63]]
+        map2:
+          contribution: [[0x1000]]
+          cooling-device: [[0x64, 0xffffffff, 0xffffffff]]
+          trip: [[0x63]]
+      trips:
+        soc-crit:
+          hysteresis: [[0x7d0]]
+          temperature: [[0x1e848]]
+          type: ["critical"]
+        trip-point-0:
+          hysteresis: [[0x7d0]]
+          temperature: [[0x11170]]
+          type: ["passive"]
+        trip-point-1:
+          hysteresis: [[0x7d0]]
+          phandle: [[0x63]]
+          temperature: [[0x14c08]]
+          type: ["passive"]
+  timer:
+    compatible: ["arm,armv8-timer"]
+    interrupts: [[0x1, 0xd, 0x8, 0x0, 0x1, 0xe, 0x8, 0x0, 0x1, 0xb, 0x8, 0x0, 0x1,
+        0xa, 0x8, 0x0]]
+  tsadc@ff260000:
+    '#thermal-sensor-cells': [[0x1]]
+    assigned-clock-rates: [[0xb71b0]]
+    assigned-clocks: [[0x8, 0x4f]]
+    clock-names: ["tsadc\0apb_pclk"]
+    clocks: [[0x8, 0x4f, 0x8, 0x164]]
+    compatible: ["rockchip,rk3399-tsadc"]
+    interrupts: [[0x0, 0x61, 0x4, 0x0]]
+    phandle: [[0x62]]
+    pinctrl-0: [[0x65]]
+    pinctrl-1: [[0x66]]
+    pinctrl-2: [[0x65]]
+    pinctrl-names: ["init\0default\0sleep"]
+    reg: [[0x0, 0xff260000, 0x0, 0x100]]
+    reset-names: ["tsadc-apb"]
+    resets: [[0x8, 0xe8]]
+    rockchip,grf: [[0x15]]
+    rockchip,hw-tshut-mode: [[0x1]]
+    rockchip,hw-tshut-polarity: [[0x1]]
+    rockchip,hw-tshut-temp: [[0x1e848]]
+    status: ["okay"]
+  tw07-ctrl:
+    compatible: ["tw07-ctrl"]
+    gsensor-power-pin: [[0x18, 0x1e, 0x0]]
+    hdmi-enable-gpios: [[0x3b, 0xb, 0x0]]
+  uboot-charge:
+    compatible: ["rockchip,uboot-charge"]
+    rockchip,android-charge-on: [[0x0]]
+    rockchip,uboot-charge-on: [[0x1]]
+    rockchip,uboot-exit-charge-voltage: [[0xce4]]
+  usb@fe340000:
+    clock-names: ["hclk_hsic\0clk_hsicphy\0pclk_hsicphy"]
+    clocks: [[0x8, 0x1cc, 0x8, 0x79, 0x8, 0x154]]
+    compatible: ["generic-ehci"]
+    interrupts: [[0x0, 0x21, 0x4, 0x0]]
+    reg: [[0x0, 0xfe340000, 0x0, 0x30000]]
+    rockchip-has-usic: true
+    status: ["disabled"]
+  usb@fe380000:
+    clock-names: ["hclk_host0\0hclk_host0_arb\0usbphy0_480m"]
+    clocks: [[0x8, 0x1c8, 0x8, 0x1c9, 0x8, 0xa8]]
+    compatible: ["generic-ehci"]
+    interrupts: [[0x0, 0x1a, 0x4, 0x0]]
+    phy-names: ["usb"]
+    phys: [[0x25]]
+    power-domains: [[0x16, 0xe]]
+    reg: [[0x0, 0xfe380000, 0x0, 0x20000]]
+    status: ["okay"]
+  usb@fe3a0000:
+    clock-names: ["hclk_host0\0hclk_host0_arb\0usbphy0_480m"]
+    clocks: [[0x8, 0x1c8, 0x8, 0x1c9, 0x8, 0xa8]]
+    compatible: ["generic-ohci"]
+    interrupts: [[0x0, 0x1c, 0x4, 0x0]]
+    phy-names: ["usb"]
+    phys: [[0x25]]
+    power-domains: [[0x16, 0xe]]
+    reg: [[0x0, 0xfe3a0000, 0x0, 0x20000]]
+    status: ["okay"]
+  usb@fe3c0000:
+    clock-names: ["hclk_host1\0hclk_host1_arb\0usbphy1_480m"]
+    clocks: [[0x8, 0x1ca, 0x8, 0x1cb, 0x8, 0xa9]]
+    compatible: ["generic-ehci"]
+    interrupts: [[0x0, 0x1e, 0x4, 0x0]]
+    phy-names: ["usb"]
+    phys: [[0x26]]
+    power-domains: [[0x16, 0xe]]
+    reg: [[0x0, 0xfe3c0000, 0x0, 0x20000]]
+    status: ["okay"]
+  usb@fe3e0000:
+    clock-names: ["hclk_host1\0hclk_host1_arb\0usbphy1_480m"]
+    clocks: [[0x8, 0x1ca, 0x8, 0x1cb, 0x8, 0xa9]]
+    compatible: ["generic-ohci"]
+    interrupts: [[0x0, 0x20, 0x4, 0x0]]
+    phy-names: ["usb"]
+    phys: [[0x26]]
+    power-domains: [[0x16, 0xe]]
+    reg: [[0x0, 0xfe3e0000, 0x0, 0x20000]]
+    status: ["okay"]
+  usb@fe800000:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    clock-names: ["ref_clk\0suspend_clk\0bus_clk\0grf_clk"]
+    clocks: [[0x8, 0x81, 0x8, 0x83, 0x8, 0xf6, 0x8, 0xf9]]
+    compatible: ["rockchip,rk3399-dwc3"]
+    extcon: [[0x27]]
+    power-domains: [[0x16, 0x18]]
+    ranges: true
+    reset-names: ["usb3-otg"]
+    resets: [[0x8, 0x125]]
+    status: ["okay"]
+    dwc3@fe800000:
+      compatible: ["snps,dwc3"]
+      dr_mode: ["otg"]
+      interrupts: [[0x0, 0x69, 0x4, 0x0]]
+      maximum-speed: ["high-speed"]
+      phy-names: ["usb2-phy"]
+      phy_type: ["utmi_wide"]
+      phys: [[0x28]]
+      reg: [[0x0, 0xfe800000, 0x0, 0x100000]]
+      snps,dis-del-phy-power-chg-quirk: true
+      snps,dis-u2-freeclk-exists-quirk: true
+      snps,dis_enblslpm_quirk: true
+      snps,dis_u2_susphy_quirk: true
+      snps,tx-ipgap-linecheck-dis-quirk: true
+      snps,usb3-warm-reset-on-resume-quirk: true
+      snps,xhci-slow-suspend-quirk: true
+      snps,xhci-trb-ent-quirk: true
+      status: ["okay"]
+  usb@fe900000:
+    '#address-cells': [[0x2]]
+    '#size-cells': [[0x2]]
+    clock-names: ["ref_clk\0suspend_clk\0bus_clk\0grf_clk"]
+    clocks: [[0x8, 0x82, 0x8, 0x84, 0x8, 0xf7, 0x8, 0xf9]]
+    compatible: ["rockchip,rk3399-dwc3"]
+    power-domains: [[0x16, 0x18]]
+    ranges: true
+    reset-names: ["usb3-otg"]
+    resets: [[0x8, 0x126]]
+    status: ["okay"]
+    dwc3@fe900000:
+      compatible: ["snps,dwc3"]
+      dr_mode: ["host"]
+      interrupts: [[0x0, 0x6e, 0x4, 0x0]]
+      phy-names: ["usb2-phy\0usb3-phy"]
+      phy_type: ["utmi_wide"]
+      phys: [[0x29, 0x2a]]
+      reg: [[0x0, 0xfe900000, 0x0, 0x100000]]
+      snps,dis-del-phy-power-chg-quirk: true
+      snps,dis-u2-freeclk-exists-quirk: true
+      snps,dis_enblslpm_quirk: true
+      snps,dis_u2_susphy_quirk: true
+      snps,tx-ipgap-linecheck-dis-quirk: true
+      snps,usb3-warm-reset-on-resume-quirk: true
+      snps,xhci-slow-suspend-quirk: true
+      snps,xhci-trb-ent-quirk: true
+      status: ["okay"]
+  vcc-phy-regulator:
+    compatible: ["regulator-fixed"]
+    phandle: [[0x17]]
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-name: ["vcc_phy"]
+  vcc-sys:
+    compatible: ["regulator-fixed"]
+    phandle: [[0x31]]
+    regulator-always-on: true
+    regulator-max-microvolt: [[0x4c4b40]]
+    regulator-min-microvolt: [[0x4c4b40]]
+    regulator-name: ["vcc_sys"]
+  vcc3v3-sys:
+    compatible: ["regulator-fixed"]
+    phandle: [[0x36]]
+    regulator-always-on: true
+    regulator-max-microvolt: [[0x325aa0]]
+    regulator-min-microvolt: [[0x325aa0]]
+    regulator-name: ["vcc3v3_sys"]
+    vin-supply: [[0x31]]
+  vcc5v0-host-regulator:
+    compatible: ["regulator-fixed"]
+    enable-active-high: true
+    phandle: [[0x99]]
+    pinctrl-0: [[0xd4]]
+    pinctrl-names: ["default"]
+    regulator-always-on: true
+    regulator-name: ["vcc5v0_host"]
+  vdd-log:
+    compatible: ["pwm-regulator"]
+    pwms: [[0xd5, 0x0, 0x61a8, 0x1]]
+    regulator-always-on: true
+    regulator-boot-on: true
+    regulator-max-microvolt: [[0x155cc0]]
+    regulator-min-microvolt: ["\0\f5"]
+    regulator-name: ["vdd_log"]
+    rockchip,pwm_id: [[0x2]]
+    rockchip,pwm_voltage: [[0xdbba0]]
+    vin-supply: [[0x31]]
+  vop@ff8f0000:
+    assigned-clock-parents: [[0x8, 0x4]]
+    assigned-clocks: [[0x8, 0xb7]]
+    clock-names: ["aclk_vop\0dclk_vop\0hclk_vop\0dclk_source"]
+    clocks: [[0x8, 0xdb, 0x8, 0xb5, 0x8, 0x1db, 0x8, 0xb7]]
+    compatible: ["rockchip,rk3399-vop-lit"]
+    interrupts: [[0x0, 0x77, 0x4, 0x0]]
+    iommus: [[0xa0]]
+    power-domains: [[0x16, 0x12]]
+    reg: [[0x0, 0xff8f0000, 0x0, 0x600, 0x0, 0xff8f1c00, 0x0, 0x200, 0x0, 0xff8f2000,
+        0x0, 0x400]]
+    reg-names: ["regs\0cabc_lut\0gamma_lut"]
+    reset-names: ["axi\0ahb\0dclk"]
+    resets: [[0x8, 0x113, 0x8, 0x117, 0x8, 0x119]]
+    status: ["okay"]
+    port:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      phandle: [[0xc0]]
+      endpoint@0:
+        phandle: [[0xb5]]
+        reg: [[0x0]]
+        remote-endpoint: [[0xa1]]
+      endpoint@1:
+        phandle: [[0xbe]]
+        reg: [[0x1]]
+        remote-endpoint: [[0xa2]]
+      endpoint@2:
+        phandle: [[0xb3]]
+        reg: [[0x2]]
+        remote-endpoint: [[0xa3]]
+      endpoint@3:
+        phandle: [[0x2e]]
+        reg: [[0x3]]
+        remote-endpoint: [[0xa4]]
+      endpoint@4:
+        phandle: [[0xb9]]
+        reg: [[0x4]]
+        remote-endpoint: [[0xa5]]
+  vop@ff900000:
+    assigned-clock-parents: [[0x8, 0x7]]
+    assigned-clocks: [[0x8, 0xb6]]
+    clock-names: ["aclk_vop\0dclk_vop\0hclk_vop\0dclk_source"]
+    clocks: [[0x8, 0xd9, 0x8, 0xb4, 0x8, 0x1d9, 0x8, 0xb6]]
+    compatible: ["rockchip,rk3399-vop-big"]
+    interrupts: [[0x0, 0x76, 0x4, 0x0]]
+    iommus: [[0xa7]]
+    power-domains: [[0x16, 0x11]]
+    reg: [[0x0, 0xff900000, 0x0, 0x600, 0x0, 0xff901c00, 0x0, 0x200, 0x0, 0xff902000,
+        0x0, 0x1000]]
+    reg-names: ["regs\0cabc_lut\0gamma_lut"]
+    reset-names: ["axi\0ahb\0dclk"]
+    resets: [[0x8, 0x112, 0x8, 0x116, 0x8, 0x118]]
+    status: ["okay"]
+    port:
+      '#address-cells': [[0x1]]
+      '#size-cells': [[0x0]]
+      phandle: [[0xbf]]
+      endpoint@0:
+        phandle: [[0xbd]]
+        reg: [[0x0]]
+        remote-endpoint: [[0xa8]]
+      endpoint@1:
+        phandle: [[0xb4]]
+        reg: [[0x1]]
+        remote-endpoint: [[0xa9]]
+      endpoint@2:
+        phandle: [[0xb2]]
+        reg: [[0x2]]
+        remote-endpoint: [[0xaa]]
+      endpoint@3:
+        phandle: [[0x2d]]
+        reg: [[0x3]]
+        remote-endpoint: [[0xab]]
+      endpoint@4:
+        phandle: [[0xb8]]
+        reg: [[0x4]]
+        remote-endpoint: [[0xac]]
+  voppwm@ff8f01a0:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x8, 0x6c]]
+    compatible: ["rockchip,vop-pwm"]
+    pinctrl-0: [[0xa6]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff8f01a0, 0x0, 0x10]]
+    status: ["disabled"]
+  voppwm@ff9001a0:
+    '#pwm-cells': [[0x3]]
+    clock-names: ["pwm"]
+    clocks: [[0x8, 0x6b]]
+    compatible: ["rockchip,vop-pwm"]
+    pinctrl-0: [[0xad]]
+    pinctrl-names: ["active"]
+    reg: [[0x0, 0xff9001a0, 0x0, 0x10]]
+    status: ["disabled"]
+  vpu_service@ff650000:
+    allocator: [[0x1]]
+    clock-names: ["aclk_vcodec\0hclk_vcodec"]
+    clocks: [[0x8, 0xeb, 0x8, 0x1ea]]
+    compatible: ["rockchip,vpu_service"]
+    dev_mode: [[0x0]]
+    interrupt-names: ["irq_dec\0irq_enc"]
+    interrupts: [[0x0, 0x71, 0x4, 0x0, 0x0, 0x72, 0x4, 0x0]]
+    iommu_enabled: [[0x1]]
+    iommus: [[0x94]]
+    power-domains: [[0x16, 0x1f]]
+    reg: [[0x0, 0xff650000, 0x0, 0x800]]
+    reset-names: ["video_h\0video_a"]
+    resets: [[0x8, 0x53, 0x8, 0x51]]
+    rockchip,grf: [[0x15]]
+    status: ["okay"]
+  watchdog@ff848000:
+    clocks: [[0x8, 0x17c]]
+    compatible: ["snps,dw-wdt"]
+    interrupts: [[0x0, 0x78, 0x4, 0x0]]
+    reg: [[0x0, 0xff848000, 0x0, 0x100]]
+  wireless-bluetooth:
+    BT,reset_gpio: [[0x39, 0x9, 0x0]]
+    BT,wake_gpio: [[0x3b, 0x1a, 0x0]]
+    BT,wake_host_irq: [[0x39, 0x4, 0x0]]
+    clock-names: ["ext_clock"]
+    clocks: [[0xdc, 0x1]]
+    compatible: ["bluetooth-platdata"]
+    pinctrl-0: [[0xde]]
+    pinctrl-1: [[0xdf]]
+    pinctrl-names: ["default\0rts_gpio"]
+    status: ["okay"]
+    uart_rts_gpios: [[0x3b, 0x13, 0x1]]
+  wireless-wlan:
+    WIFI,host_wake_irq: [[0x39, 0x3, 0x0]]
+    compatible: ["wlan-platdata"]
+    rockchip,grf: [[0x15]]
+    sdio_vref: [[0x708]]
+    status: ["okay"]
+    wifi_chip_type: ["rtl8821cs"]
+  xin24m:
+    '#clock-cells': [[0x0]]
+    clock-frequency: [[0x16e3600]]
+    clock-output-names: ["xin24m"]
+    compatible: ["fixed-clock"]
+...
